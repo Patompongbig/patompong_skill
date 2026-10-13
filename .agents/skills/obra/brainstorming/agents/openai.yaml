@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / brainstorming"
+  short_description: "Clarify intent, constraints, choices and scope before building"
+policy:
+  allow_implicit_invocation: false

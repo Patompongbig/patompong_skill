@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / systematic-debugging"
+  short_description: "Reproduce, trace, hypothesize and test the root cause before fix"
+policy:
+  allow_implicit_invocation: false

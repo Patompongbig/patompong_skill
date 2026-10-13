@@ -1,0 +1,5 @@
+interface:
+  display_name: "Matt Pocock: Loop Me"
+  short_description: "Spec the workflows you want to build"
+policy:
+  allow_implicit_invocation: false

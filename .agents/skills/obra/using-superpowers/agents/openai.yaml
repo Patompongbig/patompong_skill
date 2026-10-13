@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / using-superpowers"
+  short_description: "Navigate the selected Superpowers workflow and its needed depend"
+policy:
+  allow_implicit_invocation: false

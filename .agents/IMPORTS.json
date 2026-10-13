@@ -1,0 +1,2139 @@
+{
+  "revision": "49dd158d1076134a641b33efb035946536778336",
+  "acquisition_date": "2026-10-11",
+  "imports": [
+    {
+      "name": "ask-matt",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/ask-matt/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/ask-matt/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/ask-matt/agents/openai.yaml",
+          "source_path": "skills/engineering/ask-matt/agents/openai.yaml",
+          "upstream_sha256": "bdffbc5a0a99ed1b6ef3253d251d755fd18162b9845972e380007f844b09b05c",
+          "installed_sha256": "c445cbd5d61387c1b8e66cf8746255278a45bc0d77203ef8ad4f715c84cb2567"
+        },
+        {
+          "path": "skills/mattpocock/ask-matt/PHASE-BOUNDARIES.md",
+          "source_path": "skills/engineering/ask-matt/PHASE-BOUNDARIES.md",
+          "upstream_sha256": "a8aa20158609ef39e2b308b6ba0660c91066838d07a867202e63a7744a88a3ed",
+          "installed_sha256": "a8aa20158609ef39e2b308b6ba0660c91066838d07a867202e63a7744a88a3ed"
+        },
+        {
+          "path": "skills/mattpocock/ask-matt/SKILL.md",
+          "source_path": "skills/engineering/ask-matt/SKILL.md",
+          "upstream_sha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c",
+          "installed_sha256": "e884a747f1e4255bd08ba11dba415a654d91dd844def9d49f681c7bf3b645819"
+        }
+      ]
+    },
+    {
+      "name": "code-review",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/code-review/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/code-review/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/code-review/agents/openai.yaml",
+          "source_path": "skills/engineering/code-review/agents/openai.yaml",
+          "upstream_sha256": "8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352",
+          "installed_sha256": "71c437b6042126a262a159b9b1c1217d0891b13cdbd3f4b2367475b3cb47e8d1"
+        },
+        {
+          "path": "skills/mattpocock/code-review/SKILL.md",
+          "source_path": "skills/engineering/code-review/SKILL.md",
+          "upstream_sha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+          "installed_sha256": "89da5da1c365c8a5c176f68743b21018da8f77aaccb523aca6755fba32bfd7a2"
+        }
+      ]
+    },
+    {
+      "name": "codebase-design",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/codebase-design/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/codebase-design/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/codebase-design/agents/openai.yaml",
+          "source_path": "skills/engineering/codebase-design/agents/openai.yaml",
+          "upstream_sha256": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
+          "installed_sha256": "4548e8dcb7e48c4fa18a4c3576b4599a5b451ee6310c094327365b13d9d4ce9a"
+        },
+        {
+          "path": "skills/mattpocock/codebase-design/DEEPENING.md",
+          "source_path": "skills/engineering/codebase-design/DEEPENING.md",
+          "upstream_sha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+          "installed_sha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1"
+        },
+        {
+          "path": "skills/mattpocock/codebase-design/DESIGN-IT-TWICE.md",
+          "source_path": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
+          "upstream_sha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
+          "installed_sha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010"
+        },
+        {
+          "path": "skills/mattpocock/codebase-design/SKILL.md",
+          "source_path": "skills/engineering/codebase-design/SKILL.md",
+          "upstream_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+          "installed_sha256": "3aeefccc8507419354f24594ae5ec059e82710eea9f92aeed241f118041ceb4e"
+        }
+      ]
+    },
+    {
+      "name": "diagnosing-bugs",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/diagnosing-bugs/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/diagnosing-bugs/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/diagnosing-bugs/agents/openai.yaml",
+          "source_path": "skills/engineering/diagnosing-bugs/agents/openai.yaml",
+          "upstream_sha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+          "installed_sha256": "4e5d2a7d618edb3742123209ecb4e968a4ca8d7619979f297b3720c0781fa15b"
+        },
+        {
+          "path": "skills/mattpocock/diagnosing-bugs/scripts/hitl-loop.template.sh",
+          "source_path": "skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh",
+          "upstream_sha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+          "installed_sha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+        },
+        {
+          "path": "skills/mattpocock/diagnosing-bugs/SKILL.md",
+          "source_path": "skills/engineering/diagnosing-bugs/SKILL.md",
+          "upstream_sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+          "installed_sha256": "01432b8fca97db0357c43df105683513fa6a6770d78ae4433804eeb00b1b339c"
+        }
+      ]
+    },
+    {
+      "name": "domain-modeling",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/domain-modeling/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/domain-modeling/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/domain-modeling/ADR-FORMAT.md",
+          "source_path": "skills/engineering/domain-modeling/ADR-FORMAT.md",
+          "upstream_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+          "installed_sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0"
+        },
+        {
+          "path": "skills/mattpocock/domain-modeling/agents/openai.yaml",
+          "source_path": "skills/engineering/domain-modeling/agents/openai.yaml",
+          "upstream_sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+          "installed_sha256": "963fad1b52f28700edb39d5ee03ddcbb48346501ec7e1f761079cb331f609223"
+        },
+        {
+          "path": "skills/mattpocock/domain-modeling/GLOSSARY-FORMAT.md",
+          "source_path": "skills/engineering/domain-modeling/GLOSSARY-FORMAT.md",
+          "upstream_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+          "installed_sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801"
+        },
+        {
+          "path": "skills/mattpocock/domain-modeling/SKILL.md",
+          "source_path": "skills/engineering/domain-modeling/SKILL.md",
+          "upstream_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+          "installed_sha256": "b33f73dafe96629d293e28e87b3d0e4f50b4369657755ba4716b903188f2e9c9"
+        }
+      ]
+    },
+    {
+      "name": "grill-with-docs",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/grill-with-docs/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/grill-with-docs/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/grill-with-docs/agents/openai.yaml",
+          "source_path": "skills/engineering/grill-with-docs/agents/openai.yaml",
+          "upstream_sha256": "94cd0ab161fb468a836349f5ed482ba58ce8e709a05c57ce533d739dbd35cca9",
+          "installed_sha256": "8f01c18625da0cbcff6b23e2d1d432c243baca0d8433fb551c27ccaa159bd7c6"
+        },
+        {
+          "path": "skills/mattpocock/grill-with-docs/SKILL.md",
+          "source_path": "skills/engineering/grill-with-docs/SKILL.md",
+          "upstream_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+          "installed_sha256": "7f9a95a5616e46c5ede5aec2229c656ea29664d756b991bed184a99cc34368fb"
+        }
+      ]
+    },
+    {
+      "name": "implement",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/implement/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/implement/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/implement/agents/openai.yaml",
+          "source_path": "skills/engineering/implement/agents/openai.yaml",
+          "upstream_sha256": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc",
+          "installed_sha256": "fbaee82def702cdb2f320d681c687fd0e4acb0468b778c112c30b435c75bd60f"
+        },
+        {
+          "path": "skills/mattpocock/implement/SKILL.md",
+          "source_path": "skills/engineering/implement/SKILL.md",
+          "upstream_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+          "installed_sha256": "75585d31b92a3f3d436a02f7fd858d7eafb2819cabb03fa4ec233af0298cee3c"
+        }
+      ]
+    },
+    {
+      "name": "implement-spec",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/implement-spec/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/implement-spec/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/implement-spec/agents/openai.yaml",
+          "source_path": "skills/engineering/implement-spec/agents/openai.yaml",
+          "upstream_sha256": "fd41efb42c60c96320d6531be7e4bf15cbf5518cd652d57dff27ccffa46988e9",
+          "installed_sha256": "a4dc6c7c0a4190efea90edddcc5c4fa6a360f325317ba1aa94855e8c566b2497"
+        },
+        {
+          "path": "skills/mattpocock/implement-spec/SKILL.md",
+          "source_path": "skills/engineering/implement-spec/SKILL.md",
+          "upstream_sha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+          "installed_sha256": "67471992a32e1b34034a7ea4ba0cd654899633a58ae96a67878e0b9d3458e6c6"
+        }
+      ]
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/improve-codebase-architecture/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/improve-codebase-architecture/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/improve-codebase-architecture/agents/openai.yaml",
+          "source_path": "skills/engineering/improve-codebase-architecture/agents/openai.yaml",
+          "upstream_sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
+          "installed_sha256": "cfd0f78fe5f349c5b0224f7d1d2a5d2ef4b1158b4e0ad168e0c3842212739dce"
+        },
+        {
+          "path": "skills/mattpocock/improve-codebase-architecture/HTML-REPORT.md",
+          "source_path": "skills/engineering/improve-codebase-architecture/HTML-REPORT.md",
+          "upstream_sha256": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
+          "installed_sha256": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528"
+        },
+        {
+          "path": "skills/mattpocock/improve-codebase-architecture/SKILL.md",
+          "source_path": "skills/engineering/improve-codebase-architecture/SKILL.md",
+          "upstream_sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
+          "installed_sha256": "8cd6c25f7f67c6b76290f96f07e25d18bb3ac75d6c0bc8df0da41a758816733f"
+        }
+      ]
+    },
+    {
+      "name": "pr",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/pr/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/pr/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/pr/agents/openai.yaml",
+          "source_path": "skills/engineering/pr/agents/openai.yaml",
+          "upstream_sha256": "2295b586624db4ef546f3fd4695492f039d941a46d8a1593a702ce3ca511b8ad",
+          "installed_sha256": "e88929a3406e7a5e82b4b1fd9694d700e418686148af1b37c70ea31f441e9ccf"
+        },
+        {
+          "path": "skills/mattpocock/pr/CREDITS.md",
+          "source_path": "skills/engineering/pr/CREDITS.md",
+          "upstream_sha256": "a7a087127665d7298a72280ef6e19c41ad8404523712a788c8dc3ab414bc2497",
+          "installed_sha256": "a7a087127665d7298a72280ef6e19c41ad8404523712a788c8dc3ab414bc2497"
+        },
+        {
+          "path": "skills/mattpocock/pr/SKILL.md",
+          "source_path": "skills/engineering/pr/SKILL.md",
+          "upstream_sha256": "ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd",
+          "installed_sha256": "d3107429a62b73ce1e794b322468462b0ebd7e572b40d893114ca5c0cfa4066b"
+        }
+      ]
+    },
+    {
+      "name": "prototype",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/prototype/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/prototype/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/prototype/agents/openai.yaml",
+          "source_path": "skills/engineering/prototype/agents/openai.yaml",
+          "upstream_sha256": "5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc",
+          "installed_sha256": "0250bc7e2b6547da3e21f4ba96cc36590c74aa75cba47122b33d77a6e8ac2ced"
+        },
+        {
+          "path": "skills/mattpocock/prototype/LOGIC.md",
+          "source_path": "skills/engineering/prototype/LOGIC.md",
+          "upstream_sha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+          "installed_sha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9"
+        },
+        {
+          "path": "skills/mattpocock/prototype/SKILL.md",
+          "source_path": "skills/engineering/prototype/SKILL.md",
+          "upstream_sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+          "installed_sha256": "50c146bbdafd681c10f71ed82a48ee8cf8bca938cc827bce034e9ad50279d326"
+        },
+        {
+          "path": "skills/mattpocock/prototype/UI.md",
+          "source_path": "skills/engineering/prototype/UI.md",
+          "upstream_sha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+          "installed_sha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3"
+        }
+      ]
+    },
+    {
+      "name": "research",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/research/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/research/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/research/agents/openai.yaml",
+          "source_path": "skills/engineering/research/agents/openai.yaml",
+          "upstream_sha256": "9b4c470d63221c1f68f22df70b83e2f12401b317babe0d1b7b5f24a974474d0d",
+          "installed_sha256": "9ea8b822c41b9129ae78e18d9df9edbcbdd57c864b2c00112062815ac7415ac2"
+        },
+        {
+          "path": "skills/mattpocock/research/SKILL.md",
+          "source_path": "skills/engineering/research/SKILL.md",
+          "upstream_sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+          "installed_sha256": "8af2dd22e0d7990d9a7e9877193e473bbab1686681a9e422ab2ae773ae67b5e6"
+        }
+      ]
+    },
+    {
+      "name": "retro",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/retro/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/retro/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/retro/agents/openai.yaml",
+          "source_path": "skills/engineering/retro/agents/openai.yaml",
+          "upstream_sha256": "cb6fb9d7e6b4be5975f41f6def1dd00a1255bad5d9b02696b124c924a8b8745c",
+          "installed_sha256": "3a54a67e99b585e3d95dd26c57d66acc31872c7bc6c77ebbb73e739595d00777"
+        },
+        {
+          "path": "skills/mattpocock/retro/SKILL.md",
+          "source_path": "skills/engineering/retro/SKILL.md",
+          "upstream_sha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+          "installed_sha256": "d5d0f3bead2333d3b2dddba05eb6a4c0a9bdd20e406047214e4d876aaf4fa794"
+        }
+      ]
+    },
+    {
+      "name": "setup-matt-pocock-skills",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/setup-matt-pocock-skills/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/agents/openai.yaml",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/agents/openai.yaml",
+          "upstream_sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
+          "installed_sha256": "750e95903ad435219afc7fa42faff516088bca09673c5c30c399d370c324ac51"
+        },
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/domain.md",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/domain.md",
+          "upstream_sha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9",
+          "installed_sha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9"
+        },
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/issue-tracker-github.md",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md",
+          "upstream_sha256": "f0653fe106dd8ee7b33be27bd7fe3104b40555896cb45f61997aed20467020c3",
+          "installed_sha256": "f0653fe106dd8ee7b33be27bd7fe3104b40555896cb45f61997aed20467020c3"
+        },
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md",
+          "upstream_sha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24",
+          "installed_sha256": "591a9e7057382aaccdfbed3f7ea3f2ad07e0cd29f012d18b82ee4e485fd81e24"
+        },
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/issue-tracker-local.md",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md",
+          "upstream_sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
+          "installed_sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e"
+        },
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/SKILL.md",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+          "upstream_sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
+          "installed_sha256": "b5723ba71ed51f1bc8e7e21a5d15ae7e9e5bb59af5448133b9c31a96130fb41c"
+        },
+        {
+          "path": "skills/mattpocock/setup-matt-pocock-skills/triage-labels.md",
+          "source_path": "skills/engineering/setup-matt-pocock-skills/triage-labels.md",
+          "upstream_sha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa",
+          "installed_sha256": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa"
+        }
+      ]
+    },
+    {
+      "name": "tdd",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/tdd/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/tdd/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/tdd/agents/openai.yaml",
+          "source_path": "skills/engineering/tdd/agents/openai.yaml",
+          "upstream_sha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
+          "installed_sha256": "d1a1f9dae70cd3d0910822b7e176ec151b4b5f9a175e9453c4ba0a6ba4c413d0"
+        },
+        {
+          "path": "skills/mattpocock/tdd/mocking.md",
+          "source_path": "skills/engineering/tdd/mocking.md",
+          "upstream_sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+          "installed_sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef"
+        },
+        {
+          "path": "skills/mattpocock/tdd/SKILL.md",
+          "source_path": "skills/engineering/tdd/SKILL.md",
+          "upstream_sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+          "installed_sha256": "28c896e05239e99e76bc9918784e039103fbadedb373dde834355626fa3a39f5"
+        },
+        {
+          "path": "skills/mattpocock/tdd/tests.md",
+          "source_path": "skills/engineering/tdd/tests.md",
+          "upstream_sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+          "installed_sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a"
+        }
+      ]
+    },
+    {
+      "name": "to-spec",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/to-spec/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/to-spec/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/to-spec/agents/openai.yaml",
+          "source_path": "skills/engineering/to-spec/agents/openai.yaml",
+          "upstream_sha256": "1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb",
+          "installed_sha256": "4971d2462b7c7962b6a018e5c8218893b51981dfa0102323d39282653413b7fa"
+        },
+        {
+          "path": "skills/mattpocock/to-spec/SKILL.md",
+          "source_path": "skills/engineering/to-spec/SKILL.md",
+          "upstream_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+          "installed_sha256": "eecf2c08a24bce07c9c57d59c22049b346f57d841bc498cee0c9d3b411a7f5cf"
+        }
+      ]
+    },
+    {
+      "name": "to-tickets",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/to-tickets/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/to-tickets/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/to-tickets/agents/openai.yaml",
+          "source_path": "skills/engineering/to-tickets/agents/openai.yaml",
+          "upstream_sha256": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090",
+          "installed_sha256": "5ab32fb402548dc3f1ef97de0c9f36806182c2e54cd4953ba5de268bfa07841a"
+        },
+        {
+          "path": "skills/mattpocock/to-tickets/SKILL.md",
+          "source_path": "skills/engineering/to-tickets/SKILL.md",
+          "upstream_sha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+          "installed_sha256": "bc5dcc64f53d97f003e4bc6d513b020b8d28a016e1857985f69b13184b38e720"
+        }
+      ]
+    },
+    {
+      "name": "triage",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/triage/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/triage/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/triage/AGENT-BRIEF.md",
+          "source_path": "skills/engineering/triage/AGENT-BRIEF.md",
+          "upstream_sha256": "7f5f87fed3033df1b06e083c480f3e847b1fbb0647746b8a4c6a50f9f26ef44f",
+          "installed_sha256": "7f5f87fed3033df1b06e083c480f3e847b1fbb0647746b8a4c6a50f9f26ef44f"
+        },
+        {
+          "path": "skills/mattpocock/triage/agents/openai.yaml",
+          "source_path": "skills/engineering/triage/agents/openai.yaml",
+          "upstream_sha256": "2e683717720cf456d165d0bb1a68bb600d0b6a8ccb61841c172e50d26f95351c",
+          "installed_sha256": "44622d2500d6905eccf443e755273aa37c9c52c3ba87343f46968d0977ae6929"
+        },
+        {
+          "path": "skills/mattpocock/triage/OUT-OF-SCOPE.md",
+          "source_path": "skills/engineering/triage/OUT-OF-SCOPE.md",
+          "upstream_sha256": "1fbf9b432130c6380aa65813b55553cfda150309b27c595e183f8e335b8a190d",
+          "installed_sha256": "1fbf9b432130c6380aa65813b55553cfda150309b27c595e183f8e335b8a190d"
+        },
+        {
+          "path": "skills/mattpocock/triage/SKILL.md",
+          "source_path": "skills/engineering/triage/SKILL.md",
+          "upstream_sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+          "installed_sha256": "6b4344f5f025416954cced0f01714c4dc91ead40d654b92201ce24d6de2071f7"
+        }
+      ]
+    },
+    {
+      "name": "wayfinder",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/wayfinder/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/wayfinder/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/wayfinder/agents/openai.yaml",
+          "source_path": "skills/engineering/wayfinder/agents/openai.yaml",
+          "upstream_sha256": "88bc81a11a6d52ac67aeaa76b8b619e387020d47c5133a4dd4927fd15c4ad073",
+          "installed_sha256": "1b9bab5ad9bd93adecef3446519b22b9408ae5942ed8ae5b9260d64b44271565"
+        },
+        {
+          "path": "skills/mattpocock/wayfinder/SKILL.md",
+          "source_path": "skills/engineering/wayfinder/SKILL.md",
+          "upstream_sha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+          "installed_sha256": "9e77062d5f14c572500e0bb353948480d162fe7f7c901705711988249d80f62e"
+        }
+      ]
+    },
+    {
+      "name": "wizard",
+      "category": "engineering",
+      "manifest": "skills/mattpocock/wizard/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/wizard/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/wizard/agents/openai.yaml",
+          "source_path": "skills/engineering/wizard/agents/openai.yaml",
+          "upstream_sha256": "98f44d682d58e262f160dc59a8befc365e0aa65820dd0261864af26aa8e59d83",
+          "installed_sha256": "0f85d53b6fdcee003c7c2e980e3a877f426c992d0f6408fc480162141aaa3078"
+        },
+        {
+          "path": "skills/mattpocock/wizard/SKILL.md",
+          "source_path": "skills/engineering/wizard/SKILL.md",
+          "upstream_sha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1",
+          "installed_sha256": "678104eec9e4a94f9c83590f55282b13083243c84d12d58ce7a964217650e7ff"
+        },
+        {
+          "path": "skills/mattpocock/wizard/template.sh",
+          "source_path": "skills/engineering/wizard/template.sh",
+          "upstream_sha256": "6566f147299bc6f1d941e64591ed04385416d543e11f96f564c7228f5018d0ed",
+          "installed_sha256": "6566f147299bc6f1d941e64591ed04385416d543e11f96f564c7228f5018d0ed"
+        }
+      ]
+    },
+    {
+      "name": "chief-of-staff",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/chief-of-staff/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/chief-of-staff/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/chief-of-staff/agents/openai.yaml",
+          "source_path": "skills/in-progress/chief-of-staff/agents/openai.yaml",
+          "upstream_sha256": "c0f68ed9da6977adc97a791be3bb0830d301b2d27f9c635d92d6f325bffefb83",
+          "installed_sha256": "d25e4686fccf67f5a46853f9425df8ee302ce3fe0417808ec696b5b9c2b2892c"
+        },
+        {
+          "path": "skills/mattpocock/chief-of-staff/SKILL.md",
+          "source_path": "skills/in-progress/chief-of-staff/SKILL.md",
+          "upstream_sha256": "6cc6e47ab5022f3e45e5be0fedbb0f6e645f4f0190d6b0c51c7cd60c2d7c1d98",
+          "installed_sha256": "a3198f2a08b9af36e0d094d0790535d9d6d6f0d713b195996cd7f12a7557ead3"
+        }
+      ]
+    },
+    {
+      "name": "claude-handoff",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/claude-handoff/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/claude-handoff/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/claude-handoff/agents/openai.yaml",
+          "source_path": "skills/in-progress/claude-handoff/agents/openai.yaml",
+          "upstream_sha256": "2308a672978864633286fb9f0792b08657e501426b3f7883fc418d5d2eac5eb0",
+          "installed_sha256": "839fe2ff367f7beeb0935e8ffa40b216bf82669fdaa82b0fa7174e5b38e2d807"
+        },
+        {
+          "path": "skills/mattpocock/claude-handoff/SKILL.md",
+          "source_path": "skills/in-progress/claude-handoff/SKILL.md",
+          "upstream_sha256": "79357a18425d66d4c24048bedf83dceb79d3bba356f38014950f764a7fab4026",
+          "installed_sha256": "d311f7d67f3c8ca749e0893991bcda2ae7f5667e4dcbe32f735c932a39589692"
+        }
+      ]
+    },
+    {
+      "name": "loop-me",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/loop-me/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/loop-me/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/loop-me/agents/openai.yaml",
+          "source_path": "skills/in-progress/loop-me/agents/openai.yaml",
+          "upstream_sha256": "b66fa10079957051be6a812f45e55b67ac394b71d5ba88349962b4c9205802c3",
+          "installed_sha256": "6846d1e8a892e4da05ac617d90ea01a58425c80ae7cf4e68b7060615f11cf263"
+        },
+        {
+          "path": "skills/mattpocock/loop-me/SKILL.md",
+          "source_path": "skills/in-progress/loop-me/SKILL.md",
+          "upstream_sha256": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+          "installed_sha256": "3f871576e82de29e261aaf6f3ed003fcb201b53ac6538f1ad2a5d87f609c6302"
+        }
+      ]
+    },
+    {
+      "name": "setup-ts-deep-modules",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/setup-ts-deep-modules/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/setup-ts-deep-modules/agents/openai.yaml",
+          "source_path": "skills/in-progress/setup-ts-deep-modules/agents/openai.yaml",
+          "upstream_sha256": "159f680217d50747702620c05fd65734a152185b3219a8ca5ee4630878a354fa",
+          "installed_sha256": "d98fd7862ecb2f8dd4511c106a9ff37cd234b1668a0e23caaeb14d60e1d9c272"
+        },
+        {
+          "path": "skills/mattpocock/setup-ts-deep-modules/dependency-cruiser.config.cjs",
+          "source_path": "skills/in-progress/setup-ts-deep-modules/dependency-cruiser.config.cjs",
+          "upstream_sha256": "3c4973bec69f73b2117654abf9e666a7c28665b213be20e6d39869e29842428e",
+          "installed_sha256": "3c4973bec69f73b2117654abf9e666a7c28665b213be20e6d39869e29842428e"
+        },
+        {
+          "path": "skills/mattpocock/setup-ts-deep-modules/SKILL.md",
+          "source_path": "skills/in-progress/setup-ts-deep-modules/SKILL.md",
+          "upstream_sha256": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+          "installed_sha256": "773d49fdfbdae92ea69b5a62708db36a0b32f6382856ce7b3a44c2e8361957c1"
+        }
+      ]
+    },
+    {
+      "name": "writing-beats",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/writing-beats/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/writing-beats/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/writing-beats/agents/openai.yaml",
+          "source_path": "skills/in-progress/writing-beats/agents/openai.yaml",
+          "upstream_sha256": "ddaef01da61d8e3c5f482c4403033c20cf5823f08a1dbf1d4c871670831d01e2",
+          "installed_sha256": "67f46d2bd3520da3babb0eae0eb976cae76f279d68aa9029203cad7543758b32"
+        },
+        {
+          "path": "skills/mattpocock/writing-beats/SKILL.md",
+          "source_path": "skills/in-progress/writing-beats/SKILL.md",
+          "upstream_sha256": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+          "installed_sha256": "8c6276a044be08ef5996265931fb0fa3b5e4b80ea7c69d753d0957a08e73b8a0"
+        }
+      ]
+    },
+    {
+      "name": "writing-fragments",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/writing-fragments/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/writing-fragments/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/writing-fragments/agents/openai.yaml",
+          "source_path": "skills/in-progress/writing-fragments/agents/openai.yaml",
+          "upstream_sha256": "81167f25ee8ea1bb4b4958f12b6702ea972ad31b05e03ec91e39fa4bae0c2641",
+          "installed_sha256": "a33f3c6700dc8c66de520dd21b6184255af9038495e3dac55378f6e7347863e9"
+        },
+        {
+          "path": "skills/mattpocock/writing-fragments/SKILL.md",
+          "source_path": "skills/in-progress/writing-fragments/SKILL.md",
+          "upstream_sha256": "298b0edd23df229183630de592ed8aa4289233560f2040691f6eb77caeaad4ea",
+          "installed_sha256": "614d48984ac87479d8e579406cc5f8b68a8f8a76c443e6819adee83bbbeac58d"
+        }
+      ]
+    },
+    {
+      "name": "writing-shape",
+      "category": "in-progress",
+      "manifest": "skills/mattpocock/writing-shape/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/in-progress/writing-shape/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/writing-shape/agents/openai.yaml",
+          "source_path": "skills/in-progress/writing-shape/agents/openai.yaml",
+          "upstream_sha256": "56de45430e23104ff178415f5ecf7821d51a9cfabd8814b1607ebf39da2ef5cd",
+          "installed_sha256": "c74a974ded6777c2476053930ee823916ed903760aacac107566e78a3564d893"
+        },
+        {
+          "path": "skills/mattpocock/writing-shape/SKILL.md",
+          "source_path": "skills/in-progress/writing-shape/SKILL.md",
+          "upstream_sha256": "f5e6c57bdd85178ace4a260c92f46da6b64ddee18215b461d875739c68976f72",
+          "installed_sha256": "c0ffb398c7afd89c6d494e9400c511a17daf1c79c65ff8838ec7060f42fe4d95"
+        }
+      ]
+    },
+    {
+      "name": "git-guardrails-claude-code",
+      "category": "misc",
+      "manifest": "skills/mattpocock/git-guardrails-claude-code/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/misc/git-guardrails-claude-code/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/git-guardrails-claude-code/agents/openai.yaml",
+          "source_path": "skills/misc/git-guardrails-claude-code/agents/openai.yaml",
+          "upstream_sha256": "d53cd783fc0ac208dec9a4c267989284384785aab6422dccdaed42f9e40243ec",
+          "installed_sha256": "5f2dddc129f3c172e8e8dfc833885b1e8f46159b5194f78697f204c63249157e"
+        },
+        {
+          "path": "skills/mattpocock/git-guardrails-claude-code/scripts/block-dangerous-git.sh",
+          "source_path": "skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh",
+          "upstream_sha256": "234922b83c0a1737ee7300806c21ac0f389b07aaeb65c2d71ccedafbc5e1ea4b",
+          "installed_sha256": "234922b83c0a1737ee7300806c21ac0f389b07aaeb65c2d71ccedafbc5e1ea4b"
+        },
+        {
+          "path": "skills/mattpocock/git-guardrails-claude-code/SKILL.md",
+          "source_path": "skills/misc/git-guardrails-claude-code/SKILL.md",
+          "upstream_sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+          "installed_sha256": "e82f370567b371c7bdc8f9634560d7938b4066ea2eae93a58c50e45354ab5006"
+        }
+      ]
+    },
+    {
+      "name": "migrate-to-shoehorn",
+      "category": "misc",
+      "manifest": "skills/mattpocock/migrate-to-shoehorn/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/misc/migrate-to-shoehorn/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/migrate-to-shoehorn/agents/openai.yaml",
+          "source_path": "skills/misc/migrate-to-shoehorn/agents/openai.yaml",
+          "upstream_sha256": "395c2db852e66a199f1cd07f7ed92d66cb6f0787460c5475926f1a5e778b699d",
+          "installed_sha256": "87935c1c7a65d7483358a730e761fbf1421651dcbb620a916c1176291c96b163"
+        },
+        {
+          "path": "skills/mattpocock/migrate-to-shoehorn/SKILL.md",
+          "source_path": "skills/misc/migrate-to-shoehorn/SKILL.md",
+          "upstream_sha256": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72",
+          "installed_sha256": "e035b5be6598bf7613277bb8f7b1b95cc56e3faa7b6c819555d355557899b029"
+        }
+      ]
+    },
+    {
+      "name": "scaffold-exercises",
+      "category": "misc",
+      "manifest": "skills/mattpocock/scaffold-exercises/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/misc/scaffold-exercises/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/scaffold-exercises/agents/openai.yaml",
+          "source_path": "skills/misc/scaffold-exercises/agents/openai.yaml",
+          "upstream_sha256": "525b33913340bea7947ad2de17f2a7c5fb94be543345fe80ae753b9a44ba601d",
+          "installed_sha256": "0717782b7c854ab93d903f54d4e51af664d667b563a0354a879627354c53457f"
+        },
+        {
+          "path": "skills/mattpocock/scaffold-exercises/SKILL.md",
+          "source_path": "skills/misc/scaffold-exercises/SKILL.md",
+          "upstream_sha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+          "installed_sha256": "b0730d55d80e06cb41db1dd55a2014db9aec66f413fd218d5d49bf93ab893e3f"
+        }
+      ]
+    },
+    {
+      "name": "setup-pre-commit",
+      "category": "misc",
+      "manifest": "skills/mattpocock/setup-pre-commit/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/misc/setup-pre-commit/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/setup-pre-commit/agents/openai.yaml",
+          "source_path": "skills/misc/setup-pre-commit/agents/openai.yaml",
+          "upstream_sha256": "acf41db398c5c43afe504008bb7d615a97b6498b0f1f6c5b2395254c0bfb57d1",
+          "installed_sha256": "dbdba646dfbb6beb588418b43897a46ca58ac3b6ba5a8b8a468d5e3d0d2092a3"
+        },
+        {
+          "path": "skills/mattpocock/setup-pre-commit/SKILL.md",
+          "source_path": "skills/misc/setup-pre-commit/SKILL.md",
+          "upstream_sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98",
+          "installed_sha256": "2aa7f153d461f9cf4c63b0b3dac986c1dddef0977528818738061638d7addbb3"
+        }
+      ]
+    },
+    {
+      "name": "grill-me",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/grill-me/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/grill-me/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/grill-me/agents/openai.yaml",
+          "source_path": "skills/productivity/grill-me/agents/openai.yaml",
+          "upstream_sha256": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b",
+          "installed_sha256": "2e434579dcc4c5d2383f1c34ac52a188b5c1356d0982870f8917499401b508d8"
+        },
+        {
+          "path": "skills/mattpocock/grill-me/SKILL.md",
+          "source_path": "skills/productivity/grill-me/SKILL.md",
+          "upstream_sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+          "installed_sha256": "2ba4246557521cb3c91e09c86799f5421c989843ae3e8bd470180fa60ae1adb8"
+        }
+      ]
+    },
+    {
+      "name": "grilling",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/grilling/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/grilling/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/grilling/agents/openai.yaml",
+          "source_path": "skills/productivity/grilling/agents/openai.yaml",
+          "upstream_sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+          "installed_sha256": "306da9fd5b81ac3d4d13dfdfdb13d2ebd0fe043b6993541a405aa603de376b88"
+        },
+        {
+          "path": "skills/mattpocock/grilling/SKILL.md",
+          "source_path": "skills/productivity/grilling/SKILL.md",
+          "upstream_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+          "installed_sha256": "a235ce37baf396c32650151befd62f825aba3af993e85dc8271694fa461848a5"
+        }
+      ]
+    },
+    {
+      "name": "handoff",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/handoff/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/handoff/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/handoff/agents/openai.yaml",
+          "source_path": "skills/productivity/handoff/agents/openai.yaml",
+          "upstream_sha256": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28",
+          "installed_sha256": "2ce3217481c1a46f33a4487c17f34249a68edc4f8b26cfb75ac26a19fd0c2383"
+        },
+        {
+          "path": "skills/mattpocock/handoff/SKILL.md",
+          "source_path": "skills/productivity/handoff/SKILL.md",
+          "upstream_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+          "installed_sha256": "c62c4ffb150aebcd700b9df190294a4607442a452a810a248f95ca240bb348df"
+        }
+      ]
+    },
+    {
+      "name": "teach",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/teach/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/teach/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/teach/agents/openai.yaml",
+          "source_path": "skills/productivity/teach/agents/openai.yaml",
+          "upstream_sha256": "5856f3ae8aec742f1499c640aecdd5f1d6af5fa210a7c6ec794de8263a6f733f",
+          "installed_sha256": "c4ddc2b24b73fb2f2b433328b94cb2208574ac4947915bed04300ada4a4ab9a1"
+        },
+        {
+          "path": "skills/mattpocock/teach/GLOSSARY-FORMAT.md",
+          "source_path": "skills/productivity/teach/GLOSSARY-FORMAT.md",
+          "upstream_sha256": "9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210",
+          "installed_sha256": "9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210"
+        },
+        {
+          "path": "skills/mattpocock/teach/LEARNING-RECORD-FORMAT.md",
+          "source_path": "skills/productivity/teach/LEARNING-RECORD-FORMAT.md",
+          "upstream_sha256": "701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052",
+          "installed_sha256": "701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052"
+        },
+        {
+          "path": "skills/mattpocock/teach/MISSION-FORMAT.md",
+          "source_path": "skills/productivity/teach/MISSION-FORMAT.md",
+          "upstream_sha256": "8cacbb3c0644d3ae0ea4965564797099401a6930a23f7cf462918576587f2418",
+          "installed_sha256": "8cacbb3c0644d3ae0ea4965564797099401a6930a23f7cf462918576587f2418"
+        },
+        {
+          "path": "skills/mattpocock/teach/RESOURCES-FORMAT.md",
+          "source_path": "skills/productivity/teach/RESOURCES-FORMAT.md",
+          "upstream_sha256": "e9cacf34026e11a8d1c8f9de88abe5bcbf654f4ebdb25cae8c0de0d5f48f44ec",
+          "installed_sha256": "e9cacf34026e11a8d1c8f9de88abe5bcbf654f4ebdb25cae8c0de0d5f48f44ec"
+        },
+        {
+          "path": "skills/mattpocock/teach/SKILL.md",
+          "source_path": "skills/productivity/teach/SKILL.md",
+          "upstream_sha256": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba",
+          "installed_sha256": "035fd215cecfa04a6861fc7b2f8601961f7b47a26361152e20a5230a5eb74d1e"
+        }
+      ]
+    },
+    {
+      "name": "to-questionnaire",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/to-questionnaire/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/to-questionnaire/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/to-questionnaire/agents/openai.yaml",
+          "source_path": "skills/productivity/to-questionnaire/agents/openai.yaml",
+          "upstream_sha256": "9e8a06c38c8842eea8d4922cb9d1ead8e3ace647bab259b943c994a1b4742bc2",
+          "installed_sha256": "b018bb04f4f9427d0c252b653987484f06fa82f7126a82b9830dfc9244f988c0"
+        },
+        {
+          "path": "skills/mattpocock/to-questionnaire/SKILL.md",
+          "source_path": "skills/productivity/to-questionnaire/SKILL.md",
+          "upstream_sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+          "installed_sha256": "f28f3c62c78d3db60d31b4c8a9e4860f33cc09f8671bf705e8e9aedd1638075b"
+        }
+      ]
+    },
+    {
+      "name": "wait-what",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/wait-what/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/wait-what/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/wait-what/agents/openai.yaml",
+          "source_path": "skills/productivity/wait-what/agents/openai.yaml",
+          "upstream_sha256": "b41faadf741d51e4ea184148b2d1854d93f947aaf754c7844f70a00f04194999",
+          "installed_sha256": "a635ff1fccb62a7507228ed8abe63f3f92fe9b4919ae70130d4a90552936d384"
+        },
+        {
+          "path": "skills/mattpocock/wait-what/SKILL.md",
+          "source_path": "skills/productivity/wait-what/SKILL.md",
+          "upstream_sha256": "d961bb37defd975c539427edb8f450cdbccdcdd552e213c1ece46676a7970905",
+          "installed_sha256": "66386c8c75c5c97a767a12d59fa3e03419a96b8a523a9593900c28aa745a28c4"
+        }
+      ]
+    },
+    {
+      "name": "writing-for-agents",
+      "category": "productivity",
+      "manifest": "skills/mattpocock/writing-for-agents/SKILL.md",
+      "source_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/productivity/writing-for-agents/SKILL.md",
+      "revision": "49dd158d1076134a641b33efb035946536778336",
+      "license": "skills/mattpocock/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Portable invocation note and direct named skill paths"
+      ],
+      "files": [
+        {
+          "path": "skills/mattpocock/writing-for-agents/agents/openai.yaml",
+          "source_path": "skills/productivity/writing-for-agents/agents/openai.yaml",
+          "upstream_sha256": "eacb24b2a618cfb81dacb0416f4fdd75ddf3a8060f8ddb99aae1b1e301907e4b",
+          "installed_sha256": "61889e50b15129c05ffef08c581aa8ea4ea3f0e2e12088331e1e346e5df13db3"
+        },
+        {
+          "path": "skills/mattpocock/writing-for-agents/SKILL-MECHANICS.md",
+          "source_path": "skills/productivity/writing-for-agents/SKILL-MECHANICS.md",
+          "upstream_sha256": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
+          "installed_sha256": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059"
+        },
+        {
+          "path": "skills/mattpocock/writing-for-agents/SKILL.md",
+          "source_path": "skills/productivity/writing-for-agents/SKILL.md",
+          "upstream_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+          "installed_sha256": "2cd6dbf05eb4be9e04a98002b68714e997cae7b1d66f6a9143314b7520f14056"
+        }
+      ]
+    },
+    {
+      "name": "ponytail",
+      "category": "ponytail",
+      "manifest": "skills/ponytail/ponytail/SKILL.md",
+      "source_url": "https://github.com/DietrichGebert/ponytail/blob/9b58c1ffb790c075ca32e70a89cf1d80588f4abf/skills/ponytail/SKILL.md",
+      "revision": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "acquisition_date": "2026-10-11",
+      "license": "skills/ponytail/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Ponytail-prefixed UI label",
+        "Normalized folded YAML description",
+        "Portable path invocation and Windows search guidance",
+        "Upstream body retained with portable invocation precedence",
+        "No native plugin hooks installed"
+      ],
+      "files": [
+        {
+          "path": "skills/ponytail/ponytail/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "427d457b0848576e81ca0c7df9ad890766a767f18e7248239f1e9713074a376d",
+          "installed_sha256": "427d457b0848576e81ca0c7df9ad890766a767f18e7248239f1e9713074a376d"
+        },
+        {
+          "path": "skills/ponytail/ponytail/SKILL.md",
+          "source_path": "skills/ponytail/SKILL.md",
+          "upstream_sha256": "ba68ff26239c3c3b05b2a9a47ee0d9a6b93a69639a2555ec87a5d44bffaf2f0c",
+          "installed_sha256": "89dc49822036b6113947790b4b36d0e52a4bdbd6897e631c6d6edcbf5b0332a5"
+        }
+      ]
+    },
+    {
+      "name": "ponytail-review",
+      "category": "ponytail",
+      "manifest": "skills/ponytail/ponytail-review/SKILL.md",
+      "source_url": "https://github.com/DietrichGebert/ponytail/blob/9b58c1ffb790c075ca32e70a89cf1d80588f4abf/skills/ponytail-review/SKILL.md",
+      "revision": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "acquisition_date": "2026-10-11",
+      "license": "skills/ponytail/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Ponytail-prefixed UI label",
+        "Normalized folded YAML description",
+        "Portable path invocation and Windows search guidance",
+        "Upstream body retained with portable invocation precedence",
+        "No native plugin hooks installed"
+      ],
+      "files": [
+        {
+          "path": "skills/ponytail/ponytail-review/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "1742dc50ec5ba5d6be99bfc66389bd1339f3444dc3319cde4a310e6dfb35f15f",
+          "installed_sha256": "1742dc50ec5ba5d6be99bfc66389bd1339f3444dc3319cde4a310e6dfb35f15f"
+        },
+        {
+          "path": "skills/ponytail/ponytail-review/SKILL.md",
+          "source_path": "skills/ponytail-review/SKILL.md",
+          "upstream_sha256": "33fe4ebe22a460924e5d4a261e223df22e409cc94ab76182bee9fb91a3ef022e",
+          "installed_sha256": "110f7a80865afd554cec36b7aeb055f29bedb274d953f8ee603a3074d4e0bb8c"
+        }
+      ]
+    },
+    {
+      "name": "ponytail-audit",
+      "category": "ponytail",
+      "manifest": "skills/ponytail/ponytail-audit/SKILL.md",
+      "source_url": "https://github.com/DietrichGebert/ponytail/blob/9b58c1ffb790c075ca32e70a89cf1d80588f4abf/skills/ponytail-audit/SKILL.md",
+      "revision": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "acquisition_date": "2026-10-11",
+      "license": "skills/ponytail/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Ponytail-prefixed UI label",
+        "Normalized folded YAML description",
+        "Portable path invocation and Windows search guidance",
+        "Upstream body retained with portable invocation precedence",
+        "No native plugin hooks installed"
+      ],
+      "files": [
+        {
+          "path": "skills/ponytail/ponytail-audit/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "66cc6397e6d41108af26d9efc580c91e187878f7380ff93267dc9550fa65813c",
+          "installed_sha256": "66cc6397e6d41108af26d9efc580c91e187878f7380ff93267dc9550fa65813c"
+        },
+        {
+          "path": "skills/ponytail/ponytail-audit/SKILL.md",
+          "source_path": "skills/ponytail-audit/SKILL.md",
+          "upstream_sha256": "2b3223a02c386d1263e1b08343cb8eb3a53e444cdafb1d79e26c8ec2a8fcad28",
+          "installed_sha256": "a8ab0be897c734e8a16747b6f45b11050d4cdb578e06c697eee89d54c6f5364f"
+        }
+      ]
+    },
+    {
+      "name": "ponytail-debt",
+      "category": "ponytail",
+      "manifest": "skills/ponytail/ponytail-debt/SKILL.md",
+      "source_url": "https://github.com/DietrichGebert/ponytail/blob/9b58c1ffb790c075ca32e70a89cf1d80588f4abf/skills/ponytail-debt/SKILL.md",
+      "revision": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "acquisition_date": "2026-10-11",
+      "license": "skills/ponytail/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Ponytail-prefixed UI label",
+        "Normalized folded YAML description",
+        "Portable path invocation and Windows search guidance",
+        "Upstream body retained with portable invocation precedence",
+        "No native plugin hooks installed"
+      ],
+      "files": [
+        {
+          "path": "skills/ponytail/ponytail-debt/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "8db5d4de88347832d8fe03d4b5b1f6648c2800393fa8c376d76d8369451afdee",
+          "installed_sha256": "8db5d4de88347832d8fe03d4b5b1f6648c2800393fa8c376d76d8369451afdee"
+        },
+        {
+          "path": "skills/ponytail/ponytail-debt/SKILL.md",
+          "source_path": "skills/ponytail-debt/SKILL.md",
+          "upstream_sha256": "63168f0e1475affb1211bc004261aa51a037f79e484571aae484bf27fe4d17c2",
+          "installed_sha256": "75308cb8c3db0c877fc59e4f18ba00c8f6e2d9331402e8b2cc3222e4f7851a8b"
+        }
+      ]
+    },
+    {
+      "name": "ponytail-gain",
+      "category": "ponytail",
+      "manifest": "skills/ponytail/ponytail-gain/SKILL.md",
+      "source_url": "https://github.com/DietrichGebert/ponytail/blob/9b58c1ffb790c075ca32e70a89cf1d80588f4abf/skills/ponytail-gain/SKILL.md",
+      "revision": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "acquisition_date": "2026-10-11",
+      "license": "skills/ponytail/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Ponytail-prefixed UI label",
+        "Normalized folded YAML description",
+        "Portable path invocation and Windows search guidance",
+        "Upstream body retained with portable invocation precedence",
+        "Benchmark evidence bundled"
+      ],
+      "files": [
+        {
+          "path": "skills/ponytail/ponytail-gain/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "5c4329a594589c2682612ef26358b52c6471770ec2a16c1c0d3775d92b36373c",
+          "installed_sha256": "5c4329a594589c2682612ef26358b52c6471770ec2a16c1c0d3775d92b36373c"
+        },
+        {
+          "path": "skills/ponytail/ponytail-gain/benchmark-report.txt",
+          "source_path": "benchmarks/results/2026-10-07-agentic.md",
+          "upstream_sha256": "a985555ce1835e82c17aa425f2d3743e0373345c8e73ad761923a700dcc341e0",
+          "installed_sha256": "a985555ce1835e82c17aa425f2d3743e0373345c8e73ad761923a700dcc341e0"
+        },
+        {
+          "path": "skills/ponytail/ponytail-gain/SKILL.md",
+          "source_path": "skills/ponytail-gain/SKILL.md",
+          "upstream_sha256": "60e05eaf65e8e404c8975a944eda9d3ed4ae3345478b3550b0e74570982c187e",
+          "installed_sha256": "5bb2232c742a7d325f31d2aa7a6cff3d48f92e55320ec6d7d71bcb50c30f50c7"
+        },
+        {
+          "path": "skills/ponytail/ponytail-gain/upstream-readme.txt",
+          "source_path": "README.md",
+          "upstream_sha256": "e31b1e24488556f2adb8ec2226331fc4a038297839cd8f61e4a8782a7a0e8705",
+          "installed_sha256": "e31b1e24488556f2adb8ec2226331fc4a038297839cd8f61e4a8782a7a0e8705"
+        }
+      ]
+    },
+    {
+      "name": "ponytail-help",
+      "category": "ponytail",
+      "manifest": "skills/ponytail/ponytail-help/SKILL.md",
+      "source_url": "https://github.com/DietrichGebert/ponytail/blob/9b58c1ffb790c075ca32e70a89cf1d80588f4abf/skills/ponytail-help/SKILL.md",
+      "revision": "9b58c1ffb790c075ca32e70a89cf1d80588f4abf",
+      "acquisition_date": "2026-10-11",
+      "license": "skills/ponytail/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Ponytail-prefixed UI label",
+        "Normalized folded YAML description",
+        "Portable path invocation and Windows search guidance",
+        "Help rewritten for selection-first portable setup",
+        "No native plugin hooks installed"
+      ],
+      "files": [
+        {
+          "path": "skills/ponytail/ponytail-help/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "d5ad8da99d88e82a44967e583b47a13acc1840ce25184d32935ee8bc41538974",
+          "installed_sha256": "d5ad8da99d88e82a44967e583b47a13acc1840ce25184d32935ee8bc41538974"
+        },
+        {
+          "path": "skills/ponytail/ponytail-help/SKILL.md",
+          "source_path": "skills/ponytail-help/SKILL.md",
+          "upstream_sha256": "2927276bc9c10221ce8bcf80adb798db130cd70eb33a95db91ab3a0d105f5109",
+          "installed_sha256": "44e2ca7a745b45f35e5bd5449d86cfc88539fd3a052518184500f38ccbd20d74"
+        }
+      ]
+    },
+    {
+      "name": "brainstorming",
+      "category": "superpowers",
+      "manifest": "skills/obra/brainstorming/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/brainstorming/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Documented telemetry-off process setting for optional visual companion; scripts unchanged",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/brainstorming/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "bc88124447c4af0119ff4040aa05214a26abd9bcfec0589dac8b267a71703f8c",
+          "installed_sha256": "bc88124447c4af0119ff4040aa05214a26abd9bcfec0589dac8b267a71703f8c"
+        },
+        {
+          "path": "skills/obra/brainstorming/builder-check-prompt.md",
+          "source_path": "skills/brainstorming/builder-check-prompt.md",
+          "upstream_sha256": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e",
+          "installed_sha256": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e"
+        },
+        {
+          "path": "skills/obra/brainstorming/scripts/frame-template.html",
+          "source_path": "skills/brainstorming/scripts/frame-template.html",
+          "upstream_sha256": "6a8a4e58bd6a44b904e2e3c57de774481d909204597e1498de53f1b2fecc4c4e",
+          "installed_sha256": "6a8a4e58bd6a44b904e2e3c57de774481d909204597e1498de53f1b2fecc4c4e"
+        },
+        {
+          "path": "skills/obra/brainstorming/scripts/helper.js",
+          "source_path": "skills/brainstorming/scripts/helper.js",
+          "upstream_sha256": "43c6d69954a46ec34a2a262bcc62a9a7e83e839c739f199cb72646d397c686e3",
+          "installed_sha256": "43c6d69954a46ec34a2a262bcc62a9a7e83e839c739f199cb72646d397c686e3"
+        },
+        {
+          "path": "skills/obra/brainstorming/scripts/server.cjs",
+          "source_path": "skills/brainstorming/scripts/server.cjs",
+          "upstream_sha256": "763abf96510e0b892a1141397b31aa82ef900cf87ed34dde94bc8782baf4a7ca",
+          "installed_sha256": "763abf96510e0b892a1141397b31aa82ef900cf87ed34dde94bc8782baf4a7ca",
+          "platform_path_literals": [
+            "\u002ftmp\u002f"
+          ]
+        },
+        {
+          "path": "skills/obra/brainstorming/scripts/start-server.sh",
+          "source_path": "skills/brainstorming/scripts/start-server.sh",
+          "upstream_sha256": "a4e5ae84275bcaacd2f84345afeabe59cf7b00ba080e123da7cc1fb226f12847",
+          "installed_sha256": "a4e5ae84275bcaacd2f84345afeabe59cf7b00ba080e123da7cc1fb226f12847",
+          "platform_path_literals": [
+            "\u002ftmp\u002f"
+          ]
+        },
+        {
+          "path": "skills/obra/brainstorming/scripts/stop-server.sh",
+          "source_path": "skills/brainstorming/scripts/stop-server.sh",
+          "upstream_sha256": "0b5ccbbd57f62d3ed88993f7940b5ee0e5c0fc9b21c550c623da4f6292e47daf",
+          "installed_sha256": "0b5ccbbd57f62d3ed88993f7940b5ee0e5c0fc9b21c550c623da4f6292e47daf",
+          "platform_path_literals": [
+            "\u002ftmp\u002f"
+          ]
+        },
+        {
+          "path": "skills/obra/brainstorming/SKILL.md",
+          "source_path": "skills/brainstorming/SKILL.md",
+          "upstream_sha256": "6ee10d1481b8a2580d5336ff66c5c08acc9d4b251b13bbc3bfd31be99c261d43",
+          "installed_sha256": "4154d24b464dbacbd64badfafcdcb9f6c0a01ebad111831f7fa21f3a0d367444"
+        },
+        {
+          "path": "skills/obra/brainstorming/visual-companion.md",
+          "source_path": "skills/brainstorming/visual-companion.md",
+          "upstream_sha256": "6ffcb038b53254bd31debaa15e12dcd4ff24bd63d690e0b644ac6396701cf2e2",
+          "installed_sha256": "502523b31ab8111f745f750623f0be420276f5e70723c8b255503b266b7eb6ce"
+        }
+      ]
+    },
+    {
+      "name": "diagnosing-superpowers",
+      "category": "superpowers",
+      "manifest": "skills/obra/diagnosing-superpowers/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/diagnosing-superpowers/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/diagnosing-superpowers/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "8fdffe76bd4cd768fb498fa98af8f29f06fd0b37a0630b35f7f7eb49e1da672d",
+          "installed_sha256": "8fdffe76bd4cd768fb498fa98af8f29f06fd0b37a0630b35f7f7eb49e1da672d"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/analyst-common.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/analyst-common.md",
+          "upstream_sha256": "88801c36070be2a54a8a9a29632b01ab21db053e2e76ee49b5252a9b74ca4090",
+          "installed_sha256": "88801c36070be2a54a8a9a29632b01ab21db053e2e76ee49b5252a9b74ca4090"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/cost-and-time.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/cost-and-time.md",
+          "upstream_sha256": "fe97a66d4db3b436816ef82694bda413b522b3a862dd41978da01e358fffecc4",
+          "installed_sha256": "fe97a66d4db3b436816ef82694bda413b522b3a862dd41978da01e358fffecc4"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/plan-adherence.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/plan-adherence.md",
+          "upstream_sha256": "1dcbab82033598a2e9c9ee42e950d4b1822d2c871c02cef9e102cdd5cbbda113",
+          "installed_sha256": "1dcbab82033598a2e9c9ee42e950d4b1822d2c871c02cef9e102cdd5cbbda113"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/quality-evidence.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/quality-evidence.md",
+          "upstream_sha256": "749d11cf678f379ed77a29274cad456634e0284aa523639a1a214a9f2b986eb1",
+          "installed_sha256": "749d11cf678f379ed77a29274cad456634e0284aa523639a1a214a9f2b986eb1"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/repeated-work.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/repeated-work.md",
+          "upstream_sha256": "895027f2dfa4b1b8bcdb7ac9aec8d45a80bff212fad6ec6cad5ab38fa68322f5",
+          "installed_sha256": "895027f2dfa4b1b8bcdb7ac9aec8d45a80bff212fad6ec6cad5ab38fa68322f5"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/request-conflicts.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/request-conflicts.md",
+          "upstream_sha256": "e800e38d8b7752c212c76c5c3ed75cd78b749684263ea0c313586f26af6f4b5c",
+          "installed_sha256": "e800e38d8b7752c212c76c5c3ed75cd78b749684263ea0c313586f26af6f4b5c"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/scrub-audit.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/scrub-audit.md",
+          "upstream_sha256": "5cc48f05a7f81f5f7e05e0c7ceafc0fb8774bcaf75fe88dcb5c7e408026c70ad",
+          "installed_sha256": "5cc48f05a7f81f5f7e05e0c7ceafc0fb8774bcaf75fe88dcb5c7e408026c70ad"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/scrub.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/scrub.md",
+          "upstream_sha256": "854cb3320cc5377b493cea2f72519d67983464882db68a0f408a7d0a0f040b8c",
+          "installed_sha256": "854cb3320cc5377b493cea2f72519d67983464882db68a0f408a7d0a0f040b8c"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/similar-session.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/similar-session.md",
+          "upstream_sha256": "b190f713b463df2bb5ec3914647e204074d1bd50643a53159db6d13cace916c1",
+          "installed_sha256": "b190f713b463df2bb5ec3914647e204074d1bd50643a53159db6d13cace916c1"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/skill-timeline.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/skill-timeline.md",
+          "upstream_sha256": "45d604d583b57a77b9033eced8eb875ef342af70fcd66cf7d15c6dc89964890f",
+          "installed_sha256": "45d604d583b57a77b9033eced8eb875ef342af70fcd66cf7d15c6dc89964890f"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/prompts/stumbles.md",
+          "source_path": "skills/diagnosing-superpowers/prompts/stumbles.md",
+          "upstream_sha256": "1f2d1f048aff7b8b400006301f1ce8c232ecc7e9d5f705af27a849b2c03ea2e7",
+          "installed_sha256": "1f2d1f048aff7b8b400006301f1ce8c232ecc7e9d5f705af27a849b2c03ea2e7"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/references/context-safety.md",
+          "source_path": "skills/diagnosing-superpowers/references/context-safety.md",
+          "upstream_sha256": "e6be2bd3495f454d4bedee9484d728d245d1fa656e11fc4ceec5693c16e4730a",
+          "installed_sha256": "e6be2bd3495f454d4bedee9484d728d245d1fa656e11fc4ceec5693c16e4730a"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/references/github-issues.md",
+          "source_path": "skills/diagnosing-superpowers/references/github-issues.md",
+          "upstream_sha256": "a656f5e15b21c7a200c39c038f5ede74b9d6ea3ceeb90f39af7e930c8d8424d6",
+          "installed_sha256": "a656f5e15b21c7a200c39c038f5ede74b9d6ea3ceeb90f39af7e930c8d8424d6"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/references/redaction-policy.md",
+          "source_path": "skills/diagnosing-superpowers/references/redaction-policy.md",
+          "upstream_sha256": "96b16f47074838fe2d7e609577d6f8b0ad460f8378b281a3f96ee23cb5a08bde",
+          "installed_sha256": "96b16f47074838fe2d7e609577d6f8b0ad460f8378b281a3f96ee23cb5a08bde"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/references/session-discovery.md",
+          "source_path": "skills/diagnosing-superpowers/references/session-discovery.md",
+          "upstream_sha256": "6d1dced083e5d978448a78df298cf515531b0eb39b2854a4a2afbffeb69a7435",
+          "installed_sha256": "6d1dced083e5d978448a78df298cf515531b0eb39b2854a4a2afbffeb69a7435"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/SKILL.md",
+          "source_path": "skills/diagnosing-superpowers/SKILL.md",
+          "upstream_sha256": "5a652f8132cc901eb5ca61f89157839f87a2f20aed037fc7a2b51051bc37cd19",
+          "installed_sha256": "1d3a4094448b39cf17beed56ffff4dcfef625fe7183fb290c6ba4f04f831ba20"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/templates/bundle-README.md",
+          "source_path": "skills/diagnosing-superpowers/templates/bundle-README.md",
+          "upstream_sha256": "2e6ddc6b106028d5ebd00a50ad93a77111d675c219ee1273cd0857869e8d51ec",
+          "installed_sha256": "2e6ddc6b106028d5ebd00a50ad93a77111d675c219ee1273cd0857869e8d51ec"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/templates/case.md",
+          "source_path": "skills/diagnosing-superpowers/templates/case.md",
+          "upstream_sha256": "597892462be83bc478536ec91f7c285f6dd25d119c560734a3a180fe8471301d",
+          "installed_sha256": "597892462be83bc478536ec91f7c285f6dd25d119c560734a3a180fe8471301d"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/templates/issue.md",
+          "source_path": "skills/diagnosing-superpowers/templates/issue.md",
+          "upstream_sha256": "8f28dbfe60602f77dda76d81815cb4e2dce7d3e2a93348890e1581be8310ac1f",
+          "installed_sha256": "8f28dbfe60602f77dda76d81815cb4e2dce7d3e2a93348890e1581be8310ac1f"
+        },
+        {
+          "path": "skills/obra/diagnosing-superpowers/templates/report.md",
+          "source_path": "skills/diagnosing-superpowers/templates/report.md",
+          "upstream_sha256": "38295d0fd785e8608f330815c59ebd7047942002ec7085aecbed54681f56b0c1",
+          "installed_sha256": "38295d0fd785e8608f330815c59ebd7047942002ec7085aecbed54681f56b0c1"
+        }
+      ]
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "category": "superpowers",
+      "manifest": "skills/obra/dispatching-parallel-agents/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/dispatching-parallel-agents/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/dispatching-parallel-agents/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "83e974fca8abb41ee7e5a84d57cc94d6548be124d3889ed63a74059e981fa485",
+          "installed_sha256": "83e974fca8abb41ee7e5a84d57cc94d6548be124d3889ed63a74059e981fa485"
+        },
+        {
+          "path": "skills/obra/dispatching-parallel-agents/SKILL.md",
+          "source_path": "skills/dispatching-parallel-agents/SKILL.md",
+          "upstream_sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+          "installed_sha256": "309a5391dd815a15dae4b1d102777dacd0faf9f790ef077b0b80064e28c4880e"
+        }
+      ]
+    },
+    {
+      "name": "executing-plans",
+      "category": "superpowers",
+      "manifest": "skills/obra/executing-plans/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/executing-plans/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/executing-plans/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "1644b4eb5cf9472d6cb6965a4260f08b0f8306f0670180f9f890931e859ee72c",
+          "installed_sha256": "1644b4eb5cf9472d6cb6965a4260f08b0f8306f0670180f9f890931e859ee72c"
+        },
+        {
+          "path": "skills/obra/executing-plans/scripts/task-done",
+          "source_path": "skills/executing-plans/scripts/task-done",
+          "upstream_sha256": "d0d4f2397c85a4426443ea955e699ef12568b41b408ec6122d4ec2433ee3a5f6",
+          "installed_sha256": "d0d4f2397c85a4426443ea955e699ef12568b41b408ec6122d4ec2433ee3a5f6"
+        },
+        {
+          "path": "skills/obra/executing-plans/scripts/task-start",
+          "source_path": "skills/executing-plans/scripts/task-start",
+          "upstream_sha256": "f833693c8fce3700fc9f841562d80f8015cd40f652c168a3405ac3e46947a1fe",
+          "installed_sha256": "f833693c8fce3700fc9f841562d80f8015cd40f652c168a3405ac3e46947a1fe"
+        },
+        {
+          "path": "skills/obra/executing-plans/SKILL.md",
+          "source_path": "skills/executing-plans/SKILL.md",
+          "upstream_sha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71",
+          "installed_sha256": "783b0989ed4ef76eb84e4e963e5a10e07bc5b599175ec74e9bc16a61aa4a3259"
+        }
+      ]
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "category": "superpowers",
+      "manifest": "skills/obra/finishing-a-development-branch/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/finishing-a-development-branch/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/finishing-a-development-branch/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "78baa050ee81bbcd6dd3d1857e9ef1eb535c65548d0d4e91631a30218f029524",
+          "installed_sha256": "78baa050ee81bbcd6dd3d1857e9ef1eb535c65548d0d4e91631a30218f029524"
+        },
+        {
+          "path": "skills/obra/finishing-a-development-branch/SKILL.md",
+          "source_path": "skills/finishing-a-development-branch/SKILL.md",
+          "upstream_sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+          "installed_sha256": "27be2f59509cad2c285c94df513933881041df42dbe7dbba4501c54aab006e5b"
+        }
+      ]
+    },
+    {
+      "name": "receiving-code-review",
+      "category": "superpowers",
+      "manifest": "skills/obra/receiving-code-review/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/receiving-code-review/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/receiving-code-review/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "d2b2f7c96603fec2148407e26c960c2b79ae36c2539f2a99ee48bdb007752525",
+          "installed_sha256": "d2b2f7c96603fec2148407e26c960c2b79ae36c2539f2a99ee48bdb007752525"
+        },
+        {
+          "path": "skills/obra/receiving-code-review/SKILL.md",
+          "source_path": "skills/receiving-code-review/SKILL.md",
+          "upstream_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+          "installed_sha256": "c5b182a868a14911ab14ed18561d215b33ea18daa27cb6952ff153121ddf2421"
+        }
+      ]
+    },
+    {
+      "name": "requesting-code-review",
+      "category": "superpowers",
+      "manifest": "skills/obra/requesting-code-review/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/requesting-code-review/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/requesting-code-review/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "a7df18111147e5967dab564c0b4cd953223a5e518ecfc3bfba527fbec2cd953b",
+          "installed_sha256": "a7df18111147e5967dab564c0b4cd953223a5e518ecfc3bfba527fbec2cd953b"
+        },
+        {
+          "path": "skills/obra/requesting-code-review/code-reviewer.md",
+          "source_path": "skills/requesting-code-review/code-reviewer.md",
+          "upstream_sha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb",
+          "installed_sha256": "9486494c03a5d13f2c64c76dc07564a2fe4709678275f24b1af86535de31bffd"
+        },
+        {
+          "path": "skills/obra/requesting-code-review/SKILL.md",
+          "source_path": "skills/requesting-code-review/SKILL.md",
+          "upstream_sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+          "installed_sha256": "f7a866a3bf84fe36be3249854af1e2b149161787a49c2edbd2d4b1cd55c7579f"
+        }
+      ]
+    },
+    {
+      "name": "subagent-driven-development",
+      "category": "superpowers",
+      "manifest": "skills/obra/subagent-driven-development/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/subagent-driven-development/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/subagent-driven-development/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "f5ec0078d3dd5379ef9dd06764b27e2e978a610285b560dc6cabf427c919cec4",
+          "installed_sha256": "f5ec0078d3dd5379ef9dd06764b27e2e978a610285b560dc6cabf427c919cec4"
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/implementer-prompt.md",
+          "source_path": "skills/subagent-driven-development/implementer-prompt.md",
+          "upstream_sha256": "81dd9d5a3fb0b09b96b5829f03b9796842f3199ef7591d1ba1c2db2a515f64d0",
+          "installed_sha256": "81dd9d5a3fb0b09b96b5829f03b9796842f3199ef7591d1ba1c2db2a515f64d0"
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/re-review-prompt.md",
+          "source_path": "skills/subagent-driven-development/re-review-prompt.md",
+          "upstream_sha256": "0828a5e9cbb12ba49f14621dd8c3953c48c0fc383e75bb5494f055ed0d6d824f",
+          "installed_sha256": "0828a5e9cbb12ba49f14621dd8c3953c48c0fc383e75bb5494f055ed0d6d824f"
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/scripts/review-package",
+          "source_path": "skills/subagent-driven-development/scripts/review-package",
+          "upstream_sha256": "f9275175b2276b1d5fdb1bae0bedaadd2a950659b7c6f311ea37ff85e1861b1f",
+          "installed_sha256": "f9275175b2276b1d5fdb1bae0bedaadd2a950659b7c6f311ea37ff85e1861b1f"
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/scripts/sdd-workspace",
+          "source_path": "skills/subagent-driven-development/scripts/sdd-workspace",
+          "upstream_sha256": "4fd9770e7a49b6bde488c0e92bac1b3bd01fcbdaf8f06b6c4efbe3a1abd99f86",
+          "installed_sha256": "4fd9770e7a49b6bde488c0e92bac1b3bd01fcbdaf8f06b6c4efbe3a1abd99f86",
+          "platform_path_literals": [
+            "C\u003a\u002fUsers\u002f",
+            "\u002fc\u002fUsers\u002f"
+          ]
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/scripts/task-brief",
+          "source_path": "skills/subagent-driven-development/scripts/task-brief",
+          "upstream_sha256": "cc563538e09abf719b34ddf4b2fa7a65cf3b301729039dbfa923cb060f729146",
+          "installed_sha256": "cc563538e09abf719b34ddf4b2fa7a65cf3b301729039dbfa923cb060f729146"
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/SKILL.md",
+          "source_path": "skills/subagent-driven-development/SKILL.md",
+          "upstream_sha256": "8dde5589ee083fb4999106d116f01c8fdaf3116a8a9813fdedeb80329de49046",
+          "installed_sha256": "884d49850a6ff9361e9c887fe3b4ba6dec1891650226d80fb821617099aec1d7"
+        },
+        {
+          "path": "skills/obra/subagent-driven-development/task-reviewer-prompt.md",
+          "source_path": "skills/subagent-driven-development/task-reviewer-prompt.md",
+          "upstream_sha256": "bfed55c8f19d0ff6ed57b0fe09127c92890e9311c6c73917129598826bf9ebe8",
+          "installed_sha256": "bfed55c8f19d0ff6ed57b0fe09127c92890e9311c6c73917129598826bf9ebe8"
+        }
+      ]
+    },
+    {
+      "name": "systematic-debugging",
+      "category": "superpowers",
+      "manifest": "skills/obra/systematic-debugging/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/systematic-debugging/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/systematic-debugging/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "fce1c4e00d20d4b00186126a1b4d383bd863cb49c1e86ef219d7872bfef9db44",
+          "installed_sha256": "fce1c4e00d20d4b00186126a1b4d383bd863cb49c1e86ef219d7872bfef9db44"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/condition-based-waiting-example.ts",
+          "source_path": "skills/systematic-debugging/condition-based-waiting-example.ts",
+          "upstream_sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+          "installed_sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/condition-based-waiting.md",
+          "source_path": "skills/systematic-debugging/condition-based-waiting.md",
+          "upstream_sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+          "installed_sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/CREATION-LOG.md",
+          "source_path": "skills/systematic-debugging/CREATION-LOG.md",
+          "upstream_sha256": "c24733a5b1821bd6bed1fc950261f0b9f4e90097e0bbb96459d8179713730789",
+          "installed_sha256": "c24733a5b1821bd6bed1fc950261f0b9f4e90097e0bbb96459d8179713730789"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/defense-in-depth.md",
+          "source_path": "skills/systematic-debugging/defense-in-depth.md",
+          "upstream_sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+          "installed_sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/find-polluter.sh",
+          "source_path": "skills/systematic-debugging/find-polluter.sh",
+          "upstream_sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+          "installed_sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/root-cause-tracing.md",
+          "source_path": "skills/systematic-debugging/root-cause-tracing.md",
+          "upstream_sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+          "installed_sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/SKILL.md",
+          "source_path": "skills/systematic-debugging/SKILL.md",
+          "upstream_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+          "installed_sha256": "95e5f425415159c26ce0718b7273c48ed58ecafa1fb3a8d99bff3154b23209a4"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/test-academic.md",
+          "source_path": "skills/systematic-debugging/test-academic.md",
+          "upstream_sha256": "fe2ba480d78ac0d686dc025f41c2a32a43d642bf533f91b0c6053a04d35d6486",
+          "installed_sha256": "fe2ba480d78ac0d686dc025f41c2a32a43d642bf533f91b0c6053a04d35d6486"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/test-pressure-1.md",
+          "source_path": "skills/systematic-debugging/test-pressure-1.md",
+          "upstream_sha256": "0b6a915db0054577819834c79be9eb614e97bddba10d73768e1fbe91cfed048a",
+          "installed_sha256": "0b6a915db0054577819834c79be9eb614e97bddba10d73768e1fbe91cfed048a"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/test-pressure-2.md",
+          "source_path": "skills/systematic-debugging/test-pressure-2.md",
+          "upstream_sha256": "b2030aeffba07050e8ad573ddf87486457c4a016a786bb326235bebd856f2016",
+          "installed_sha256": "b2030aeffba07050e8ad573ddf87486457c4a016a786bb326235bebd856f2016"
+        },
+        {
+          "path": "skills/obra/systematic-debugging/test-pressure-3.md",
+          "source_path": "skills/systematic-debugging/test-pressure-3.md",
+          "upstream_sha256": "96b50a52e2c7989c9cf20fb752c47c1e9a3a70dc362f8f7989f8f5b64dac7708",
+          "installed_sha256": "96b50a52e2c7989c9cf20fb752c47c1e9a3a70dc362f8f7989f8f5b64dac7708"
+        }
+      ]
+    },
+    {
+      "name": "test-driven-development",
+      "category": "superpowers",
+      "manifest": "skills/obra/test-driven-development/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/test-driven-development/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/test-driven-development/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "18c3e0009a5c823224169611f3a4f84c9f71e8383d4323370f23147ec150e6f0",
+          "installed_sha256": "18c3e0009a5c823224169611f3a4f84c9f71e8383d4323370f23147ec150e6f0"
+        },
+        {
+          "path": "skills/obra/test-driven-development/SKILL.md",
+          "source_path": "skills/test-driven-development/SKILL.md",
+          "upstream_sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+          "installed_sha256": "c018f78db0ab712662885c0b866ce97b2fd9475031aa31699fb56be6776a7876"
+        },
+        {
+          "path": "skills/obra/test-driven-development/writing-good-tests.md",
+          "source_path": "skills/test-driven-development/writing-good-tests.md",
+          "upstream_sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1",
+          "installed_sha256": "e22a5d6fef2595318b97eef914c0baf3d5afe03fc0b520c0bcc4dab6eec861c0"
+        }
+      ]
+    },
+    {
+      "name": "using-git-worktrees",
+      "category": "superpowers",
+      "manifest": "skills/obra/using-git-worktrees/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/using-git-worktrees/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/using-git-worktrees/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "1a3173e21cd417841a75fb5b370d258f2f30f2ee0d9046031e1734cb3944ea01",
+          "installed_sha256": "1a3173e21cd417841a75fb5b370d258f2f30f2ee0d9046031e1734cb3944ea01"
+        },
+        {
+          "path": "skills/obra/using-git-worktrees/SKILL.md",
+          "source_path": "skills/using-git-worktrees/SKILL.md",
+          "upstream_sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+          "installed_sha256": "e80703af2e713a8dede8c67fde362b97316a5e9d243b957d641198f0bfda4798"
+        }
+      ]
+    },
+    {
+      "name": "using-superpowers",
+      "category": "superpowers",
+      "manifest": "skills/obra/using-superpowers/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/using-superpowers/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Replaced automatic startup/relevance mandate with user-selected routing",
+        "Replaced version-specific Codex config/tool advice with capability-based mapping",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/using-superpowers/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "20a36b85add5673aa053852cf1f6cfe72c3796da1f1fe76ecad2b173642a6ced",
+          "installed_sha256": "20a36b85add5673aa053852cf1f6cfe72c3796da1f1fe76ecad2b173642a6ced"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/antigravity-tools.md",
+          "source_path": "skills/using-superpowers/references/antigravity-tools.md",
+          "upstream_sha256": "4880f6de3da4e32f9659ebe7a72b9e0ebfff04e028c2ed96173f86d0387a04c0",
+          "installed_sha256": "4880f6de3da4e32f9659ebe7a72b9e0ebfff04e028c2ed96173f86d0387a04c0"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/claude-code-tools.md",
+          "source_path": "skills/using-superpowers/references/claude-code-tools.md",
+          "upstream_sha256": "21479a3fee27448cab8748a3b5687e53bb257883bda9c070426f9a1ab5cebf1b",
+          "installed_sha256": "14de726999ea5233c3e54fffea73e57e11d82d3efc4d20ec29e8a4ab7ca615bc"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/codex-tools.md",
+          "source_path": "skills/using-superpowers/references/codex-tools.md",
+          "upstream_sha256": "1a38ad9b188c393052f58d95657a1c35ea6aafc8b5a27f198f3922912f70bbe7",
+          "installed_sha256": "bc49a49d50735984b7c459848836d03f3c8e03b0721e47d5cc746ec549dcc30a"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/gemini-tools.md",
+          "source_path": "skills/using-superpowers/references/gemini-tools.md",
+          "upstream_sha256": "62b9157bcb0ee3c6784e3d0da0798ddfa5872f9e0c34bea48f3079dabea71965",
+          "installed_sha256": "16528ea240b9ff6d7e03ba0e2046328ece7fa04df1f51687e6eb2a23107c8582"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/hermes-tools.md",
+          "source_path": "skills/using-superpowers/references/hermes-tools.md",
+          "upstream_sha256": "e2185c976a3c87503910e05e2aea58cc89bc8e569bb624b93df9958ac47a9190",
+          "installed_sha256": "e2185c976a3c87503910e05e2aea58cc89bc8e569bb624b93df9958ac47a9190"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/muse-tools.md",
+          "source_path": "skills/using-superpowers/references/muse-tools.md",
+          "upstream_sha256": "5a1da5c575fe18456ca71cd47ebfd8a38c745f8d82a67fe64d5b83080000eeb3",
+          "installed_sha256": "5a1da5c575fe18456ca71cd47ebfd8a38c745f8d82a67fe64d5b83080000eeb3"
+        },
+        {
+          "path": "skills/obra/using-superpowers/references/pi-tools.md",
+          "source_path": "skills/using-superpowers/references/pi-tools.md",
+          "upstream_sha256": "703dbc83d23ecab9c6f388460c38abc482e9dee2fe6772a8c7a255152ad3a4d5",
+          "installed_sha256": "703dbc83d23ecab9c6f388460c38abc482e9dee2fe6772a8c7a255152ad3a4d5"
+        },
+        {
+          "path": "skills/obra/using-superpowers/SKILL.md",
+          "source_path": "skills/using-superpowers/SKILL.md",
+          "upstream_sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
+          "installed_sha256": "c95bae4c0af688187cef62c06c3d3a04171861343134c1b0fd4204cf1f49fb37"
+        }
+      ]
+    },
+    {
+      "name": "verification-before-completion",
+      "category": "superpowers",
+      "manifest": "skills/obra/verification-before-completion/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/verification-before-completion/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/verification-before-completion/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "224a8a83243f05d4c67840afa4b7e971178fe8c8f2bdb7c67ac23edaf2e27d9b",
+          "installed_sha256": "224a8a83243f05d4c67840afa4b7e971178fe8c8f2bdb7c67ac23edaf2e27d9b"
+        },
+        {
+          "path": "skills/obra/verification-before-completion/SKILL.md",
+          "source_path": "skills/verification-before-completion/SKILL.md",
+          "upstream_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+          "installed_sha256": "71511353256d61157081124fd66657691c23891c9e3ccafa52bc70d15c28c193"
+        }
+      ]
+    },
+    {
+      "name": "writing-plans",
+      "category": "superpowers",
+      "manifest": "skills/obra/writing-plans/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/writing-plans/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/writing-plans/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "1234fd7dc933067b768a4e9b111c48594b77d7ab406b727037b392f13376bdfc",
+          "installed_sha256": "1234fd7dc933067b768a4e9b111c48594b77d7ab406b727037b392f13376bdfc"
+        },
+        {
+          "path": "skills/obra/writing-plans/SKILL.md",
+          "source_path": "skills/writing-plans/SKILL.md",
+          "upstream_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+          "installed_sha256": "054cdcda5848e3849c13d252975c2e72cc52be93e3a74f0f8df74742393bd3ac"
+        }
+      ]
+    },
+    {
+      "name": "writing-skills",
+      "category": "superpowers",
+      "manifest": "skills/obra/writing-skills/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/writing-skills/SKILL.md",
+      "revision": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "acquisition_date": "2026-10-13",
+      "license": "skills/obra/LICENSE",
+      "adaptations": [
+        "Explicit-only policy and Superpowers-prefixed label",
+        "Portable selection-first invocation and direct dependency paths",
+        "Preserved portable author grouping instead of upstream flat creation convention",
+        "Example-only Markdown links rendered as code where no bundled target exists"
+      ],
+      "files": [
+        {
+          "path": "skills/obra/writing-skills/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "3eb96ab1b7d4343b8e8efc2f37b451bd4ceae41720433cf1544e15490f039d55",
+          "installed_sha256": "3eb96ab1b7d4343b8e8efc2f37b451bd4ceae41720433cf1544e15490f039d55"
+        },
+        {
+          "path": "skills/obra/writing-skills/anthropic-best-practices.md",
+          "source_path": "skills/writing-skills/anthropic-best-practices.md",
+          "upstream_sha256": "217629b356c09c9bd11017c9788e8fc654ca1b32c92d4a51cd490e16dd65e59a",
+          "installed_sha256": "90e55be5198cc0c95b3f4f0af2a4c500bb97453139947734d92a4be0e7c8d934"
+        },
+        {
+          "path": "skills/obra/writing-skills/examples/CLAUDE_MD_TESTING.md",
+          "source_path": "skills/writing-skills/examples/CLAUDE_MD_TESTING.md",
+          "upstream_sha256": "0b379a3415e185d3c434b3ad283d8aa132f3022c2a4f210f168865b5986bcef0",
+          "installed_sha256": "0b379a3415e185d3c434b3ad283d8aa132f3022c2a4f210f168865b5986bcef0"
+        },
+        {
+          "path": "skills/obra/writing-skills/graphviz-conventions.dot",
+          "source_path": "skills/writing-skills/graphviz-conventions.dot",
+          "upstream_sha256": "e2890a593c91370e384b42f2f67b1a6232c9e69dddea7891a0c1c46d7b20b694",
+          "installed_sha256": "e2890a593c91370e384b42f2f67b1a6232c9e69dddea7891a0c1c46d7b20b694"
+        },
+        {
+          "path": "skills/obra/writing-skills/persuasion-principles.md",
+          "source_path": "skills/writing-skills/persuasion-principles.md",
+          "upstream_sha256": "a51bc9bf75189ea73a27b3fb504a2fdfdb966fb1f7f1cdf03203230a216ccc03",
+          "installed_sha256": "a51bc9bf75189ea73a27b3fb504a2fdfdb966fb1f7f1cdf03203230a216ccc03"
+        },
+        {
+          "path": "skills/obra/writing-skills/render-graphs.js",
+          "source_path": "skills/writing-skills/render-graphs.js",
+          "upstream_sha256": "c7f412cc629461c4d10287e668731874c0497707023e3e3f74a5355eb2cee196",
+          "installed_sha256": "c7f412cc629461c4d10287e668731874c0497707023e3e3f74a5355eb2cee196"
+        },
+        {
+          "path": "skills/obra/writing-skills/SKILL.md",
+          "source_path": "skills/writing-skills/SKILL.md",
+          "upstream_sha256": "bbdfe742f853562e643a3d40d64476359d47881e39cef80a189283fa26d11ab9",
+          "installed_sha256": "44c1d54f7e6e8e8a4a167189b35dbe85b0d1abd33023f60d06528fdf8e7105db"
+        },
+        {
+          "path": "skills/obra/writing-skills/testing-skills-with-subagents.md",
+          "source_path": "skills/writing-skills/testing-skills-with-subagents.md",
+          "upstream_sha256": "c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade",
+          "installed_sha256": "6a7204f2d3445e811bf2a3508c8836056477316cc24e33b0fc0279cd3bf20486"
+        }
+      ]
+    }
+  ]
+}

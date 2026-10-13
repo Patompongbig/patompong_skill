@@ -1,0 +1,5 @@
+interface:
+  display_name: "Matt Pocock: Writing for Agents"
+  short_description: "Write documents agents consume"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / writing-plans"
+  short_description: "Turn an agreed specification into testable implementation tasks"
+policy:
+  allow_implicit_invocation: false

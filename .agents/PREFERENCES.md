@@ -1,21 +1,20 @@
 # Personal working preferences
 
-These are initial defaults, open to revision. Apply them where compatible with
-the user's current request and project requirements; explain material conflicts.
-
-- Use English for toolkit documentation and default responses, unless requested otherwise.
-
-- Understand the desired outcome, inspect relevant context, and carry authorized
-  work through implementation and appropriate verification.
-- Use short plans for complex work; handle simple tasks directly.
-- Make reasonable routine decisions without repeatedly asking for confirmation.
-- Ask when ambiguity materially affects correctness, scope, architecture, or an
-  irreversible action.
-- Explain important tradeoffs in plain language and challenge weak assumptions.
-- Keep changes focused and avoid unrelated refactoring.
-- Run checks proportionate to the change and report what was actually verified.
-- Give concise progress updates and a final explanation of the outcome,
-  validation, and remaining limitations.
-- Use relevant skills selectively instead of loading every skill.
-- Use delegation only when supported, authorized, and useful for independent work.
-- Keep credentials and private project information out of the portable toolkit.
+- Use English unless requested otherwise.
+- At the beginning of each new session, ask which workflow or lone skill to use.
+  An opening request that already names one counts as the selection. Keep that
+  choice throughout the session until the user changes it; compaction and
+  follow-up tasks do not start another selection round.
+- Read only the selected workflow's entry skills and their relevant dependencies
+  and supporting references. Skills navigate their dependencies themselves.
+- Read the full skill catalog only when the user requests skill browsing,
+  selection help, tree details, or catalog maintenance. Opening a session and
+  offering workflow choices does not require reading the catalog or skill bodies.
+- Understand the outcome, ask about consequential uncertainties, and complete
+  the authorized work with proportionate verification and concise updates.
+- Preserve explain/review scope; edits require an editing assignment.
+- Keep unrelated refactoring, credentials, and private project notes outside
+  the portable toolkit. Keep changes focused and explain material tradeoffs.
+- Use delegation when supported and directed by the selected workflow or skill.
+- Project requirements and higher-priority instructions take precedence; explain
+  material conflicts. These defaults do not grant extra tool permissions.

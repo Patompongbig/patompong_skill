@@ -6,8 +6,10 @@ description: "Maintain this portable personal .agents toolkit: find and evaluate
 # Maintain the personal toolkit
 
 Locate this toolkit using this skill's file location: its root is two directories
-above this skill folder. Read [the catalog](../../CATALOG.md) and the relevant
-existing instructions before creating another skill with the same purpose.
+above this skill folder. Read relevant existing instructions for the assigned maintenance operation.
+Read [the catalog](../../CATALOG.md) only when the user asks for skill browsing,
+selection help, tree details, or catalog maintenance; routine session workflow
+selection does not authorize catalog reading.
 Read [the README](../../README.md) when changing layout, activation, or portability.
 
 For creation and updates:
@@ -46,3 +48,10 @@ to reuse, adapt, or skip; do not install yet.`
 Complete when requested changes exist, catalog/docs match the file state,
 appropriate checks have run or their unavailable prerequisites are reported,
 and the outcome plus any activation/restart requirement is explained.
+
+## Compose or edit a workflow
+
+When the user assigns workflow creation or editing, read
+[workflow composition](references/workflows.md) and the specifically named skills.
+Existing personal skills stay flat; outside imports use
+`skills/<author>/<skill>/SKILL.md`. Preserve author grouping when importing.

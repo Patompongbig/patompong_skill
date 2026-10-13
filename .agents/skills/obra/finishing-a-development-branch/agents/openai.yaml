@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / finishing-a-development-branch"
+  short_description: "Verify a branch and prepare the chosen integration or handoff"
+policy:
+  allow_implicit_invocation: false

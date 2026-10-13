@@ -1,13 +1,15 @@
-Read the applicable project instructions and `.agents/PREFERENCES.md` plus
-`.agents/workflows/default.md`. Use the latter as personal defaults where
-compatible with this project's requirements and higher-priority instructions.
-Explain any material conflict. If a path is unavailable, report it instead of
-claiming it was read.
+Read the applicable project instructions, `.agents/PREFERENCES.md`, and
+`.agents/workflows/default.md`. At the beginning of this session ask which
+workflow or lone skill I want, using only `.agents/workflows/INDEX.md` for choices.
+If my opening request already names one, it is my selection. Keep the selection
+through the session until I change it.
 
-Use only skills relevant to my task. If this host lacks native skill discovery,
-consult `.agents/CATALOG.md` when a reusable workflow is useful and read only the
-selected enabled skill's manifest. Do not invoke disabled skills. Keep project
-notes and sensitive context outside `.agents`. This prompt grants no extra tool
-permissions or authorization for external actions.
+Read only the selected workflow's entry skills and their relevant dependencies
+and resources. Skills follow those dependencies themselves. Read the full
+`.agents/CATALOG.md` only when I ask to browse/choose skills, inspect the tree,
+or maintain the catalog. Keep private/project context outside the portable folder.
+Project requirements and higher-priority instructions apply; this grants no
+additional tool permissions.
 
-My task: [replace this line with the desired outcome and constraints]
+My workflow or lone skill: [choose one, or ask me]
+My task: [desired outcome and constraints]

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ponytail / ponytail-audit"
+  short_description: "Map a repository or subsystem and rank quality and maintenance f"
+policy:
+  allow_implicit_invocation: false

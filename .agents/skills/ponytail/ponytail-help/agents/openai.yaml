@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ponytail / ponytail-help"
+  short_description: "Explain portable skill selection, modes and paths"
+policy:
+  allow_implicit_invocation: false

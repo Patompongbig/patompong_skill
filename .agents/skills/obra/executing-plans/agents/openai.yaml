@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / executing-plans"
+  short_description: "Implement an agreed plan inline with a durable progress ledger"
+policy:
+  allow_implicit_invocation: false

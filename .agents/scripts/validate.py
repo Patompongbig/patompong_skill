@@ -9,10 +9,11 @@ from urllib.parse import unquote, urlsplit
 REQUIRED = (
     "README.md", "PREFERENCES.md", "workflows/default.md", "CATALOG.md",
     "STARTUP.md", "CHANGELOG.md", "templates/activation.md",
-    "scripts/activate.py", "scripts/validate.py",
+    "scripts/activate.py", "scripts/validate.py", "workflows/INDEX.md",
+    "templates/workflow.md", "COMPATIBILITY.md", "IMPORTS.json",
 )
 NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
-MACHINE_PATH = re.compile(r"(?i)(?<![\w])(?:[a-z]:[\\/]|\\\\[a-z0-9_.-]+[\\/]|/(?:home|Users|mnt|tmp|var|opt|etc)/)")
+MACHINE_PATH = re.compile(r"(?<![\w])(?:(?i:[a-z]:[\\/]|\\\\[a-z0-9_.-]+[\\/])|/(?:home|Users|mnt|tmp|var|opt|etc)/)")
 SECRET = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bsk-[A-Za-z0-9_-]{20,}")
 LINK = re.compile(r"!?\[[^\]\n]*\]\((?:<([^>]+)>|([^\s)]+))(?:\s+\"[^\"]*\")?\)")
 REF = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*<?([^\s>]+)>?", re.M)
@@ -53,6 +54,20 @@ def metadata(content):
 def validate(root, project=None):
     root = root.resolve()
     errors = []
+    approved_platform_literals = {}
+    inventory_file = root / "IMPORTS.json"
+    if inventory_file.is_file():
+        import hashlib
+        records = json.loads(inventory_file.read_text(encoding="utf-8"))
+        for record in records.get("imports", []):
+            for resource in record.get("files", []):
+                literals = resource.get("platform_path_literals", [])
+                candidate = (root / resource["path"]).resolve()
+                if (literals and candidate.is_relative_to(root) and candidate.is_file()
+                        and resource["upstream_sha256"] == resource["installed_sha256"]
+                        and hashlib.sha256(candidate.read_bytes()).hexdigest() == resource["installed_sha256"]
+                        and all(value in ("/" + "tmp/", "C:" + "/" + "Users/", "/c" + "/" + "Users/") for value in literals)):
+                    approved_platform_literals[resource["path"]] = literals
     manifests = {}
     names = {}
     for relative in REQUIRED:
@@ -73,7 +88,10 @@ def validate(root, project=None):
             if path.suffix in (".md", ".disabled", ".py", ".yaml", ".yml", ".json", ".toml", ".txt"):
                 errors.append(f"Expected UTF-8 text: {relative}")
             continue
-        if MACHINE_PATH.search(content):
+        path_check = content
+        for literal in approved_platform_literals.get(relative, []):
+            path_check = path_check.replace(literal, "<platform-path>/")
+        if MACHINE_PATH.search(path_check):
             errors.append(f"Absolute machine path: {relative}")
         if SECRET.search(content):
             errors.append(f"Credential-like text: {relative}")
@@ -84,14 +102,30 @@ def validate(root, project=None):
                 if name in names:
                     errors.append(f"Duplicate skill name {name}: {names[name]} and {relative}")
                 names[name] = relative
-                if path.parent.parent != root / "skills" or path.parent.name != name:
-                    errors.append(f"Skill folder must be skills/{name}: {relative}")
+                try:
+                    parts = path.relative_to(root / "skills").parts
+                except ValueError:
+                    parts = ()
+                flat = len(parts) == 2 and parts[0] == name
+                grouped = len(parts) == 3 and NAME.fullmatch(parts[0]) and parts[1] == name
+                if not (flat or grouped):
+                    errors.append(f"Skill folder must be skills/{name} or skills/<author>/{name}: {relative}")
+                policy_path = path.parent / "agents/openai.yaml"
+                if not policy_path.is_file():
+                    errors.append(f"Missing explicit invocation policy: {relative}")
+                else:
+                    policy_text = policy_path.read_text(encoding="utf-8-sig")
+                    blocks = re.findall(r"(?m)^policy:[ \t]*\n((?:[ \t]+[^\n]*\n?)*)", policy_text)
+                    if len(blocks) != 1 or not re.search(r"(?m)^  allow_implicit_invocation: false[ \t]*$", blocks[0]):
+                        errors.append(f"Expected explicit-only policy: {relative}")
                 manifests[relative] = (name, "disabled" if path.name.endswith(".disabled") else "enabled")
             except (ValueError, TypeError) as error:
                 errors.append(f"{relative}: {error}")
         if path.suffix == ".md" or path.name == "SKILL.md.disabled":
             # Ignore fenced examples; validate ordinary inline and reference links.
             prose = re.sub(r"(?ms)^\s*(```|~~~).*?^\s*\1[^\n]*$", "", content)
+            # Inline-code links are generated-project examples, not bundled files.
+            prose = re.sub(r"`[^`\n]*`", "", prose)
             targets = [a or b for a, b in LINK.findall(prose)] + REF.findall(prose)
             for target in targets:
                 if target.startswith("#"):
@@ -115,8 +149,16 @@ def validate(root, project=None):
         errors.append("No skill manifests found")
     if skills.exists():
         for folder in skills.iterdir():
-            if folder.is_dir() and not any((folder / name).is_file() for name in ("SKILL.md", "SKILL.md.disabled")):
-                errors.append(f"Missing skill manifest: skills/{folder.name}")
+            if not folder.is_dir():
+                continue
+            if any((folder / filename).is_file() for filename in ("SKILL.md", "SKILL.md.disabled")):
+                continue
+            children = [child for child in folder.iterdir() if child.is_dir()]
+            if not children:
+                errors.append(f"Empty author group: skills/{folder.name}")
+            for child in children:
+                if not any((child / filename).is_file() for filename in ("SKILL.md", "SKILL.md.disabled")):
+                    errors.append(f"Missing grouped skill manifest: skills/{folder.name}/{child.name}")
     catalog = root / "CATALOG.md"
     rows = {}
     if catalog.is_file():
@@ -137,6 +179,71 @@ def validate(root, project=None):
         for target in sorted(set(rows) | set(manifests)):
             if rows.get(target) != manifests.get(target):
                 errors.append(f"Catalog/manifest mismatch: {target}")
+    # Verify pinned resources without executing upstream code.
+    inventory_path = root / "IMPORTS.json"
+    if inventory_path.is_file():
+        import hashlib
+        inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+        imported = set()
+        for record in inventory.get("imports", []):
+            target = record["manifest"]
+            imported.add(target)
+            if target not in manifests:
+                errors.append(f"Imported manifest missing: {target}")
+            if not (root / record["license"]).is_file():
+                errors.append(f"Missing import license: {record['name']}")
+            if not re.fullmatch(r"[0-9a-f]{40}", record.get("revision", "")) or record["revision"] not in record["source_url"]:
+                errors.append(f"Unpinned import: {record['name']}")
+            for resource in record.get("files", []):
+                local = (root / resource["path"]).resolve()
+                if not local.is_relative_to(root):
+                    errors.append(f"Import resource escapes toolkit: {resource['path']}")
+                    continue
+                if not local.is_file():
+                    errors.append(f"Missing imported resource: {resource['path']}")
+                elif hashlib.sha256(local.read_bytes()).hexdigest() != resource["installed_sha256"]:
+                    errors.append(f"Unrecorded imported resource change: {resource['path']}")
+                if local.suffix in (".sh", ".cjs") and resource["upstream_sha256"] != resource["installed_sha256"]:
+                    errors.append(f"Imported executable changed without script review: {resource['path']}")
+        grouped_manifests = {target for target in manifests if len(Path(target).parts) == 4}
+        if grouped_manifests - imported:
+            errors.append("Author-grouped imports missing provenance inventory")
+    # Workflow entry paths and adapted named skill calls must exist. Generic
+    # placeholders in the reusable template are intentionally ignored.
+    for path in list((root / "workflows").glob("*.md")) + list((root / "skills").rglob("*.md")):
+        content = path.read_text(encoding="utf-8-sig")
+        for target in re.findall(r"`(\.agents/skills/[^`\n]+/SKILL\.md)`", content):
+            if "<" in target:
+                continue
+            local = (root.parent / target).resolve()
+            if not local.is_relative_to(root) or not local.is_file():
+                errors.append(f"Broken skill entry path in {path.relative_to(root)}: {target}")
+    # The editable menu, not historical example names, defines selectable workflows.
+    menu_path = root / "workflows/INDEX.md"
+    menu_entries = {}
+    if menu_path.is_file():
+        for line in menu_path.read_text(encoding="utf-8-sig").splitlines():
+            if not line.startswith("| ") or line.startswith(("| Workflow |", "| ---")):
+                continue
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) != 3 or not NAME.fullmatch(cells[0]):
+                errors.append("Malformed workflow menu row")
+                continue
+            name = cells[0]
+            expected = f"{name}.md"
+            if name in menu_entries:
+                errors.append(f"Duplicate workflow menu entry: {name}")
+            menu_entries[name] = expected
+            link = re.fullmatch(r"\[[^\]]+\]\(([^)]+)\)", cells[2])
+            if not cells[1] or not link or link.group(1) != expected:
+                errors.append(f"Workflow menu target mismatch: {name}")
+            if not (root / "workflows" / expected).is_file():
+                errors.append(f"Missing menu workflow: {expected}")
+        if not menu_entries:
+            errors.append("Workflow menu has no selections")
+        for path in (root / "workflows").glob("*.md"):
+            if path.name not in ("INDEX.md", "default.md") and path.stem not in menu_entries:
+                errors.append(f"Workflow missing menu entry: {path.name}")
     if project is not None:
         project = project.resolve()
         if root != (project / ".agents").resolve():

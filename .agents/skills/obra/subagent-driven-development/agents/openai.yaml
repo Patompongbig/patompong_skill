@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / subagent-driven-development"
+  short_description: "Execute planned tasks with independent implementers and review g"
+policy:
+  allow_implicit_invocation: false

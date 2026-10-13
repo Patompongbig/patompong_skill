@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / diagnosing-superpowers"
+  short_description: "Investigate a failed agent session from transcripts with cited e"
+policy:
+  allow_implicit_invocation: false

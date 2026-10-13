@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ponytail / ponytail-debt"
+  short_description: "Collect deliberate shortcut markers and their upgrade triggers"
+policy:
+  allow_implicit_invocation: false

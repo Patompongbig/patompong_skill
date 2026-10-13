@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / receiving-code-review"
+  short_description: "Verify review feedback before applying it or pushing back"
+policy:
+  allow_implicit_invocation: false

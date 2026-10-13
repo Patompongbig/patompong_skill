@@ -1,157 +1,142 @@
-# Portable personal agent toolkit
+# Patompong portable skills and workflows
 
-Copy this `.agents` folder into a project root. The instruction-only core needs
-no global installation, credentials, symlinks, or runtime. Optional local helpers
-use Python 3.9+ and its standard library on Windows or Linux.
+Copy this complete `.agents` folder into a project. Keep existing project
+guidance and merge any existing toolkit files deliberately. Nothing here requires
+a global skill installation, symlink, account, background service, or auto-update.
 
-## Contents
+## Navigation
 
-| File | Use |
+| Location | Purpose |
 | --- | --- |
-| [PREFERENCES.md](PREFERENCES.md) | Your revisable working defaults |
-| [workflows/default.md](workflows/default.md) | Short implementation workflow |
-| [CATALOG.md](CATALOG.md) | Skills, triggers, dependencies, origins, status |
-| [STARTUP.md](STARTUP.md) | Prompt for activation without project edits |
-| [templates/activation.md](templates/activation.md) | Small root instruction section |
-| [skills/](skills/) | Three focused, discoverable skills |
-| [scripts/validate.py](scripts/validate.py) | Read-only static checks |
-| [scripts/activate.py](scripts/activate.py) | Optional append-only activation |
-| [CHANGELOG.md](CHANGELOG.md) | Brief meaningful toolkit changes |
+| [PREFERENCES.md](PREFERENCES.md) | Personal session and working defaults |
+| [workflows/default.md](workflows/default.md) | Session selection and reading rules |
+| [workflows/INDEX.md](workflows/INDEX.md) | Small session menu; seven available workflows |
+| [WORKFLOW-USAGE.md](WORKFLOW-USAGE.md) | Development sequence, project layout and example prompts |
+| [CATALOG.md](CATALOG.md) | Detailed overall catalog; read when requested |
+| [skills/mattpocock/](skills/mattpocock/) | All 38 downloaded Matt skills and their resources |
+| [skills/ponytail/](skills/ponytail/) | All six Ponytail skills; explicit-only; benchmark evidence bundled |
+| [skills/obra/](skills/obra/) | All 15 Superpowers skills and their supporting resources; explicit-only |
+| [templates/workflow.md](templates/workflow.md) | Create a reusable skill combination |
+| [COMPATIBILITY.md](COMPATIBILITY.md) | Host/tool requirements and path-based invocation |
+| [IMPORTS.json](IMPORTS.json) | Source revision, license, original and installed hashes |
+| [scripts/activate.py](scripts/activate.py) | Optional append-only project activation |
+| [scripts/validate.py](scripts/validate.py) | Read-only packaging, policy, paths, integrity checks |
+| [STARTUP.md](STARTUP.md) | Session prompt when root activation is unavailable |
+| [CHANGELOG.md](CHANGELOG.md) | Meaningful changes |
+| [VALIDATION.md](VALIDATION.md) | Observed checks and remaining host acceptance tests |
 
-## Copy and activate
+## Folder conventions
 
-1. Copy the complete `.agents` folder, including hidden files, into the project
-   root. If the destination already has `.agents`, compare and merge selected
-   files; do not overwrite its skills or guidance. Check for same-purpose and
-   same-name skills before merging.
-2. Append [the activation section](templates/activation.md) to the project's root
-   `AGENTS.md`, preserving all existing contents. Or run from that project root:
+Outside collections: `.agents/skills/<author>/<skill>/SKILL.md`.
+Matt collection: `.agents/skills/mattpocock/<skill>/SKILL.md`.
+Ponytail collection: `.agents/skills/ponytail/<skill>/SKILL.md` (user-selected collection group).
+The three original personal skills retain their existing flat paths.
+Skill names remain unique locally; authors are navigation groups, not duplicate
+wrappers. Supporting resources stay beside their original manifest. MIT license
+and additional credits are retained; no upstream executable was run at import.
 
-   ```sh
-   python .agents/scripts/activate.py
-   python .agents/scripts/validate.py --project-root .
-   ```
+## Activate in another project
 
-   On Linux, use `python3` if `python` is unavailable. On Windows, `py -3` is
-   another option. These helpers are optional; copying the section by hand works.
-   The activator refuses an existing root `AGENTS.override.md`, detects malformed
-   markers, preserves existing bytes, and makes no change on repeat activation.
-   With overrides or custom instruction filenames, integrate the section into
-   the applicable instruction file yourself after inspecting project guidance.
-3. Start a fresh Codex session in the project. For a session-only alternative,
-   paste [STARTUP.md](STARTUP.md); no root file edit is needed.
+1. Copy the complete `.agents` folder. If one exists, compare and merge without
+   replacing unrelated guidance or skills.
+2. Append [the activation section](templates/activation.md) to the project's
+   AGENTS.md, or run `python .agents/scripts/activate.py` from that project root.
+   For an old differing activation section, reconcile it manually; the helper
+   preserves bytes and refuses to overwrite it. If a root override exists,
+   integrate into the applicable instruction file after inspection.
+3. Run `python .agents/scripts/validate.py --project-root .` and start a fresh
+   session. On systems without `python`, use an available Python 3.9+ command.
 
-For example, run these copy commands from the canonical toolkit project's root
-only when the target `.agents` does not yet exist (replace `../my-project`):
+If root instruction routing is unavailable, paste [STARTUP.md](STARTUP.md).
+Native nested discovery depends on the host; exact workflow/file paths are the
+fallback. Fresh-session discovery and reading behavior remain acceptance checks.
 
-```powershell
-Copy-Item -LiteralPath .agents -Destination ../my-project/.agents -Recurse
-```
+## Session behavior
 
-```sh
-cp -R .agents ../my-project/.agents
-```
+The agent asks for your workflow once at session start unless you already named
+it. It reads only the small menu to ask; it does not read every skill or the full
+catalog. It keeps the choice across follow-ups, tasks, and compaction until you
+change it. Selected skills can navigate their relevant dependencies and resources.
+Ask to browse/select skills or inspect the tree to open the detailed catalog.
 
-Copying one folder makes local skills available to a compatible Codex host.
-It does **not** activate personal defaults by itself. Root instruction routing
-or the startup prompt is the minimal additional step.
+Examples: "Use workflow interview for this design", "Use workflow execute-development
+for the accepted feature plan", "Use lone-skill mattpocock/handoff", or "Show me the skill catalog".
+To switch: "Switch this session to ask-answer." To create: "Use toolkit-maintain to
+create my workflow <name> combining <skills>." Keep the small menu in sync.
 
-## What loads when
+For chat-only explanation, select "Use workflow ask-answer." This self-contained
+workflow reads relevant context without editing files or running tests, builds,
+or applications. It has no skill dependencies and stays read-only until you
+explicitly switch workflows. See [ask-answer](workflows/ask-answer.md).
 
-| Mechanism | Content | Behavior |
-| --- | --- | --- |
-| Native discovery | `skills/*/SKILL.md` name and description | Codex scans `.agents/skills` from its working directory to repository root; full skill instructions load when selected |
-| Root instruction reference | Preferences and default workflow | Root `AGENTS.md` instructs the agent to read these files; they are not independently auto-loaded |
-| Explicit startup prompt | `STARTUP.md` | You paste its text; it is not automatically read |
-| On-demand reference | README, catalog, changelog, skill references | Read only when the task needs them |
-| Optional helpers | Python scripts | Run explicitly; no hooks or background services |
-| External integrations | Imported tool-dependent skills | Require their documented tools, accounts, network access, credentials, or packages |
+For requirements work, select "Use workflow software-requirement-creation."
+It scopes inspection to a relevant feature and connected flows, uses domain-modeling,
+and offers research only for user selection. Review produces findings; confirmed
+create/update assignments maintain requirements and related system context without
+an implementation plan. Outputs stay in the target project's `patompong-docs/docs/`;
+existing documents elsewhere are reference sources. Development plans belong in
+`patompong-docs/implement-plan/` when a planning workflow is selected. See
+[software-requirement-creation](workflows/software-requirement-creation.md).
 
-Project requirements take precedence over these personal defaults. None of the
-files override higher-priority agent instructions or grant tool permissions.
-Root overrides can hide `AGENTS.md`; nested guidance, custom configuration, and
-instruction-size limits can affect loading. Other agents may use different
-discovery rules: use the startup prompt and explicitly request a skill file when
-native discovery is absent. Tool access and filesystem permissions still apply.
+For implementation planning, select "Use workflow writing-development-plan."
+It uses obra/writing-plans and mattpocock/codebase-design to turn agreed requirements,
+existing contracts/tests and relevant current code
+into ordered, checkable end-to-end tasks. Plans stay in the target project's
+`patompong-docs/implement-plan/<feature>/plan.md`. It writes planning documents
+only and does not start implementation or select execution skills. See
+[writing-development-plan](workflows/writing-development-plan.md).
 
-## Everyday use and skill management
+For contracts and executable tests, select "Use workflow test-and-contract-creation."
+It defaults to contract definition, test authoring and Red verification for user
+review, using verification-before-completion and focused test-writing guidance.
+Full test-driven-development is selected only when you explicitly request minimal
+production code for a bounded behavior. Contracts live in
+`patompong-docs/docs/contracts/<feature>/`; tests and evidence live in
+`patompong-docs/tests/<feature>/`. See
+[test-and-contract-creation](workflows/test-and-contract-creation.md).
 
-Use ordinary task prompts; select relevant skills only. Examples:
+For feature implementation, select "Use workflow execute-development."
+It executes an accepted plan with protected contracts/tests, Green verification,
+root-cause debugging and iterative risk-based QA. Seven skills load by phase,
+including Ponytail full for the smallest complete implementation within the accepted
+design; execution and review remain coordinated in one workflow. Progress and QA records stay beside
+`patompong-docs/implement-plan/<feature>/plan.md`. Completion requires fresh required
+gates and resolved blocking findings; delivery actions remain explicitly scoped.
+See [execute-development](workflows/execute-development.md).
 
-- `$toolkit-maintain Add a focused skill for writing migration guides.`
-- `$diagnose-bug Find why this test fails and fix the cause.`
-- `$review-change Review this diff for correctness; do not edit files.`
-- `$toolkit-maintain Find a small selection of documentation skills; compare
-  overlap and dependencies before installing anything.`
+## Runtime scope and updates
 
-For creation or edits, check the catalog and installed skill instructions first.
-Update an existing same-purpose skill when suitable. Update the catalog and
-changelog, include an invocation and completion condition, and validate.
-Downloads require actual instruction/script inspection, sources and pinned
-revision information, preserved licenses/attribution, and installation
-authorization. Install inside this folder, never silently into global locations.
-See [maintenance instructions](skills/toolkit-maintain/SKILL.md).
+62 instruction skills are installed, including seven experimental Matt skills.
+Project runtimes, tracker credentials, Bash/Node utilities, Claude-only hooks,
+and subagent availability are separate prerequisites in [compatibility](COMPATIBILITY.md).
+Downloading the collection does not run M14 target-project setup. Local task
+files avoid tracker accounts. Project notes, glossaries, plans, and secrets remain
+outside `.agents`. Higher-priority mandatory system/plugin skill rules still apply.
 
-Disable a skill by renaming its `SKILL.md` to `SKILL.md.disabled`, leaving its
-resources beside it, and changing its catalog link and status to `disabled`.
-Update other links to the renamed manifest as needed.
-For example, from the project root:
+All local copies use explicit-only metadata. Host loading of names/metadata and
+agent reading of instruction bodies are different. This setup cannot override
+host/system loading behavior or remove global/plugin skills elsewhere.
 
-```powershell
-Rename-Item -LiteralPath .agents/skills/review-change/SKILL.md -NewName SKILL.md.disabled
-```
+Updates are manual: request a pinned import review, preserve local adaptations,
+licenses and resources, refresh the file hashes, and validate. When editing an
+imported file deliberately, refresh its installed_sha256 in IMPORTS.json after
+review; preserve upstream_sha256. Integrity failures detect unrecorded changes.
+Disable a skill by renaming SKILL.md to SKILL.md.disabled and updating its catalog
+link/status and relevant workflows/import manifest path. Start a fresh session.
 
-```sh
-mv .agents/skills/review-change/SKILL.md .agents/skills/review-change/SKILL.md.disabled
-```
+## Development handoffs
 
-Re-enable by reversing the rename and restoring `enabled` in the catalog. Restart
-Codex after disabling to avoid an already-loaded skill persisting in context.
-Without its exact manifest filename, the local copy cannot be discovered as a
-skill. Catalog status alone does nothing. Explicitly reading the disabled file
-still works; it is ordinary text, not an access restriction. A same-name copy in
-another discovery location remains available; inspect the host's skill list.
-Remove a skill by deleting only its confirmed folder and catalog row; record the
-change. Disable first when you want an easy recovery path.
+See [workflow usage](WORKFLOW-USAGE.md) for the normal sequence and the new-interface
+iteration. Each active development stage reads the shared handoff convention;
+accepted requirements, contracts/tests and plans keep separate status from runtime
+verification. Review-only stays read-only. User-selected combinations preserve
+stage boundaries and do not automatically authorize later implementation.
 
-## Carry improvements back
+## Verification
 
-This checkout is the initial canonical copy; choose another later if useful.
-Copies evolve independently. Keep project plans, session notes, credentials, and
-private examples outside `.agents`, in project-owned locations.
-
-To return improvements: compare the edited copy against the canonical folder
-(an editor diff works; Git is optional), copy only selected reusable changes,
-reconcile catalog/changelog and any import attribution, then validate both
-copies. Bring selected updates to other projects the same way. Do not copy a
-project's `AGENTS.md` back into the toolkit or replace a destination `.agents`
-wholesale. No synchronization service is required.
-
-## Validation and limits
-
-```sh
-python .agents/scripts/validate.py
-python .agents/scripts/validate.py --project-root .
-```
-
-The checker finds missing core files, broken local Markdown links, metadata
-problems, duplicate local names, catalog/file-state mismatch, symlinks, common
-absolute machine paths, and some credential-like files/text. It never executes
-skill scripts or contacts the network. `name` and `description` must use nonempty
-single-line plain or quoted YAML strings; normalize imported block scalars for
-this lightweight checker. Other frontmatter fields are retained but not fully
-YAML-validated. Markdown anchor targets, remote links, arbitrary source-code
-references, global skill collisions, and complete secret detection are outside
-its scope. Review imported files as well.
-
-`--project-root` also checks the standard root activation section and warns about
-an override. These are static checks, not proof that a host followed instructions.
-In a fresh session, ask: "List the toolkit skills available, read the personal
-defaults through the root guidance, and report the paths you actually read."
-Then try one relevant invocation and one unrelated request. Do not label discovery
-or trigger behavior verified until observed in that host.
-
-Conventions checked on 2026-10-07 against official OpenAI documentation:
-[local skill loading](https://learn.chatgpt.com/docs/build-skills) and
-[AGENTS.md loading](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
-Recheck when a host upgrade changes behavior.
+The validator checks grouped paths, metadata, explicit policy, catalog state,
+bundled file integrity, local links, and workflow entry paths. It does not execute
+upstream scripts or prove skill quality. Test behavior in a fresh session:
+start without a workflow and expect one selection question; name interview and
+expect only that workflow, grill-me, and its grilling dependency to be needed;
+continue without another workflow question; request the catalog to browse skills.

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ponytail / ponytail-gain"
+  short_description: "Explain published benchmark results without inventing project sa"
+policy:
+  allow_implicit_invocation: false

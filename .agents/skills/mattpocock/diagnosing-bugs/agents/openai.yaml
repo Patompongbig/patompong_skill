@@ -1,0 +1,5 @@
+interface:
+  display_name: "Matt Pocock: Diagnosing Bugs"
+  short_description: "Diagnose hard bugs and regressions"
+policy:
+  allow_implicit_invocation: false

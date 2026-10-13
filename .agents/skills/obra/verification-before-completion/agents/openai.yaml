@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / verification-before-completion"
+  short_description: "Require fresh relevant evidence before reporting success"
+policy:
+  allow_implicit_invocation: false

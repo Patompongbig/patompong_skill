@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / dispatching-parallel-agents"
+  short_description: "Split independent problems into isolated agent assignments"
+policy:
+  allow_implicit_invocation: false

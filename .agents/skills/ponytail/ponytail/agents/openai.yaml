@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ponytail / ponytail"
+  short_description: "Build the smallest complete solution using existing code and pla"
+policy:
+  allow_implicit_invocation: false

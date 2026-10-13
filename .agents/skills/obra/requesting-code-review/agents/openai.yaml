@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / requesting-code-review"
+  short_description: "Request an independent review against requirements and an exact "
+policy:
+  allow_implicit_invocation: false

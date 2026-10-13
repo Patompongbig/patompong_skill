@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / writing-skills"
+  short_description: "Create and improve reusable skill instructions using behavioral "
+policy:
+  allow_implicit_invocation: false

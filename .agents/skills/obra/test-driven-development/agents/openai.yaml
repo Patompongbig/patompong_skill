@@ -1,0 +1,5 @@
+interface:
+  display_name: "Superpowers / test-driven-development"
+  short_description: "Write a failing behavior test before code, then pass and refacto"
+policy:
+  allow_implicit_invocation: false
