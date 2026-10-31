@@ -1,8 +1,9 @@
 # Portable skill catalog
 
 Open this detailed catalog for user-requested skill browsing, selection help,
-tree details, or catalog maintenance. Session startup uses only the small
-[workflow menu](workflows/INDEX.md). Read [workflow usage](WORKFLOW-USAGE.md) when
+tree details, or catalog maintenance. Normal Codex startup needs no toolkit
+selection or catalog read. Use the small [workflow menu](workflows/INDEX.md) when
+workflow choices are requested. Read [workflow usage](WORKFLOW-USAGE.md) when
 choosing a development sequence. Reading the catalog does not execute skills.
 
 62 installed instruction skills: three original personal skills, 38 Matt
@@ -10,6 +11,11 @@ Pocock skills, six Ponytail skills, and 15 Superpowers skills. Every local copy 
 relevant dependencies themselves. Status `enabled` means SKILL.md exists, not
 automatic invocation or runtime proof. External system/plugin skills are outside
 this portable catalog.
+
+For deep, maintained feature implementation explanations, explicitly select the
+self-contained [feature-and-architect workflow](workflows/feature-and-architect.md).
+It can accompany planning/execution by explicit combination; it adds no skill or
+automatic dependency to this catalog.
 
 ## Personal skills
 
@@ -94,7 +100,7 @@ are retained; see installed inventory for original/installed hashes.
 
 **Needs:** Bundled DEEPENING and DESIGN-IT-TWICE references; subagents only for alternative-design mode.
 
-**Overlap:** Adds architecture vocabulary beyond the default workflow.
+**Overlap:** Adds architecture vocabulary beyond normal Codex behavior.
 
 **Compatibility:** Requires specific jargon; relax forced terminology for plain-language explanations and make parallel design optional.
 
@@ -162,7 +168,7 @@ are retained; see installed inventory for original/installed hashes.
 
 **Needs:** tdd and code-review, Git, project type/test commands; review tracker configuration.
 
-**Overlap:** Overlaps the default workflow.
+**Overlap:** Overlaps ordinary implementation work in normal Codex mode.
 
 **Compatibility:** Commits automatically and inherits mandatory checkpoints/subagent assumptions from dependencies; adapt before use.
 

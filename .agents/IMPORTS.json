@@ -1952,8 +1952,8 @@
       "license": "skills/obra/LICENSE",
       "adaptations": [
         "Explicit-only policy and Superpowers-prefixed label",
-        "Portable selection-first invocation and direct dependency paths",
-        "Replaced automatic startup/relevance mandate with user-selected routing",
+        "Explicit selection and direct dependency paths; normal Codex behavior by default",
+        "Removed automatic startup/relevance mandate and startup selection question",
         "Replaced version-specific Codex config/tool advice with capability-based mapping",
         "Example-only Markdown links rendered as code where no bundled target exists"
       ],
@@ -2010,7 +2010,7 @@
           "path": "skills/obra/using-superpowers/SKILL.md",
           "source_path": "skills/using-superpowers/SKILL.md",
           "upstream_sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
-          "installed_sha256": "c95bae4c0af688187cef62c06c3d3a04171861343134c1b0fd4204cf1f49fb37"
+          "installed_sha256": "3450e7d9d71a16d78f494de5556d258bf4780c447699defd94810c65e4ab42dd"
         }
       ]
     },

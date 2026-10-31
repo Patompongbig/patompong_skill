@@ -1,5 +1,37 @@
 # Toolkit changes
 
+- 2026-10-31: Allowed bounded factual execution-documentation updates and verified
+  plan checkboxes, retaining progress/QA as the primary records. Governing criteria
+  and accepted decisions cannot be weakened to fit code; tests/contracts and agent
+  instructions remain protected. Feature-and-architect now prioritizes actual code,
+  explicit implementation gaps and two-way human navigation; planning proposals
+  stay in the plan. Synchronized handoff, planning, guide, README and usage guidance.
+
+- 2026-10-31: Added the explicit-only feature-and-architect workflow for living,
+  source-grounded implementation guides beside feature plans. Covers all scoped
+  use cases, relevant function indexes, deep behavior/code-block explanations,
+  architecture and extension guidance; preserves proposed/observed/verified states.
+  Added narrow opt-in planning/execution integration for its explanatory directory
+  while protecting governing inputs and keeping execution reports in progress/QA.
+  Updated menu, guide, catalog navigation, README and usage. No skills or imported
+  resources changed; creating the workflow does not select it.
+
+- 2026-10-31: Tightened execute-development to minimal necessary implementation
+  edits, with requirements, design/context documents, the accepted plan and agent
+  instructions protected from incidental changes. Progress and QA records own
+  task status, deviations and change reports; plan checkboxes stay unchanged.
+  Added preflight/final scope checks and synchronized shared handoff/usage/README.
+  Clarified retired default.md routing and stale active-guidance wording; historical
+  setup scripts/snapshots remain historical. No skills added or imported files edited.
+
+- 2026-10-25: Made normal Codex behavior the default with no toolkit preprompt,
+  startup selection question or automatic local skill use. Replaced the former
+  default workflow with an optional WORKFLOW-GUIDE.md; synchronized root activation,
+  preferences, startup template, menu, catalog introduction, usage and compatibility
+  docs. Explicit selections persist until changed; returning to normal clears them.
+  Updated the validator and Superpowers router, preserving its upstream hash and
+  refreshing the installed hash. Historical setup snapshots remain historical.
+
 - 2026-10-13: Reviewed and reconciled the custom development workflow chain. Added
   shared artifact ownership/status/handoff rules and real-use prompts; resolved
   draft-plan/new-interface Red-stage ordering, protected-input acceptance, review-only

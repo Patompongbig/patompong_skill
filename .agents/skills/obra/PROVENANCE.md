@@ -7,7 +7,7 @@ All 15 main skills and 74 upstream per-skill files are retained.
 The official skill-installer helper fetched the pinned directories; their bytes
 were compared against the pinned source checkout with Git newline normalization.
 
-[Compatibility](COMPATIBILITY.md) explains the local selection-first routing,
+[Compatibility](COMPATIBILITY.md) explains the local explicit-only activation,
 Codex tool reference, direct dependencies, example-link/path handling and visual
 companion telemetry-off launch requirement. Original/installed hashes and each
 skill's adaptations are in [IMPORTS.json](../../IMPORTS.json). Upstream executable

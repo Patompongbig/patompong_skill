@@ -8,9 +8,9 @@ a global skill installation, symlink, account, background service, or auto-updat
 
 | Location | Purpose |
 | --- | --- |
-| [PREFERENCES.md](PREFERENCES.md) | Personal session and working defaults |
-| [workflows/default.md](workflows/default.md) | Session selection and reading rules |
-| [workflows/INDEX.md](workflows/INDEX.md) | Small session menu; seven available workflows |
+| [PREFERENCES.md](PREFERENCES.md) | Optional personal working guidance |
+| [WORKFLOW-GUIDE.md](WORKFLOW-GUIDE.md) | Optional selection, switching and reading guide |
+| [workflows/INDEX.md](workflows/INDEX.md) | Optional menu; eight available workflows |
 | [WORKFLOW-USAGE.md](WORKFLOW-USAGE.md) | Development sequence, project layout and example prompts |
 | [CATALOG.md](CATALOG.md) | Detailed overall catalog; read when requested |
 | [skills/mattpocock/](skills/mattpocock/) | All 38 downloaded Matt skills and their resources |
@@ -21,7 +21,7 @@ a global skill installation, symlink, account, background service, or auto-updat
 | [IMPORTS.json](IMPORTS.json) | Source revision, license, original and installed hashes |
 | [scripts/activate.py](scripts/activate.py) | Optional append-only project activation |
 | [scripts/validate.py](scripts/validate.py) | Read-only packaging, policy, paths, integrity checks |
-| [STARTUP.md](STARTUP.md) | Session prompt when root activation is unavailable |
+| [STARTUP.md](STARTUP.md) | Optional explicit-use prompt when root activation is unavailable |
 | [CHANGELOG.md](CHANGELOG.md) | Meaningful changes |
 | [VALIDATION.md](VALIDATION.md) | Observed checks and remaining host acceptance tests |
 
@@ -47,17 +47,24 @@ and additional credits are retained; no upstream executable was run at import.
 3. Run `python .agents/scripts/validate.py --project-root .` and start a fresh
    session. On systems without `python`, use an available Python 3.9+ command.
 
-If root instruction routing is unavailable, paste [STARTUP.md](STARTUP.md).
+Normal Codex use requires no activation or preprompt. If root instruction routing
+is unavailable and you want a toolkit workflow, adapt [STARTUP.md](STARTUP.md).
 Native nested discovery depends on the host; exact workflow/file paths are the
 fallback. Fresh-session discovery and reading behavior remain acceptance checks.
 
 ## Session behavior
 
-The agent asks for your workflow once at session start unless you already named
-it. It reads only the small menu to ask; it does not read every skill or the full
-catalog. It keeps the choice across follow-ups, tasks, and compaction until you
-change it. Selected skills can navigate their relevant dependencies and resources.
-Ask to browse/select skills or inspect the tree to open the detailed catalog.
+Normal Codex behavior is the default. There is no toolkit preprompt, startup
+selection question, or automatic local skill usage. The optional guide, preferences,
+menu and catalog do not need to be read at startup. Applicable host/system/plugin
+instructions still apply; this toolkit does not change global Codex settings.
+
+Explicitly select a workflow or skill when wanted. That choice persists across
+follow-ups, tasks and compaction until changed. Say "Return to normal Codex" or
+"use default mode" to clear it, including any workflow-specific restrictions.
+A new session starts in normal mode unless you select a workflow or skill again.
+Selected skills can navigate relevant dependencies and resources. Ask for choices
+to open the small menu; ask to browse skills or inspect the tree to open the catalog.
 
 Examples: "Use workflow interview for this design", "Use workflow execute-development
 for the accepted feature plan", "Use lone-skill mattpocock/handoff", or "Show me the skill catalog".
@@ -96,13 +103,29 @@ production code for a bounded behavior. Contracts live in
 [test-and-contract-creation](workflows/test-and-contract-creation.md).
 
 For feature implementation, select "Use workflow execute-development."
-It executes an accepted plan with protected contracts/tests, Green verification,
+It executes an accepted plan with protected governing criteria, agent instructions
+and contracts/tests, Green verification,
 root-cause debugging and iterative risk-based QA. Seven skills load by phase,
 including Ponytail full for the smallest complete implementation within the accepted
-design; execution and review remain coordinated in one workflow. Progress and QA records stay beside
+design; execution and review remain coordinated in one workflow. Implementation
+edits stay minimal and necessary for accepted scope. Task status, deviations and
+change reports belong primarily in `progress.md` and `qa.md`. Small, evidenced
+documentation/status updates, including plan checkboxes, are allowed; requirements
+and acceptance criteria remain the standards the code must meet.
+Progress and QA records stay beside
 `patompong-docs/implement-plan/<feature>/plan.md`. Completion requires fresh required
 gates and resolved blocking findings; delivery actions remain explicitly scoped.
 See [execute-development](workflows/execute-development.md).
+
+For a living implementation guide, explicitly select
+[feature-and-architect](workflows/feature-and-architect.md). It maps every scoped
+use case to actual architecture, files, functions, important code blocks and tests, with
+deep explanations and extension guidance. Linked Markdown pages live beside the
+plan under `feature-and-architect/`. Select it alone or explicitly combine it with
+planning/execution; those workflows do not load it automatically. Guide updates
+preserve governing agreements and leave progress/QA as the primary execution record.
+The guide explains actual code, including defects and missing behavior, with
+two-way navigation between use cases and symbols so the owner can extend it.
 
 ## Runtime scope and updates
 
@@ -137,6 +160,8 @@ stage boundaries and do not automatically authorize later implementation.
 The validator checks grouped paths, metadata, explicit policy, catalog state,
 bundled file integrity, local links, and workflow entry paths. It does not execute
 upstream scripts or prove skill quality. Test behavior in a fresh session:
-start without a workflow and expect one selection question; name interview and
-expect only that workflow, grill-me, and its grilling dependency to be needed;
-continue without another workflow question; request the catalog to browse skills.
+start with an ordinary task and expect normal Codex behavior with no selection
+question or toolkit-body reads; explicitly name interview and expect that workflow,
+grill-me, and its grilling dependency to be needed; continue without another
+selection question; return to normal mode and check that interview stops applying;
+request the catalog to browse skills.

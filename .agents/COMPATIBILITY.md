@@ -8,8 +8,9 @@ The installed catalog also gives per-skill requirements and overlap.
 - All local skills use `agents/openai.yaml` with
   `policy.allow_implicit_invocation: false`. Full bodies are read by explicit
   assignment or as relevant dependencies of the selected workflow/skill.
-- Native discovery of names/metadata is host behavior; the no-catalog/no-body
-  startup rule governs agent file reads. Native selectors and nested author
+- Native discovery of names/metadata is host behavior. Normal Codex startup needs
+  no toolkit preprompt, selection question, or guide/menu/catalog/skill-body read.
+  Native selectors and nested author
   discovery need a fresh-session check. Direct file paths remain the portable
   fallback; no symlinks or flat duplicate wrappers are required.
 - Ordinary named upstream Skill-tool calls are adapted to project-root paths.
@@ -27,7 +28,7 @@ The installed catalog also gives per-skill requirements and overlap.
 - M14 setup runs per target project; downloading the collection does not run it.
   Local Markdown tasks need no tracker account. GitHub/GitLab modes need their
   CLI or a compatible authorized integration and account access.
-- For Codex, put the setup's routing block in the applicable AGENTS.md; a
+- For optional Codex toolkit discovery, put the activation block in the applicable AGENTS.md; a
   CLAUDE.md-only block does not activate Codex guidance. Preserve existing files
   and integrate into the active instruction file rather than replacing it.
 - Project glossaries, ADRs, task files, teaching records, and generated artifacts
@@ -91,5 +92,5 @@ now select individual Ponytail skills explicitly; see [workflow usage](WORKFLOW-
 
 All 15 skills and per-skill resources are installed under `skills/obra/`.
 See [collection compatibility](skills/obra/COMPATIBILITY.md) for Bash/Node.js,
-optional visual companion, delegation and adapted selection-first behavior.
+optional visual companion, delegation and explicit-only activation.
 No startup hooks, global settings or automatic updater were installed.

@@ -1,16 +1,9 @@
 <!-- personal-toolkit:begin -->
-## Patompong portable workflow defaults
+## Optional Patompong toolkit
 
-Read [.agents/PREFERENCES.md](.agents/PREFERENCES.md) and
-[.agents/workflows/default.md](.agents/workflows/default.md).
-At each new session, ask which workflow or lone skill to use unless the opening
-request already names one. Keep that selection throughout the session until the
-user changes it. Use only [the small workflow menu](.agents/workflows/INDEX.md)
-to offer choices; read no full catalog or skill bodies for that question.
-After selection, read the selected workflow and the skills/references it needs;
-skills follow their relevant dependencies themselves. Read
-[the full catalog](.agents/CATALOG.md) only for user-requested skill browsing,
-selection help, tree details, or catalog maintenance.
-Follow applicable project requirements and higher-priority instructions; explain
-material conflicts. Keep project notes and credentials outside the portable folder.
+Use normal Codex behavior by default, without a toolkit preprompt, workflow
+selection question, or automatic use of local skills. When the user explicitly
+requests a toolkit workflow or skill, read its entry point and relevant dependencies.
+The optional [workflow guide](.agents/WORKFLOW-GUIDE.md) explains selection,
+switching, and returning to normal mode; read it when needed.
 <!-- personal-toolkit:end -->

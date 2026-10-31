@@ -7,7 +7,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 REQUIRED = (
-    "README.md", "PREFERENCES.md", "workflows/default.md", "CATALOG.md",
+    "README.md", "PREFERENCES.md", "WORKFLOW-GUIDE.md", "CATALOG.md",
     "STARTUP.md", "CHANGELOG.md", "templates/activation.md",
     "scripts/activate.py", "scripts/validate.py", "workflows/INDEX.md",
     "templates/workflow.md", "COMPATIBILITY.md", "IMPORTS.json",
@@ -242,7 +242,7 @@ def validate(root, project=None):
         if not menu_entries:
             errors.append("Workflow menu has no selections")
         for path in (root / "workflows").glob("*.md"):
-            if path.name not in ("INDEX.md", "default.md") and path.stem not in menu_entries:
+            if path.name != "INDEX.md" and path.stem not in menu_entries:
                 errors.append(f"Workflow missing menu entry: {path.name}")
     if project is not None:
         project = project.resolve()

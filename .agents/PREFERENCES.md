@@ -1,15 +1,18 @@
 # Personal working preferences
 
+Optional reference for toolkit work; not a required startup read.
+
 - Use English unless requested otherwise.
-- At the beginning of each new session, ask which workflow or lone skill to use.
-  An opening request that already names one counts as the selection. Keep that
-  choice throughout the session until the user changes it; compaction and
-  follow-up tasks do not start another selection round.
+- Use normal Codex behavior by default, with no toolkit preprompt, workflow
+  selection question, or automatic local skill activation.
+- Explicit workflow or skill requests select that mode for the session until
+  changed. Returning to normal/default mode clears the selection. New sessions
+  start in normal mode unless the user selects a workflow or skill.
 - Read only the selected workflow's entry skills and their relevant dependencies
   and supporting references. Skills navigate their dependencies themselves.
 - Read the full skill catalog only when the user requests skill browsing,
-  selection help, tree details, or catalog maintenance. Opening a session and
-  offering workflow choices does not require reading the catalog or skill bodies.
+  selection help, tree details, or catalog maintenance. Ordinary session startup
+  does not require reading toolkit guides, menus, catalogs, or skill bodies.
 - Understand the outcome, ask about consequential uncertainties, and complete
   the authorized work with proportionate verification and concise updates.
 - Preserve explain/review scope; edits require an editing assignment.

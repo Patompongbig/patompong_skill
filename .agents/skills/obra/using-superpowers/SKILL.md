@@ -20,13 +20,14 @@ requirement is relevant. No startup hooks or global configuration are installed.
 
 # Using Superpowers in the portable toolkit
 
-This collection is explicit-only. At the start of a session, follow the personal
-workflow router and offer only the small workflow menu. Do not inspect this
-collection or the full catalog to compose the startup question.
+This collection is explicit-only. Normal Codex sessions require no toolkit
+preprompt, workflow selection question, or automatic activation of this collection.
+Offer the small workflow menu only when the user asks for workflow choices.
 
 After the user selects a workflow or lone skill, read its assigned entry point.
 Read only relevant dependencies as the selected skill reaches them. Keep the
-session selection until the user changes it. Installation itself selects nothing.
+session selection until the user changes it. Returning to normal/default Codex
+clears the selection. Installation itself selects nothing.
 
 For user-requested selection help, use the Superpowers section of the overall
 catalog. Explain the tradeoff between inline execution with a final review and
@@ -41,4 +42,4 @@ those hosts, not automatic dependencies in a Codex session.
 Applicable user/project instructions and higher-priority rules control scope,
 permissions, verification, model selection and reading. Original upstream's
 automatic startup and 1-percent relevance mandate are intentionally replaced
-in this local copy to satisfy the user's selection-first preferences.
+in this local copy by explicit selection and normal Codex behavior by default.

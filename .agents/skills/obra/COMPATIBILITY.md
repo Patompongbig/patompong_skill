@@ -3,7 +3,7 @@
 All 15 skills are installed as user-selected instructions under `skills/obra/`.
 No native plugin, bootstrap hook, global symlink, always-on AGENTS.md, or automatic
 updater was installed. The upstream source archive is kept outside the portable
-folder. Selection-first routing replaces upstream automatic relevance/startup
+folder. Explicit-only activation replaces upstream automatic relevance/startup
 rules; named skill references point to this collection's exact manifest paths.
 
 ## Optional executables and hosts

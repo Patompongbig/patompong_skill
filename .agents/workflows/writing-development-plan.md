@@ -44,6 +44,13 @@ supporting planning material beside `plan.md` only when it improves usability,
 and link it from the main plan. Create no empty scaffolding or private project
 artifacts in the portable toolkit.
 
+Only when explicitly combined with
+[feature-and-architect](feature-and-architect.md), also maintain its linked guide
+beside the plan to explain current code. Future architecture, files and flows belong
+in the plan; link them as proposals rather than writing imaginary implementation
+walkthroughs. If code is absent, the guide can only record an initial scope/source
+index and that gap. Planning alone does not load or maintain that workflow.
+
 ## Selected skill and adaptations
 
 Read [obra/writing-plans](../skills/obra/writing-plans/SKILL.md) when planning begins.

@@ -19,7 +19,7 @@ purpose/trigger, local overlap, dependencies, portability/license concerns, and
 recommendation (reuse, adapt, or skip). Usually two or three strong candidates are
 enough; include fewer when the available evidence supports fewer. Explain the
 recommended choice and material adaptations in plain language. Avoid adding a
-skill that merely repeats the default workflow or an already available capability.
+skill that merely repeats normal Codex behavior or an already available capability.
 
 Evaluate whether the description will trigger for a representative intended
 request and stay out of an unrelated request. Identify any absolute paths,

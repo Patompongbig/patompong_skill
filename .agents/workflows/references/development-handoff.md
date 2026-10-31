@@ -34,7 +34,8 @@ valid; capture its substance in the next authorized artifact update, not fake qu
 | Requirements | Goals, scope, acceptance criteria, terminology, justified system context | Intention, current evidence, project guidance |
 | Contract/test | Observable interface agreement, scenarios, schemas and executable tests | Accepted requirements, relevant design proposals and code |
 | Development plan | Internal decomposition, task order, proposed source paths, check commands | Requirements, contracts, scenarios/tests, current code |
-| Execution | Assigned production code, supplementary regressions, progress and QA evidence | Accepted requirements, contracts/tests and plan |
+| Execution | Assigned production code, supplementary regressions, progress/QA evidence and bounded factual documentation updates | Accepted requirements, contracts/tests and plan |
+| Feature-and-architect, when explicitly selected | Explanatory guide under the feature's `feature-and-architect/` directory | Plan, requirements, actual code/tests and progress/QA evidence |
 
 Project instructions and user-confirmed intent govern. Requirements state what must
 happen; accepted contracts make connection behavior precise; tests exercise it;
@@ -42,6 +43,22 @@ plans explain how to build it. If these disagree, surface the exact conflict rat
 than silently choosing the convenient document. Existing code describes current
 state, not desired behavior. A test is not authority to contradict an agreed
 requirement. Execution cannot rewrite accepted contracts/tests to reach Green.
+Execution preserves the meaning of governing requirements, acceptance criteria,
+architectural decisions, terminology and plan scope. It may make small, evidenced
+status/reference updates in existing feature-related `patompong-docs/` documents,
+including verified plan checkboxes and factual implementation annotations. Describe
+code/design discrepancies separately without rewriting agreed criteria or decision
+history. Progress and QA remain the primary status/change/evidence records.
+Changes to governing agreements, accepted tests/contracts or agent instructions
+require separate explicit assignment; included skills cannot grant that permission.
+
+An explicitly selected [feature-and-architect](../feature-and-architect.md)
+combination permits planning/execution to maintain only that explanatory directory.
+It explains actual code with evidence labels and links intended behavior as context;
+it cannot redefine accepted architecture, requirements or completion status.
+Absent implementation is a gap, not a proposed function walkthrough. Standalone use
+does not edit plan/progress/QA. Planning and execution alone do not select it. This
+permission leaves the execution workflow's bounded documentation maintenance intact.
 
 Requirements may summarize boundary needs and link contracts, but detailed testable
 protocol artifacts belong to contract/test work. Planning may propose missing

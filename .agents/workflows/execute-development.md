@@ -19,8 +19,37 @@ missing or conflicting inputs before dependent work; do not invent accepted scop
 Read source paths and dependencies needed for the feature, not the whole repository.
 An overly broad assignment needs smaller agreed feature/flow slices.
 
-- Implement production changes and plan-required project setup/configuration within
-  the accepted scope. Preserve other contributors' work and unrelated instructions.
+- Change only production code, necessary callers, supplementary regression tests,
+  and project setup/configuration needed to satisfy the accepted requirements and
+  plan. Make the smallest complete change; avoid unrelated cleanup, refactoring,
+  formatting, dependency updates, or documentation churn. Preserve other contributors'
+  work. A file's presence in the project is not permission to edit it.
+- Requirements and acceptance criteria govern the implementation: change the code
+  to meet them, never weaken or reinterpret them to match delivered code. Preserve
+  accepted behavior, scope, constraints and architectural decisions in requirements,
+  design/context documents, glossaries, ADRs and the plan. Changing those agreements
+  or their acceptance status requires a separate explicit assignment and agreement;
+  pause dependent work until consequential revisions are reconciled.
+- Allow small, directly relevant documentation updates: verified plan checkboxes,
+  source links, factual implementation/status annotations, and corrections to stale
+  file locations or runnable check commands when their meaning/gates stay unchanged.
+  Existing explanatory system documentation may be updated to describe current code,
+  clearly separating observations from accepted design. Preserve original criteria
+  and decision history; report unmet criteria as gaps instead of rewriting them.
+  No bulk rewrites, document moves, new specifications or unrelated edits. Preserve
+  other authors' notes and existing output-location/ownership restrictions.
+  Limit this maintenance to existing feature-related documents in `patompong-docs/`;
+  edits elsewhere require explicit assignment. Do not move documents into this
+  directory to bypass that boundary.
+  The `feature-and-architect/` guide still requires its explicitly selected workflow;
+  this maintenance permission does not activate it.
+  Log each update and its reason in `progress.md`; put verification evidence and
+  discrepancies in `qa.md`. These remain the primary execution records.
+- Do not create, edit, delete, or rename `AGENTS.md`, `AGENTS.override.md`,
+  `CLAUDE.md`, agent settings, skills, workflows, or other agent instruction files
+  as an implementation side effect, even if a plan or included skill suggests it.
+  Such changes require a separate explicit assignment. Reading applicable guidance
+  remains required; runtime configuration is distinct from agent configuration.
 - Approved tests, assertions, expected values, fixtures, scenarios and contracts are
   protected. Record their baseline identity/content and check their integrity at
   gates. Do not modify, delete, skip, weaken or mark them expected-failure to reach
@@ -46,6 +75,19 @@ Paths are relative to the target project root:
 - Read `patompong-docs/implement-plan/<feature>/plan.md` and its linked sources.
 - Keep task progress, decisions and resume context in that directory's `progress.md`.
 - Keep QA findings, fixes, review scope and verification evidence in its `qa.md`.
+- Use these two records as the primary change report: link task/requirement IDs,
+  changed paths, reasons, deviations, and observed results. Apply only the bounded
+  documentation maintenance allowed above. Plan checkboxes may mirror verified task
+  completion; retain detailed status, partial work and blockers in `progress.md`.
+  Other product documentation changes need explicit assignment unless covered by
+  that bounded maintenance; report the changed sections and supporting evidence.
+- Only when explicitly combined with
+  [feature-and-architect](feature-and-architect.md), maintain this directory's
+  `feature-and-architect/` explanatory guide after meaningful slices and reconcile
+  it with final code before completing the combined assignment. This narrow
+  explanatory assignment does not permit changes to agreed requirements/design,
+  plan scope, protected contracts/tests or agent instructions. Execution alone
+  does not load that workflow or require its guide.
 - Store useful detailed command output under that directory only as needed, avoiding
   secrets and unnecessary logs. Preserve records for future sessions; no automatic
   deletion of the execution workspace or ledger.
@@ -91,6 +133,10 @@ Apply these workflow adaptations to upstream defaults:
 - Ordinary implementation decisions are autonomous and recorded when consequential.
   Product-policy changes, conflicting contracts or test expectations need the user;
   the execution skill's autonomous rulings cannot override them.
+- Included skills, helper scripts, generated prompts and reviewers inherit the
+  change boundaries above. Inspect bookkeeping helpers before use: only bounded
+  status/documentation updates are permitted, never changes to governing criteria
+  or protected tests/instructions.
 - QA has fix-and-recheck cycles, not the execution skill's one-final-fix-pass limit.
   Re-review changed risky areas and unresolved findings when justified; do not repeat
   a whole review for every trivial fix or rerun unchanged checks without a reason.
@@ -114,7 +160,10 @@ Apply these workflow adaptations to upstream defaults:
 
 1. **Preflight.** Read plan, requirements, contracts, approved tests and applicable
    standards. Confirm their agreement and dependencies. Record the starting revision,
-   existing changes, protected test/contract identities and relevant baseline checks.
+   existing changes, protected governing-document/instruction/test/contract
+   identities and relevant baseline checks. Identify allowed implementation paths
+   from the accepted scope, including necessary callers and configuration; identify
+   bounded factual documentation updates and any separately assigned edits.
    Distinguish expected feature failures from unrelated failures and environment
    blockers. Establish required acceptance, regression and quality gates from the
    plan/project. Do not call an unavailable gate passed or quietly drop it. An
@@ -145,7 +194,10 @@ Apply these workflow adaptations to upstream defaults:
    risk points and after final integration, dispatch a read-only reviewer via
    requesting-code-review if supported. Supply governing requirements, contracts,
    standards, task/plan, exact diff or working-tree file scope, known baseline issues,
-   and evidence. Capture uncommitted changes too; do not commit just to make a diff.
+   and evidence. Judge observed code and check results against agreed criteria;
+   distinguish static findings, reproduced defects, unverified assumptions and
+   remaining gaps. A progress entry or plan checkbox is not runtime evidence.
+   Capture uncommitted changes too; do not commit just to make a diff.
    Reviewers report and do not implement or dispatch additional agents. If delegation
    is unavailable, perform a distinct self-review and clearly label that limitation.
 
@@ -165,15 +217,21 @@ Apply these workflow adaptations to upstream defaults:
 
 6. **Complete the task and continue.** Record delivered behavior, changed paths,
    actual verification commands/results, QA dispositions and justified deviations.
-   Mark complete only when its required criteria hold. Continue through all accepted
-   tasks without routine permission prompts. Give concise progress updates.
+   Mark complete in `progress.md` only when its required criteria hold; then update
+   matching plan checkboxes without changing task wording or acceptance criteria.
+   Check that edited paths are necessary for the accepted task, documentation edits
+   are bounded and evidenced, governing agreements retain their meaning, and
+   protected tests/instructions remain unchanged. Continue through all accepted tasks
+   without routine permission prompts. Give concise progress updates.
 
 7. **Final feature gate.** Exercise the complete acceptance flow, real integration
    boundaries, required regression suite, and project-defined build/type/lint or
    other quality checks. Use mock evidence only for the claims it supports. Perform
-   the final independent feature review, verify protected artifact integrity, fix
-   blocking findings, and rerun checks affected by those fixes. Final evidence must
-   correspond to the final code state. Report test counts, skips, collection failures,
+   the final independent feature review, verify protected tests/instructions and
+   governing agreements against their baseline, review all permitted documentation
+   diffs, and check that every changed file is within scope. Fix blocking findings and
+   rerun checks affected by those fixes. Final evidence must correspond to the final
+   code state. Report test counts, skips, collection failures,
    unavailable environments and baseline failures, not just a green command.
 
 ## Progress and stop conditions
@@ -186,16 +244,21 @@ scope expansion, authorization, or an external environment change. Follow the
 selected debugging skill's architecture-discussion checkpoint before another
 architectural fix. Do not turn uncertainty into endless retries or a false success.
 
-Pause dependent work for contradictions, necessary protected-test changes, missing
-required environments, unauthorized actions, or a broken plan whose remaining paths
-would be guesses. State the concrete blocker, completed work and smallest decision
-or environment change needed. A blocker is not feature completion.
+Pause dependent work for contradictions, necessary changes to governing agreements,
+protected instructions or tests, missing required environments, unauthorized actions,
+or a broken plan whose remaining paths would be guesses. State the concrete blocker,
+completed work and smallest decision or environment change needed. A blocker is
+not feature completion.
 
 ## Completion and handoff
 
 Complete only when all accepted tasks, required acceptance/quality gates and blocking
-QA findings are satisfied, protected contracts/tests remain intact, and fresh evidence
-supports the final code. Unrun/skipped required checks prevent an unconditional
+QA findings are satisfied, governing agreements retain their meaning, protected
+instructions, contracts and tests remain intact, documentation updates are bounded
+and evidence-backed, edits are limited to necessary authorized files, and fresh
+evidence supports the final code. If another contributor changes a protected input,
+report the drift and reconcile dependent work; do not revert their changes or assume
+old acceptance still applies. Unrun/skipped required checks prevent an unconditional
 complete claim. Record optional deferred findings and independent-review limits.
 
 Deliver implemented code plus progress/QA records and a concise report of behavior,

@@ -1,15 +1,15 @@
-Read the applicable project instructions, `.agents/PREFERENCES.md`, and
-`.agents/workflows/default.md`. At the beginning of this session ask which
-workflow or lone skill I want, using only `.agents/workflows/INDEX.md` for choices.
-If my opening request already names one, it is my selection. Keep the selection
-through the session until I change it.
+# Optional explicit-use prompt
 
-Read only the selected workflow's entry skills and their relevant dependencies
-and resources. Skills follow those dependencies themselves. Read the full
-`.agents/CATALOG.md` only when I ask to browse/choose skills, inspect the tree,
-or maintain the catalog. Keep private/project context outside the portable folder.
-Project requirements and higher-priority instructions apply; this grants no
-additional tool permissions.
+Normal Codex use needs no startup prompt. Use this template only when you want
+to select a toolkit workflow or skill on a host without instruction routing.
+Replace the placeholders before sending it.
 
-My workflow or lone skill: [choose one, or ask me]
-My task: [desired outcome and constraints]
+```text
+Use .agents/workflows/<workflow-name>.md for this task, or use the named
+.agents/skills/<author>/<skill>/SKILL.md as a lone skill. Read the selected
+entry point and its relevant dependencies only. Keep this selection until I
+change it; "return to normal Codex" clears it. Applicable project and host
+instructions still apply.
+
+My task: <desired outcome and constraints>
+```
