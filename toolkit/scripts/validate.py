@@ -208,7 +208,9 @@ def validate(root, project=None):
                     errors.append(f"Unrecorded imported resource change: {resource['path']}")
                 if local.suffix in (".sh", ".cjs") and resource["upstream_sha256"] != resource["installed_sha256"]:
                     errors.append(f"Imported executable changed without script review: {resource['path']}")
-        grouped_manifests = {target for target in manifests if len(Path(target).parts) == 4}
+        # skills/patompong/ holds the owner's own grouped skills, not imports.
+        grouped_manifests = {target for target in manifests
+                             if len(Path(target).parts) == 4 and Path(target).parts[1] != "patompong"}
         if grouped_manifests - imported:
             errors.append("Author-grouped imports missing provenance inventory")
     # Workflow entry paths and adapted named skill calls must exist. Generic

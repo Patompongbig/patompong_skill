@@ -1,0 +1,5 @@
+interface:
+  display_name: "Samber / deep-research"
+  short_description: "Multi-source cited research report with parallel research tracks"
+policy:
+  allow_implicit_invocation: false

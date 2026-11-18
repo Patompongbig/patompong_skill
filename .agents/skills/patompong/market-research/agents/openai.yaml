@@ -1,0 +1,5 @@
+interface:
+  display_name: "Patompong / market-research"
+  short_description: "Stage 2: cited competitive landscape and build-vs-buy document"
+policy:
+  allow_implicit_invocation: false

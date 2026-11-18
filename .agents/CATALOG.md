@@ -5,8 +5,8 @@ tree details, or catalog maintenance. Normal startup needs no toolkit
 selection or catalog read. Use the small [workflow menu](workflows/INDEX.md) when
 workflow choices are requested. Reading the catalog does not execute skills.
 
-62 installed instruction skills: three original personal skills, 38 Matt
-Pocock skills, six Ponytail skills, and 15 Superpowers skills. Every local copy is explicit-only; selected skills can follow
+64 installed instruction skills: four original personal skills, 38 Matt
+Pocock skills, six Ponytail skills, 15 Superpowers skills, and one Samber skill. Every local copy is explicit-only; selected skills can follow
 relevant dependencies themselves. Status `enabled` means SKILL.md exists, not
 automatic invocation or runtime proof. External system/plugin skills are outside
 this portable catalog.
@@ -26,6 +26,7 @@ its current phase needs.
 | [toolkit-maintain](skills/toolkit-maintain/SKILL.md) | Maintain skills and compose editable workflows | Assigned toolkit/catalog/workflow maintenance | File access; Python for checks; network for imports; explicit-only | Original personal toolkit | enabled |
 | [diagnose-bug](skills/diagnose-bug/SKILL.md) | Reproduce and diagnose a concrete software defect | Assigned failure/regression diagnosis | Relevant project runtime and tests; explicit-only | Original personal toolkit | enabled |
 | [review-change](skills/review-change/SKILL.md) | Review a diff for actionable correctness defects | Assigned review of a change | File/diff access; project checks as relevant; explicit-only | Original personal toolkit | enabled |
+| [market-research](skills/patompong/market-research/SKILL.md) | Stage 2: turn a confirmed intent into the cited "02 — Market Research" document | A new product/feature intent needs competitive landscape and build-vs-buy evidence; skipped for bugfix, refactor, infra, security-patch | samber/deep-research (sub-agents, web); web-search fallback; writes `patompong-docs/docs/research/`; explicit-only | Original personal toolkit; grouped under `skills/patompong/` | enabled |
 
 ## Matt Pocock collection
 
@@ -791,6 +792,24 @@ or compose them in a workflow later; no automatic startup hooks are installed.
 
 These entries can be lone skills or future workflow components. Installation does
 not add them to the session workflow menu or select a workflow on your behalf.
+
+## Samber collection (1)
+
+[Pinned provenance and license](skills/samber/PROVENANCE.md); [compatibility](COMPATIBILITY.md).
+
+| Name | Purpose | Use when | Requirements | Origin / notes | Status |
+| --- | --- | --- | --- | --- | --- |
+| [deep-research](skills/samber/deep-research/SKILL.md) | Multi-source research with parallel sub-agent tracks, confidence tracking and a cited report | A thorough sourced report is the deliverable (market, competitive, technical, academic, legal, trend and more) | Web search and fetch; sub-agents for parallel tracks; optional pandoc or md-to-pdf; explicit-only | S01; Samuel Berthe / samber; MIT; pinned 1.3.0 | enabled |
+
+#### S01: deep-research
+
+**Benefit:** Parallel research tracks with per-claim citations, source tiers and a confidence ladder; a separate report-writer sub-agent keeps the coordinator's context clean.
+
+**Example:** "Research the AI coding assistant market and write a cited report."
+
+**Overlap:** Matt research (M12) for single cited notes from primary sources; deep-research is broader and multi-track. Used by personal market-research.
+
+**Cost/scope:** standard depth spawns many sub-agents across three fan-out steps; callers such as market-research narrow it to one fan-out. Default output goes to `./research/` unless a caller overrides it.
 
 ## Superpowers collection / obra (15)
 

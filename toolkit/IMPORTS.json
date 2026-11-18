@@ -2134,6 +2134,136 @@
           "installed_sha256": "6a7204f2d3445e811bf2a3508c8836056477316cc24e33b0fc0279cd3bf20486"
         }
       ]
+    },
+    {
+      "name": "deep-research",
+      "category": "samber",
+      "manifest": "skills/samber/deep-research/SKILL.md",
+      "source_url": "https://github.com/samber/cc-skills/blob/50a33836b20f690c668af557bd9ef9d07a8c7ef2/skills/deep-research/SKILL.md",
+      "revision": "50a33836b20f690c668af557bd9ef9d07a8c7ef2",
+      "acquisition_date": "2026-11-19",
+      "license": "skills/samber/LICENSE",
+      "adaptations": [
+        "Explicit-only agents/openai.yaml policy; author-prefixed UI title",
+        "Description shortened from 1546 to under 1024 characters (validator limit); trigger list condensed",
+        "Portable invocation note: host hints, {path_to_skill}, caller overrides take precedence"
+      ],
+      "files": [
+        {
+          "path": "skills/samber/deep-research/SKILL.md",
+          "source_path": "skills/deep-research/SKILL.md",
+          "upstream_sha256": "8ef1f700584ae82d591b9d216a969bfc7ba7a9e685162ec7ee0616a4302d1bd1",
+          "installed_sha256": "d2cab36057f636be50e337bde4e8701cf0c6b75c451b3c48587827ad8b497ae1"
+        },
+        {
+          "path": "skills/samber/deep-research/agents/openai.yaml",
+          "source_path": null,
+          "upstream_sha256": "4ba27bf3059858dab1eaa794759f417d4e96dc6b4c5a0383c988889fd0d2bb20",
+          "installed_sha256": "4ba27bf3059858dab1eaa794759f417d4e96dc6b4c5a0383c988889fd0d2bb20"
+        },
+        {
+          "path": "skills/samber/deep-research/assets/report-template.md",
+          "source_path": "skills/deep-research/assets/report-template.md",
+          "upstream_sha256": "cd65599182db03613deea4f5e6f9727704cc900047bea522d226c9367626d843",
+          "installed_sha256": "cd65599182db03613deea4f5e6f9727704cc900047bea522d226c9367626d843"
+        },
+        {
+          "path": "skills/samber/deep-research/evals/evals.json",
+          "source_path": "skills/deep-research/evals/evals.json",
+          "upstream_sha256": "081ad316fe8e4fa30d56e48ddc42f8aa30790c6d0dbaf6cf501025dc00c59cf7",
+          "installed_sha256": "081ad316fe8e4fa30d56e48ddc42f8aa30790c6d0dbaf6cf501025dc00c59cf7"
+        },
+        {
+          "path": "skills/samber/deep-research/references/academic.md",
+          "source_path": "skills/deep-research/references/academic.md",
+          "upstream_sha256": "78cea0446c3ce8ba2a28cba91c3a05c3f9163a0cef5d974855a8379919001f68",
+          "installed_sha256": "78cea0446c3ce8ba2a28cba91c3a05c3f9163a0cef5d974855a8379919001f68"
+        },
+        {
+          "path": "skills/samber/deep-research/references/citations.md",
+          "source_path": "skills/deep-research/references/citations.md",
+          "upstream_sha256": "605b1f0e6ac3e5194ebb592063ac1554273811341fce329680fcaf30b60e09b6",
+          "installed_sha256": "605b1f0e6ac3e5194ebb592063ac1554273811341fce329680fcaf30b60e09b6"
+        },
+        {
+          "path": "skills/samber/deep-research/references/community.md",
+          "source_path": "skills/deep-research/references/community.md",
+          "upstream_sha256": "bf913f035604bece629549eff55c58ace231522532c5fcb989b5b8f2f1597d57",
+          "installed_sha256": "bf913f035604bece629549eff55c58ace231522532c5fcb989b5b8f2f1597d57"
+        },
+        {
+          "path": "skills/samber/deep-research/references/competitive.md",
+          "source_path": "skills/deep-research/references/competitive.md",
+          "upstream_sha256": "e3aca11c7605ab0e59f15361751931f03f8562dfd05ee866e9e1604549b4efef",
+          "installed_sha256": "e3aca11c7605ab0e59f15361751931f03f8562dfd05ee866e9e1604549b4efef"
+        },
+        {
+          "path": "skills/samber/deep-research/references/domain.md",
+          "source_path": "skills/deep-research/references/domain.md",
+          "upstream_sha256": "d31f0c376daba84dce96c2e47664b1fa9faa98b87eb01894c777808a492765e9",
+          "installed_sha256": "d31f0c376daba84dce96c2e47664b1fa9faa98b87eb01894c777808a492765e9"
+        },
+        {
+          "path": "skills/samber/deep-research/references/financial.md",
+          "source_path": "skills/deep-research/references/financial.md",
+          "upstream_sha256": "84cdccba26c014847373fe2602b00b2214d5e8e954eeea2b842b3f73e83dcc0c",
+          "installed_sha256": "84cdccba26c014847373fe2602b00b2214d5e8e954eeea2b842b3f73e83dcc0c"
+        },
+        {
+          "path": "skills/samber/deep-research/references/legal.md",
+          "source_path": "skills/deep-research/references/legal.md",
+          "upstream_sha256": "f53e09f1eed22298ca3e15d1e14df2550681fae924978620b6b5aa52e2fb365f",
+          "installed_sha256": "f53e09f1eed22298ca3e15d1e14df2550681fae924978620b6b5aa52e2fb365f"
+        },
+        {
+          "path": "skills/samber/deep-research/references/market.md",
+          "source_path": "skills/deep-research/references/market.md",
+          "upstream_sha256": "6e50878d559a8c978ba798267a86c5e9e0162d8fefff676168b3b9466abe1bdf",
+          "installed_sha256": "6e50878d559a8c978ba798267a86c5e9e0162d8fefff676168b3b9466abe1bdf"
+        },
+        {
+          "path": "skills/samber/deep-research/references/org.md",
+          "source_path": "skills/deep-research/references/org.md",
+          "upstream_sha256": "4ce04a7ef3882b8122cf336a751704b9f18c0795076a199c8b1bdd15b1635b9e",
+          "installed_sha256": "4ce04a7ef3882b8122cf336a751704b9f18c0795076a199c8b1bdd15b1635b9e"
+        },
+        {
+          "path": "skills/samber/deep-research/references/parallel-search.md",
+          "source_path": "skills/deep-research/references/parallel-search.md",
+          "upstream_sha256": "7c6849d83fe2bbc7ff71c8922b02b29aeb10bc959c9bc83ac06bbe1bdd9bb5a1",
+          "installed_sha256": "7c6849d83fe2bbc7ff71c8922b02b29aeb10bc959c9bc83ac06bbe1bdd9bb5a1"
+        },
+        {
+          "path": "skills/samber/deep-research/references/product.md",
+          "source_path": "skills/deep-research/references/product.md",
+          "upstream_sha256": "e9baafe34fbcf03fbd32c8ecf127a868981c8f12d0cbcd4433ddeb99246b2587",
+          "installed_sha256": "e9baafe34fbcf03fbd32c8ecf127a868981c8f12d0cbcd4433ddeb99246b2587"
+        },
+        {
+          "path": "skills/samber/deep-research/references/report-writer.md",
+          "source_path": "skills/deep-research/references/report-writer.md",
+          "upstream_sha256": "2a8670cf7620674e7fc0084768bc6abd5f60f89678fd2f4f4212a17a9624113b",
+          "installed_sha256": "2a8670cf7620674e7fc0084768bc6abd5f60f89678fd2f4f4212a17a9624113b"
+        },
+        {
+          "path": "skills/samber/deep-research/references/researcher.md",
+          "source_path": "skills/deep-research/references/researcher.md",
+          "upstream_sha256": "f9939b7768f88ba584ce354575e0e2544e8e84063cd1eeae570ac93d4a954781",
+          "installed_sha256": "f9939b7768f88ba584ce354575e0e2544e8e84063cd1eeae570ac93d4a954781"
+        },
+        {
+          "path": "skills/samber/deep-research/references/technical.md",
+          "source_path": "skills/deep-research/references/technical.md",
+          "upstream_sha256": "52656d6f33b0fb47f9c9f6512cf74c8e37ab2113a484dadd558c6c66aabf72d5",
+          "installed_sha256": "52656d6f33b0fb47f9c9f6512cf74c8e37ab2113a484dadd558c6c66aabf72d5"
+        },
+        {
+          "path": "skills/samber/deep-research/references/trend.md",
+          "source_path": "skills/deep-research/references/trend.md",
+          "upstream_sha256": "f11d7608cd90f713d9ac7306272f633a13d302c4eb905a34eefa57b8b5d5134c",
+          "installed_sha256": "f11d7608cd90f713d9ac7306272f633a13d302c4eb905a34eefa57b8b5d5134c"
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,13 @@
 # Toolkit changes
 
+- 2026-11-19: Added personal `patompong/market-research` (Stage 2: cited
+  "02 — Market Research" document with competitive landscape, build vs buy,
+  market gaps, recommendation and a Carry-Forward block). Imported
+  `samber/deep-research` pinned at 50a3383 (MIT) as its research engine, with a
+  shortened description and a portable invocation note. The validator treats
+  `skills/patompong/` as the owner's own author group, exempt from the import
+  inventory.
+
 - 2026-11-18: Review fixes. Task packets scope QA to the task's file list, so the
   orchestrator option no longer mixes parallel tasks in one diff. Verdict rules made
   consistent (MAJOR fails unless marked deferrable; deferred MAJORs reported at the
