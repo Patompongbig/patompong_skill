@@ -1,67 +1,67 @@
-# Ask-answer workflow
+# ask-answer workflow
 
-Purpose: answer questions and explain code or software development topics through
-focused read-only investigation, with all deliverables in chat.
+> Answer questions about code and software engineering through focused,
+> read-only investigation, with every deliverable in chat.
 
-This workflow is self-contained and has no skill dependencies. Its behavior is
-adapted from GitHub Copilot's Ask agent for Codex; it does not use VS Code-specific
-tool names or grant permissions beyond the host environment.
+Shared rules: [glossary](references/glossary.md)
 
-## Inputs and scope
+## Purpose
 
-Use the user's question, relevant project context, and applicable project
-instructions. Inspect the current project as needed. Read other local files when
-the user identifies them or they are directly relevant to the question; keep
-searches focused rather than inventorying the computer.
+A safe mode for understanding. The agent investigates and explains; it never
+changes anything. Proposed fixes, commands and code are shown, not applied. The
+selection persists across follow-ups until the user switches workflows; "fix
+this" yields an explained proposal and a note that applying it needs an editing
+workflow.
 
-Remain read-only throughout this workflow:
+## Modes
 
-- Use file reads, searches, and commands whose effects are limited to reading,
-  such as `rg`, `git diff`, and `git status`. Inspect unfamiliar commands before
-  deciding they are read-only. Reading existing logs and test output is allowed.
-- Do not edit, create, delete, rename, or format files, save reports or notes,
-  change configuration, or perform external writes. Do not use editing tools.
-- Do not run tests, builds, installs, project scripts, applications, or services;
-  these can change state even when used for investigation. Do not execute code
-  from the project merely to explain it.
-- Use read-only online documentation or connected sources when needed and
-  available. Do not submit private project content to external services.
-- Provide proposed code, commands, fixes, or procedures in chat only. Do not
-  apply or execute them.
+| Mode | Use when | Writes | Ends with |
+| --- | --- | --- | --- |
+| **answer** (only mode) | Any question | Nothing | Answer in chat |
 
-This selection persists across follow-ups until the user explicitly switches
-workflows. A request such as "fix this" calls for an explanation of the proposed
-fix; it does not override read-only mode. Explain that applying the fix requires
-an explicit switch to an editing workflow. Creating this workflow does not select
-it for the current session.
+## Inputs
 
-## Steps
+The question, the current project, files the user names, and read-only online
+documentation when needed.
 
-1. Identify what the user wants to understand. Ask about consequential ambiguity
-   when needed; discover accessible facts yourself rather than asking the user
-   to provide information available in the project.
-2. Read the relevant code, requirements, callers, configuration, and existing
-   evidence. Use only the context needed to answer. For general questions that
-   need no project evidence, answer directly.
-3. Explain the result clearly at the requested depth. Reference specific files,
-   symbols, and line locations when making code claims. Distinguish observed
-   code behavior, existing runtime evidence, hypotheses, and proposed changes.
-   Cite online sources when used.
-4. If proof requires execution or edits, describe the check or change in chat
-   and state the remaining uncertainty. Stay within this workflow rather than
-   performing that check or silently loading an implementation skill.
+## Outputs
 
-## Deliverables and completion
+Chat only: the answer with file and line references, examples, and proposed
+changes clearly labelled as proposals.
 
-Deliver the answer in chat, with relevant references and examples. Complete when
-the question is answered to the extent supported by available read-only evidence,
-or the missing evidence and its effect on the answer are clearly explained.
-Static inspection alone does not prove runtime success. No files or external
-artifacts are produced by using this workflow.
+## Roles and models
 
-## Example invocation
+Main session. Wide investigations may dispatch read-only researchers (default
+sonnet). No model prompt unless the user names models.
 
-"Use workflow ask-answer. Explain how this project's import pipeline works and
-where cancellation is handled. Read relevant files and answer in chat only."
+## Procedure
 
-Follow-up: "Why could this error happen? Show the proposed fix without applying it."
+1. **Understand the question.** Ask only about consequential ambiguity; find
+   facts yourself.
+2. **Investigate.** Read the relevant code, callers, configuration, documents
+   and existing logs or test output. Delegate breadth to researchers. General
+   questions that need no project evidence are answered directly.
+3. **Answer.** At the requested depth, citing `path:line` for code claims and
+   sources for online facts. Distinguish observed behaviour, existing runtime
+   evidence, inference, and proposals.
+4. **Name the limits.** If proof needs execution or edits, describe the check
+   and the remaining uncertainty instead of performing it.
+
+## Boundaries
+
+- Read-only: file reads, searches and commands whose only effect is reading
+  (`rg`, `git diff`, `git log`, `git status`). Inspect unfamiliar commands first.
+- No edits, saved notes, configuration changes or external writes.
+- No tests, builds, installs, scripts or services, even to investigate.
+- No private project content sent to external services.
+- Never combined with a writing stage; switching requires an explicit request.
+
+## Done when
+
+The question is answered as far as read-only evidence allows, and any missing
+evidence and its effect on the answer are stated.
+
+## Example invocations
+
+- "Use workflow ask-answer. Explain how the import pipeline handles cancellation."
+- "Why could this error happen? Show the fix without applying it."

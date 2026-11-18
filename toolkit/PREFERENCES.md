@@ -3,7 +3,7 @@
 Optional reference for toolkit work; not a required startup read.
 
 - Use English unless requested otherwise.
-- Use normal Codex behavior by default, with no toolkit preprompt, workflow
+- Use normal agent behavior by default, with no toolkit preprompt, workflow
   selection question, or automatic local skill activation.
 - Explicit workflow or skill requests select that mode for the session until
   changed. Returning to normal/default mode clears the selection. New sessions

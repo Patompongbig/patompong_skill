@@ -1,10 +1,9 @@
 # Portable skill catalog
 
 Open this detailed catalog for user-requested skill browsing, selection help,
-tree details, or catalog maintenance. Normal Codex startup needs no toolkit
+tree details, or catalog maintenance. Normal startup needs no toolkit
 selection or catalog read. Use the small [workflow menu](workflows/INDEX.md) when
-workflow choices are requested. Read [workflow usage](WORKFLOW-USAGE.md) when
-choosing a development sequence. Reading the catalog does not execute skills.
+workflow choices are requested. Reading the catalog does not execute skills.
 
 62 installed instruction skills: three original personal skills, 38 Matt
 Pocock skills, six Ponytail skills, and 15 Superpowers skills. Every local copy is explicit-only; selected skills can follow
@@ -12,10 +11,13 @@ relevant dependencies themselves. Status `enabled` means SKILL.md exists, not
 automatic invocation or runtime proof. External system/plugin skills are outside
 this portable catalog.
 
-For deep, maintained feature implementation explanations, explicitly select the
-self-contained [feature-and-architect workflow](workflows/feature-and-architect.md).
-It can accompany planning/execution by explicit combination; it adds no skill or
-automatic dependency to this catalog.
+Workflows compose these skills: execute uses obra TDD, systematic-debugging,
+receiving-code-review, verification-before-completion and Ponytail full;
+qa-verify uses ponytail-review, Matt code-review and verification-before-completion;
+development-plan uses obra writing-plans and Matt codebase-design;
+software-requirement uses Matt domain-modeling and research. See the
+[workflow menu](workflows/INDEX.md). Selecting a workflow loads only the skills
+its current phase needs.
 
 ## Personal skills
 
@@ -28,7 +30,7 @@ automatic dependency to this catalog.
 ## Matt Pocock collection
 
 [Pinned provenance and license](skills/mattpocock/PROVENANCE.md);
-[host/runtime compatibility](COMPATIBILITY.md); [file inventory](IMPORTS.json).
+[host/runtime compatibility](COMPATIBILITY.md); file inventory in `toolkit/IMPORTS.json` (source repository).
 All bundled resources are installed; runtime prerequisites remain per target
 project and host. Overlapping skills are retained because the user chose the
 whole collection; explicit selection resolves which one is used.

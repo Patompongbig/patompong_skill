@@ -1,125 +1,178 @@
-# Shared development handoff
+# Development handoff
 
-Read this when using requirements, contract/test, planning, or execution workflows.
-It defines their common artifact ownership and transition rules, not a new workflow
-or an instruction to load every stage's skills.
+Shared operating rules for the development workflows: the pipeline, authority
+between artifacts, modes, baseline boundaries, evidence and stage transitions.
+Document layout and ownership are in the [document model](document-model.md);
+roles and loops in [agent roles](agent-roles.md); terms in the [glossary](glossary.md).
+Workflows link here instead of restating these rules.
 
-## Feature identity and sources
+## Pipeline
 
-Use one stable feature slug across `patompong-docs/docs/requirements/<feature>.md`,
-`patompong-docs/docs/contracts/<feature>/`, `patompong-docs/tests/<feature>/`, and
-`patompong-docs/implement-plan/<feature>/`. Reuse existing equivalents and link them;
-do not duplicate a project's authoritative documents merely to populate folders.
-Confirm the target project root before writing; paths describe that project, not
-the portable toolkit checkout. Create only artifacts needed for the assigned scope.
+```text
+software-requirement ──► roadmap (decompose) ──► per feature:
+   (SRS, system level)                            contract-and-test ──► development-plan
+                                                  ──► execute ⇄ qa-verify ──► feature gate
+                                               per phase: qa-verify release ──► phase exit
+doc-reconcile: any time (audit / migrate / amend)
+feature-explain: on demand, after code exists
+interview: combinable with any writing stage
+ask-answer: read-only, never combined with a writing stage
+```
 
-Put concise handoff metadata in the documents already being maintained:
-- Feature/scope and status: draft, accepted, or superseded.
-- Governing requirements, contract/test paths and relevant source revision or date.
-- Acceptance evidence: the user's confirmation of this artifact/version, or pending.
-- Important decisions, blockers, deferred work, and the next needed stage/action.
+The SRS defines the system as a whole. Decompose turns it into phases and
+features. Each feature is then deepened through its contract and tests, planned,
+and implemented under independent QA.
 
-Stable requirement, contract, scenario and task IDs should link the same behavior.
-Separate document acceptance from test results. A draft is not accepted; accepted
-contracts can have Red or blocked tests. A previously verified feature can become
-unverified after relevant code, tests, dependencies or environment change.
-Do not create a separate status database or write chat-only review results to disk
-unless the assignment authorizes a document update. Conversation confirmation is
-valid; capture its substance in the next authorized artifact update, not fake quotes.
+**Entering later.** Start at any stage whose inputs already exist and are
+accepted. Do not recreate artifacts or repeat approvals for unchanged content.
 
-## Ownership and consistency
+**New interfaces.** When the exact interface is not yet known, a draft plan may
+propose it; contract-and-test then reviews and accepts it, and the plan is
+reconciled before execution. Tests may be written against proposed interfaces
+without production stubs; the resulting import failures are *blocked*, not Red.
 
-| Stage | Owns changes | Reads as input |
+## Authority
+
+When artifacts disagree, the higher one governs:
+
+1. User-confirmed intent in the current conversation
+2. SRS (`docs/requirements/`) and accepted ADRs
+3. Shared contracts (`docs/contracts/`)
+4. Feature contract (`features/<f>/contract.md`)
+5. Accepted tests
+6. Plan
+7. Existing code — evidence of *current* state, never authority for desired behaviour
+
+Surface every conflict with the exact clauses involved. Never resolve it by
+editing the lower artifact to match convenience, or the higher one to match code.
+Changing an accepted higher artifact goes through its owning workflow or a change
+request.
+
+## Alignment preflight
+
+Contract-and-test and development-plan begin with a preflight before deep writing:
+
+- Every in-scope item traces to SRS requirements and its roadmap feature.
+- Referenced shared contracts are current, and the new work fits them as-is or
+  needs a compatible extension or a CR.
+- Upstream artifacts the stage depends on are accepted and not stale.
+
+Output `aligned`, or a numbered conflict list with a proposed resolution for each.
+Independent work continues; dependent work waits for the user's decision.
+
+## Modes
+
+Every workflow interprets modes the same way:
+
+| Mode | Writes | Notes |
 | --- | --- | --- |
-| Requirements | Goals, scope, acceptance criteria, terminology, justified system context | Intention, current evidence, project guidance |
-| Contract/test | Observable interface agreement, scenarios, schemas and executable tests | Accepted requirements, relevant design proposals and code |
-| Development plan | Internal decomposition, task order, proposed source paths, check commands | Requirements, contracts, scenarios/tests, current code |
-| Execution | Assigned production code, supplementary regressions, progress/QA evidence and bounded factual documentation updates | Accepted requirements, contracts/tests and plan |
-| Feature-and-architect, when explicitly selected | Explanatory guide under the feature's `feature-and-architect/` directory | Plan, requirements, actual code/tests and progress/QA evidence |
+| **review** | Nothing | Findings in chat. No saved reports, no test execution unless also assigned. |
+| **create / update** | The workflow's owned files | Propose the change, obtain confirmation, then write. Already-confirmed content needs no second confirmation. |
+| Workflow-specific modes | As defined by that workflow | e.g. decompose, standards, audit, migrate, amend. |
 
-Project instructions and user-confirmed intent govern. Requirements state what must
-happen; accepted contracts make connection behavior precise; tests exercise it;
-plans explain how to build it. If these disagree, surface the exact conflict rather
-than silently choosing the convenient document. Existing code describes current
-state, not desired behavior. A test is not authority to contradict an agreed
-requirement. Execution cannot rewrite accepted contracts/tests to reach Green.
-Execution preserves the meaning of governing requirements, acceptance criteria,
-architectural decisions, terminology and plan scope. It may make small, evidenced
-status/reference updates in existing feature-related `patompong-docs/` documents,
-including verified plan checkboxes and factual implementation annotations. Describe
-code/design discrepancies separately without rewriting agreed criteria or decision
-history. Progress and QA remain the primary status/change/evidence records.
-Changes to governing agreements, accepted tests/contracts or agent instructions
-require separate explicit assignment; included skills cannot grant that permission.
+Default mode is stated by each workflow.
 
-An explicitly selected [feature-and-architect](../feature-and-architect.md)
-combination permits planning/execution to maintain only that explanatory directory.
-It explains actual code with evidence labels and links intended behavior as context;
-it cannot redefine accepted architecture, requirements or completion status.
-Absent implementation is a gap, not a proposed function walkthrough. Standalone use
-does not edit plan/progress/QA. Planning and execution alone do not select it. This
-permission leaves the execution workflow's bounded documentation maintenance intact.
+## Baseline boundaries
 
-Requirements may summarize boundary needs and link contracts, but detailed testable
-protocol artifacts belong to contract/test work. Planning may propose missing
-interfaces, but acceptance and contract/test alignment are required before dependent
-execution. No stage edits another stage's protected artifacts solely to unblock
-itself. Routine implementation detail may change with a recorded reason; a change
-to accepted behavior or a consequential architectural agreement needs user decision.
+These apply to every workflow, every included skill, and every subagent.
 
-After an accepted upstream change, identify affected contracts/tests/plans and mark
-or report them as needing reconciliation. Update only artifacts inside the assigned
-operation's ownership; list dependent artifacts that require a later selected stage.
-Do not rewrite history, silently carry old acceptance to changed content, or mark
-implementation complete using stale verification.
+- **Version control.** Never commit, push, merge, rebase, open PRs or delete
+  branches/worktrees. The only permitted git write is staging task files as a
+  checkpoint during execution.
+- **Agent configuration.** Do not create or edit `AGENTS.md`, `CLAUDE.md`, agent
+  settings, skills or workflows as a side effect of project work.
+- **Environment.** No installs, global configuration changes, deployments,
+  destructive migrations or external writes without an explicit assignment.
+- **Data.** Use isolated local test data. Live user data, paid services and
+  shared environments need explicit scope. Inspect unfamiliar commands before
+  running them.
+- **Protected artifacts.** A stage never modifies another stage's accepted
+  artifacts to unblock itself. Downstream stages consume them; disagreements
+  become conflicts or CRs.
+- **Scope.** If a request needs substantial unrelated context, propose smaller
+  feature or flow slices and wait for the user's choice before broad reading.
+- **Included skills.** Workflow adaptations override a skill's defaults. A skill
+  cannot widen output paths, write access, delegation or external actions.
 
-## Practical order without a circular dependency
+## Autonomy
 
-Normally: requirements -> contract/scenario agreement and focused Red tests ->
-final development plan -> execution with Green and QA.
+The user owns *what* is built and whether it is done; agents own *how*, under
+independent review.
 
-For a new interface: requirements -> initial contract/scenarios -> draft plan that
-proposes exact interfaces -> contract/test review and executable tests -> reconcile
-and accept the final plan -> execution. Draft planning does not require preexisting
-executable tests, and tests can be authored against proposed interfaces without
-adding production stubs. Missing imports/interfaces are blocked evidence, not a
-behavioral Red pass. Execution can implement accepted missing interfaces; an
-unavailable required environment must still be restored before its final gate.
+| Artifact or decision | Accepted by |
+| --- | --- |
+| SRS, roadmap, `engineering.md`, ADRs | User |
+| Feature contract and its outside-in tests | User |
+| Shared-contract change requests | User |
+| Plan | User (guided) · design review (chain) |
+| Unit tests and code | QA verdict, task by task |
+| Feature done, phase exit | User, on the feature-gate or release report |
 
-Use existing accepted artifacts to enter at a later stage. Do not force a project
-to recreate documents or repeat approvals already supplied for unchanged content.
-For small work, keep documents/tasks short; do not drop necessary contracts or
-acceptance checks simply to shorten the process.
+Two levels, chosen per request:
 
-## Stage switching and combined workflows
+- **guided** (default): every stage stops for the user's confirmation.
+- **chain**: the user names a sequence and says "chain", e.g. "contract-and-test →
+  development-plan → execute for batch-import, chain". User-owned artifacts
+  still stop for acceptance. An agent-owned artifact is accepted automatically
+  when its design review returns `PASS` or `PASS_WITH_NOTES` and it has no open
+  decisions, conflicts or CRs; the chain then continues. The status header
+  records `accepted (auto: design review PASS)` and the log notes it, so the
+  user can review it later. Any `FAIL`, open decision or escalation stops the
+  chain and returns to the user.
 
-Selecting or accepting one stage does not automatically select or authorize the
-next. Explicitly requested multi-stage chains can advance through their named
-stages, preserving each stage's confirmation and editing boundaries. Explain which
-stage is active. A chain's later editing assignment does not permit early edits.
+Execution's task loop is autonomous at both levels; it stops only for the
+escalations defined in [execute](../execute.md).
 
-Interview is a clarification method that can be combined with one active stage.
-It supplies questions and confirmation, not extra edit permissions. After confirmed
-understanding, perform the already-authorized active stage. Ask-answer remains
-chat-only/read-only: do not combine it with a writing stage to bypass its boundary;
-ask for an explicit switch. Review-only inside any workflow permits inspection and
-chat findings only; executing tests, saving a report, or applying fixes requires a
-corresponding assignment. Offer the smallest useful change of scope when needed.
+## Acceptance and staleness
 
-Workflow-specific adaptations govern included skills; imported dependencies cannot
-expand the active operation, its output paths, protected artifacts, delegation scope,
-or external actions. Load only the phase/dependency actually needed.
+- The user accepts, except agent-owned artifacts under chain autonomy (above). Record acceptance in the file's status header and in
+  `state.json`; capture the substance of the confirmation, never invented quotes.
+- Document acceptance and test results are separate facts: an accepted contract
+  can have Red or blocked tests.
+- After an accepted upstream change, the changing stage marks dependents stale
+  (see [amendments](document-model.md#amendments)) and lists them. A stale
+  artifact cannot gate execution or a completion claim until reconciled.
+- Previously verified behaviour becomes unverified when relevant code, tests,
+  dependencies or environment change.
 
-## Gate and handoff evidence
+## Evidence
 
-Provide links to the stage's outputs, their acceptance status, inspected coverage,
-remaining decisions, next stage inputs, and executed versus proposed commands.
-For tests record working directory, runner/discovery path, dependencies, fixture and
-service requirements, isolation/cleanup, expected result and actual result when run.
-Flag commands unavailable on the target host rather than inventing successful runs.
+Claims require matching evidence:
 
-Different claims require different evidence: document consistency, behavioral Red,
-unit/contract checks, actual integration, end-to-end acceptance, and independent QA
-are distinct. Zero collected, skipped, expected-failure or environment-blocked checks
-do not count as passing acceptance. Required external/hardware/manual gates stay
-explicit and incomplete until observed or the user deliberately changes the criterion.
+| Claim | Evidence required |
+| --- | --- |
+| Documents consistent | Cross-check of IDs, links, Basis headers |
+| Behavioural Red | Test collected, executed, failed on the target behaviour |
+| Unit / contract behaviour | Fresh Green run of those tests |
+| Integration | Real connected components exercised, not doubles |
+| End-to-end acceptance | Complete user flow observed |
+| Independent QA | Fresh-context verifier verdict on the final code state |
+
+Zero collected tests, skips, expected-failure markers and environment-blocked
+checks are not passes. Required manual, hardware or external gates stay open
+until observed or the user changes the criterion. Record for every executed
+check: working directory, command, result; for unexecuted ones, label them
+`proposed`.
+
+## Combining and switching stages
+
+- Selecting or accepting one stage does not start the next. An explicitly
+  requested chain advances through its named stages, each keeping its own
+  confirmation and write boundaries. Always state which stage is active.
+- **Interview** supplies structured questioning and confirmation to the active
+  writing stage. Confirmed decisions are written to their owning files, phrased
+  as engineering statements of intent, with one log entry each. Interview alone
+  is chat-only.
+- **Ask-answer** stays read-only; switching to a writing stage requires an
+  explicit request.
+- Review-only inside any workflow permits inspection and chat findings only.
+
+## Stage handoff
+
+Each stage ends by reporting, in chat:
+
+- Outputs written (links) and their status.
+- Alignment result and any open conflicts or CRs.
+- Dependents marked stale.
+- Commands executed versus proposed, with results.
+- Inputs the next stage needs, and the decisions still open.

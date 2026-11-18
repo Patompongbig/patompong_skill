@@ -1,21 +1,59 @@
-# Lone-skill session
+# lone-skill workflow
 
-Purpose: use a named skill without requiring a composed workflow.
+> Use one named skill, with the dependencies it needs, without a composed
+> workflow.
 
-1. If the user already named an author/skill or an explicit skill invocation,
-   resolve that manifest directly and read it. Matt skills live at
-   `.agents/skills/mattpocock/<name>/SKILL.md`; the three existing personal skills
-   remain at `.agents/skills/<name>/SKILL.md`. Outside downloads use author groups.
-2. If the user asks for selection help or tree details, read
-   [CATALOG.md](../CATALOG.md) to explain appropriate choices. Naming a known
-   skill does not require catalog reading. A request naming a catalog ID such as
-   M14 authorizes looking up that matching catalog entry; it does not require
-   reading every entry. Ask to resolve genuinely ambiguous names.
-3. Follow the chosen skill and relevant dependencies/references. The skills can
-   navigate their dependencies themselves; no workflow whitelist is required.
-4. Retain lone-skill mode for the session. A later explicitly named skill updates
-   the skill choice. If the existing choice cannot handle the next task, ask
-   which skill they want, rather than silently selecting an unrelated one.
+Shared rules: [development handoff](references/development-handoff.md#baseline-boundaries)
 
-Deliverable and completion follow the assigned skill and task. Example:
-"Use lone-skill: mattpocock/handoff; summarize this task for another session."
+## Purpose
+
+For tasks a single skill covers well. The skill governs the work; the toolkit's
+baseline boundaries still apply.
+
+## Modes
+
+| Mode | Use when | Writes | Ends with |
+| --- | --- | --- | --- |
+| **skill** (only mode) | The user names a skill or catalog ID | Whatever the skill and the user's request authorise | The skill's own completion condition |
+
+## Inputs
+
+The skill name (`author/skill`, personal skill name, or catalog ID such as
+`M23`) and the task.
+
+## Outputs
+
+As defined by the skill, inside the target project, never inside the portable
+toolkit.
+
+## Roles and models
+
+Main session, plus any subagents the skill itself directs (default models per
+[agent roles](references/agent-roles.md#roles)). No model prompt unless the
+user names models.
+
+## Procedure
+
+1. **Resolve the skill.** Read its manifest directly: personal skills at
+   `skills/<name>/SKILL.md`, imported skills at `skills/<author>/<name>/SKILL.md`.
+   Read the [catalog](../CATALOG.md) only to look up a catalog ID or when the
+   user asks for help choosing. Ask when a name is genuinely ambiguous.
+2. **Follow the skill** and the dependencies and references it needs.
+3. **Keep the selection** for the session. A newly named skill replaces it. If
+   the current skill cannot handle the next task, ask which skill to use rather
+   than switching silently.
+
+## Boundaries
+
+The skill cannot widen the [baseline boundaries](references/development-handoff.md#baseline-boundaries):
+no commits or pushes, no agent-configuration edits, no installs or external
+writes without explicit assignment.
+
+## Done when
+
+The skill's completion condition is met for the user's task.
+
+## Example invocations
+
+- "Use lone-skill mattpocock/handoff to summarise this task for another session."
+- "Use lone-skill M13 to run a retro on this session."

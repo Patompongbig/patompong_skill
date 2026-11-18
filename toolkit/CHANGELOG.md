@@ -1,5 +1,42 @@
 # Toolkit changes
 
+- 2026-11-18: Clarified test ownership: contract-and-test writes the outside-in suite
+  (schema, contract, integration, end-to-end); execute writes unit tests test-first
+  against the plan's internal design. Renamed execute's final check to "feature gate"
+  and added qa-verify release mode for phase-level verification across features
+  (REQ coverage, combined suites, shared-contract consumers), recorded as one exit
+  line in the roadmap. Added guided/chain autonomy: user owns what and done, agents
+  own how; under chain a passing design review accepts the plan. Parked security/ops
+  and pilot-run items in toolkit/BACKLOG.md.
+
+- 2026-11-18: Slimmed the portable folder. `.agents/` now holds only README.md (single
+  entry point and activation block), CATALOG.md, COMPATIBILITY.md, workflows/ and
+  skills/. Moved CHANGELOG, VALIDATION, IMPORTS.json, PREFERENCES, the workflow
+  template and both scripts to a new repo-root `toolkit/` folder that is never copied.
+  Merged and removed WORKFLOW-GUIDE, WORKFLOW-USAGE and STARTUP (content now in
+  README.md and workflows/INDEX.md). The activation block is defined once in
+  README.md and tells agents not to read `.agents/` unless a workflow or skill is
+  selected. Validator and activator updated for the new layout.
+
+- 2026-11-18: Restructured the development workflows around a system SRS, per-feature
+  dossiers and an independent build–verify loop. Added shared references (glossary,
+  document model, agent roles, engineering standards) and rewrote the development
+  handoff so workflows link rules instead of restating them. Renamed
+  software-requirement-creation → software-requirement (+ decompose and standards
+  modes), test-and-contract-creation → contract-and-test (+ alignment preflight,
+  shared-contract registry, change-request mode), writing-development-plan →
+  development-plan, feature-and-architect → feature-explain (on-demand snapshot).
+  Split execute-development into execute (implementer) and qa-verify (fresh-context
+  verifier, verdict with at most five BLOCKER/MAJOR findings, three-round cap).
+  Added doc-reconcile (audit, migrate, amend, compact) to reduce documentation
+  overhead: one owning file per fact, edit in place, `log.md` + `state.json`
+  replace progress/QA/verification files, compatible-by-default contracts with
+  expand → migrate → contract for breaking changes. Per-run model selection by
+  role with host mapping (Claude, ChatGPT, Gemini). Execution never commits;
+  QA-passed tasks are staged as checkpoints. Rewrote the workflow template to one
+  fixed structure. Removed the old workflow files without aliases. Made toolkit
+  docs host-neutral ("normal agent behavior"). No imported skill files changed.
+
 - 2026-10-31: Allowed bounded factual execution-documentation updates and verified
   plan checkboxes, retaining progress/QA as the primary records. Governing criteria
   and accepted decisions cannot be weakened to fit code; tests/contracts and agent

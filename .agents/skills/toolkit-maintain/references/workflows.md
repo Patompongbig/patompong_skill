@@ -4,7 +4,7 @@
    the user's request. Read the skills they named directly; follow relevant
    dependencies as needed. Read the complete catalog only if they request skill
    selection help, tree browsing, or catalog maintenance.
-2. Use [the workflow template](../../../templates/workflow.md). Write the file
+2. Use the workflow template, `toolkit/templates/workflow.md` in the source repository. Write the file
    to the toolkit's workflows/<name>.md with concrete entry skill paths, required
    inputs, conditional steps, deliverables, and completion criteria. The workflow
    chooses entry points; each skill still navigates relevant dependencies itself.

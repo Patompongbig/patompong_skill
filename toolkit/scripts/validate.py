@@ -1,4 +1,7 @@
-"""Read-only, standard-library static validation of a portable .agents toolkit."""
+"""Read-only, standard-library static validation of a portable .agents toolkit.
+
+Lives in the source repo's toolkit/ folder; validates the sibling .agents/ by
+default, or another copy via --agents. The import inventory stays in toolkit/."""
 
 import argparse
 import json
@@ -6,12 +9,15 @@ import re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-REQUIRED = (
-    "README.md", "PREFERENCES.md", "WORKFLOW-GUIDE.md", "CATALOG.md",
-    "STARTUP.md", "CHANGELOG.md", "templates/activation.md",
-    "scripts/activate.py", "scripts/validate.py", "workflows/INDEX.md",
-    "templates/workflow.md", "COMPATIBILITY.md", "IMPORTS.json",
-)
+REQUIRED = ("README.md", "CATALOG.md", "COMPATIBILITY.md", "workflows/INDEX.md")
+META = Path(__file__).resolve().parents[1]
+ACTIVATION = re.compile(r"<!-- personal-toolkit:begin -->.*?<!-- personal-toolkit:end -->", re.S)
+
+
+def activation_section(root):
+    """The activation block, defined once in .agents/README.md."""
+    match = ACTIVATION.search((root / "README.md").read_text(encoding="utf-8-sig"))
+    return match.group(0).strip() if match else None
 NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 MACHINE_PATH = re.compile(r"(?<![\w])(?:(?i:[a-z]:[\\/]|\\\\[a-z0-9_.-]+[\\/])|/(?:home|Users|mnt|tmp|var|opt|etc)/)")
 SECRET = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bsk-[A-Za-z0-9_-]{20,}")
@@ -55,7 +61,7 @@ def validate(root, project=None):
     root = root.resolve()
     errors = []
     approved_platform_literals = {}
-    inventory_file = root / "IMPORTS.json"
+    inventory_file = META / "IMPORTS.json"
     if inventory_file.is_file():
         import hashlib
         records = json.loads(inventory_file.read_text(encoding="utf-8"))
@@ -137,9 +143,6 @@ def validate(root, project=None):
                     errors.append(f"Nonportable link in {relative}: {target}")
                     continue
                 resolved = (path.parent / unquote(parsed.path)).resolve()
-                # Activation template intentionally resolves from project root.
-                if relative == "templates/activation.md":
-                    resolved = (root.parent / unquote(parsed.path)).resolve()
                 if not resolved.is_relative_to(root):
                     errors.append(f"Link leaves toolkit in {relative}: {target}")
                 elif not resolved.exists():
@@ -180,7 +183,7 @@ def validate(root, project=None):
             if rows.get(target) != manifests.get(target):
                 errors.append(f"Catalog/manifest mismatch: {target}")
     # Verify pinned resources without executing upstream code.
-    inventory_path = root / "IMPORTS.json"
+    inventory_path = META / "IMPORTS.json"
     if inventory_path.is_file():
         import hashlib
         inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
@@ -251,12 +254,13 @@ def validate(root, project=None):
         if (project / "AGENTS.override.md").exists():
             errors.append("Root AGENTS.override.md can hide activation; inspect manually")
         guidance = project / "AGENTS.md"
-        template = root / "templates" / "activation.md"
+        section = activation_section(root)
         if not guidance.is_file():
             errors.append("Missing root AGENTS.md activation")
-        elif template.is_file():
+        elif section is None:
+            errors.append("README.md has no activation block")
+        else:
             text = guidance.read_text(encoding="utf-8-sig")
-            section = template.read_text(encoding="utf-8-sig").strip()
             if text.count("<!-- personal-toolkit:begin -->") != 1 or text.count("<!-- personal-toolkit:end -->") != 1 or section not in text:
                 errors.append("Root activation section is missing, duplicated, or differs")
     return errors, len(manifests)
@@ -264,10 +268,12 @@ def validate(root, project=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--agents", type=Path, default=META.parent / ".agents",
+                        help="toolkit folder to validate (default: sibling .agents)")
     parser.add_argument("--project-root", type=Path)
     args = parser.parse_args()
     try:
-        errors, count = validate(Path(__file__).resolve().parents[1], args.project_root)
+        errors, count = validate(args.agents, args.project_root)
     except (OSError, UnicodeError, ValueError) as error:
         parser.exit(1, f"Validation failed: {error}\n")
     if errors:

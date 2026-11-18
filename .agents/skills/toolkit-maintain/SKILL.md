@@ -21,8 +21,8 @@ For creation and updates:
    a one-off example into a personal preference. Keep project context elsewhere.
 3. Include an example invocation, exclusions that prevent likely misrouting, and
    a clear completion condition. Inspect any executable resource before running it.
-4. Keep catalog, relevant docs, and [changelog](../../CHANGELOG.md) consistent.
-   Use [the validator](../../scripts/validate.py) when Python is available; otherwise
+4. Keep catalog, relevant docs, and the changelog (`toolkit/CHANGELOG.md` in the
+   source repository) consistent. Run `python toolkit/scripts/validate.py` when Python is available; otherwise
    inspect metadata, names, links, file states, and portability manually and say so.
 5. Compare one intended trigger and one unrelated request against the description.
    Label this a static review unless actual host behavior was tested. Run changed

@@ -17,7 +17,7 @@ policy; collection-prefixed labels; selection-first invocation note and Windows
 search guidance. Help was rewritten to describe portable paths and explicit
 session mode activation instead of automatic plugin startup/configuration.
 Gain points to bundled evidence and labels it author-reported. Original and
-installed hashes are recorded in [the import inventory](../../IMPORTS.json).
+installed hashes are recorded in the import inventory, `toolkit/IMPORTS.json` in the source repository.
 
 No workflow files or global configuration were changed. No upstream executable
 was run. The collection is pinned and does not auto-update. Native discovery and

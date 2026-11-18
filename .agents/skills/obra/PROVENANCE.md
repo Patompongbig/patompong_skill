@@ -10,7 +10,7 @@ were compared against the pinned source checkout with Git newline normalization.
 [Compatibility](COMPATIBILITY.md) explains the local explicit-only activation,
 Codex tool reference, direct dependencies, example-link/path handling and visual
 companion telemetry-off launch requirement. Original/installed hashes and each
-skill's adaptations are in [IMPORTS.json](../../IMPORTS.json). Upstream executable
+skill's adaptations are in `toolkit/IMPORTS.json` (source repository). Upstream executable
 resources remain byte-identical; none was executed during installation.
 Native host adapters, bootstrap hooks and global settings are not installed.
 Workflow/menu files are preserved; the user can compose combinations later.

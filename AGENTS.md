@@ -1,9 +1,10 @@
 <!-- personal-toolkit:begin -->
-## Optional Patompong toolkit
+## Agent toolkit (opt-in)
 
-Use normal Codex behavior by default, without a toolkit preprompt, workflow
-selection question, or automatic use of local skills. When the user explicitly
-requests a toolkit workflow or skill, read its entry point and relevant dependencies.
-The optional [workflow guide](.agents/WORKFLOW-GUIDE.md) explains selection,
-switching, and returning to normal mode; read it when needed.
+Default: normal agent behavior. Do not open or read anything under `.agents/`
+unless the user explicitly selects a workflow or skill.
+- "Use workflow <name>": read `.agents/workflows/<name>.md`, then only what it links.
+- "Use skill <author>/<name>" or a catalog ID: read `.agents/README.md` for where to look.
+- "What workflows are there?": read `.agents/workflows/INDEX.md`.
+The selection lasts until the user says "return to normal mode".
 <!-- personal-toolkit:end -->

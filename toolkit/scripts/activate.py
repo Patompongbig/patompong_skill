@@ -1,6 +1,10 @@
-"""Append the bundled root instruction section without replacing project guidance."""
+"""Append the toolkit activation block (defined in .agents/README.md) to a project's AGENTS.md
+without replacing existing guidance. Run from the source repo:
+    python toolkit/scripts/activate.py --project-root /path/to/project
+"""
 
 import argparse
+import re
 from pathlib import Path
 
 BEGIN = b"<!-- personal-toolkit:begin -->"
@@ -20,7 +24,11 @@ def activate(project, toolkit):
     if existing.startswith((b"\xff\xfe", b"\xfe\xff")):
         raise ValueError("UTF-16 instruction file; integrate manually preserving its encoding.")
     existing.decode("utf-8-sig")
-    section = (toolkit / "templates" / "activation.md").read_bytes().strip()
+    readme = (toolkit / "README.md").read_bytes()
+    match = re.search(rb"<!-- personal-toolkit:begin -->.*?<!-- personal-toolkit:end -->", readme, re.S)
+    if not match:
+        raise ValueError("No activation block in .agents/README.md.")
+    section = match.group(0).strip()
     if existing.count(BEGIN) or existing.count(END):
         if existing.count(BEGIN) != 1 or existing.count(END) != 1:
             raise ValueError("Malformed or duplicate integration markers; inspect manually.")
@@ -42,7 +50,7 @@ def main():
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     args = parser.parse_args()
     try:
-        print(activate(args.project_root, Path(__file__).resolve().parents[1]))
+        print(activate(args.project_root, args.project_root / ".agents"))
     except (OSError, UnicodeError, ValueError) as error:
         parser.exit(1, f"Activation failed: {error}\n")
 

@@ -9,7 +9,7 @@
 - Executable resources are preserved unchanged, not executed on installation.
 - Original source archive remains in the setup checkout outside the portable
   folder; its executable files are not automatically activated.
-- [Installed inventory](../../IMPORTS.json) records original and installed hashes.
+- The installed inventory, `toolkit/IMPORTS.json` in the source repository, records original and installed hashes.
 - [Compatibility](../../COMPATIBILITY.md) identifies host/runtime requirements.
 
 These are installed instruction packages, not runtime proof for every skill.
