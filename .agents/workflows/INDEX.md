@@ -57,6 +57,9 @@ engineering standards, glossary.
 - Resume or status: "execute, resume batch-import" · "execute, status".
 - Review any change: "qa-verify on <diff> against <contract>".
 - Close a roadmap phase: "qa-verify, release PH-2".
+- Refactor: small → normal mode, then "qa-verify on my changes, run tests";
+  large → "development-plan, refactor <area>" → "execute". The outside-in suite
+  must stay green; unit tests may be rewritten or deleted with coverage kept.
 - Models: stated in the prompt skip the per-run question, e.g. "implementer
   sonnet, QA opus, high effort".
 

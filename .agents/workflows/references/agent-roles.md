@@ -84,12 +84,16 @@ CHECKS: command — result (only for QA; re-run by the verifier, not copied).
 FINDINGS (max 5, BLOCKER/MAJOR only, most severe first):
   [BLOCKER] path:line — defect. Violates: AC-03 / C-02 / engineering.md §Errors.
             Evidence: reproduced | static. Fix direction: one or two lines.
+  [MAJOR, deferrable: <reason>] … (only when deferral is justified)
 NOTES (optional, max 3, MINOR): one line each.
 ```
 
-`FAIL` requires at least one BLOCKER, or a MAJOR the verifier judges must be
-fixed before the task can be built upon. Findings cite the violated clause; a
-reviewer cannot introduce new requirements.
+Verdict rules: any BLOCKER → `FAIL`. Any MAJOR → `FAIL`, unless the verifier
+marks it `deferrable` with a reason (it does not undermine later tasks or an
+acceptance criterion); then `PASS_WITH_NOTES`, and the implementer logs it as
+deferred. Deferred MAJORs are listed in the feature-gate report. No findings →
+`PASS`. Findings cite the violated clause; a reviewer cannot introduce new
+requirements.
 
 ## Task packet
 
@@ -97,9 +101,11 @@ What the implementer hands to QA for one task:
 
 ```text
 TASK: T-04 — <title>. Implements: AC-02, AC-05. Basis: contract.md, plan.md#T-04.
-SCOPE: files changed (unstaged diff = this task only).
+SCOPE: files changed. Review with `git diff -- <these files>`; in single-session
+       mode the whole unstaged diff equals this task.
 CHECKS RUN: command — result.
 CLAIMS: behaviors now satisfied; known limits; deviations from plan with reason.
+TESTS REMOVED (if any): path::name — reason — behaviour now covered by <test> | behaviour removed.
 ```
 
 ## Build–verify loop

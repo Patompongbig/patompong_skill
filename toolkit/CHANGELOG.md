@@ -1,5 +1,17 @@
 # Toolkit changes
 
+- 2026-11-18: Review fixes. Task packets scope QA to the task's file list, so the
+  orchestrator option no longer mixes parallel tasks in one diff. Verdict rules made
+  consistent (MAJOR fails unless marked deferrable; deferred MAJORs reported at the
+  feature gate). Removed plan checkboxes: state.json is the only task-status record.
+  Workflow headers drop the glossary and say to read references only when needed.
+
+- 2026-11-18: Added test economy to the engineering rubric (one test per rule,
+  table-driven cases, deletion when behaviour is removed or covered, migration chain
+  testing and squashing). Task packets list removed tests with coverage; qa-verify
+  treats unexplained coverage loss as MAJOR. Documented refactor plans and the
+  small/large refactor path.
+
 - 2026-11-18: Clarified test ownership: contract-and-test writes the outside-in suite
   (schema, contract, integration, end-to-end); execute writes unit tests test-first
   against the plan's internal design. Renamed execute's final check to "feature gate"

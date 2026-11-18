@@ -6,8 +6,8 @@
 Shared rules: [development handoff](references/development-handoff.md) ·
 [document model](references/document-model.md) ·
 [agent roles](references/agent-roles.md) ·
-[engineering standards](references/engineering-standards.md) ·
-[glossary](references/glossary.md)
+[engineering standards](references/engineering-standards.md)
+Read a reference only when a step needs it.
 
 ## Purpose
 
@@ -26,13 +26,15 @@ stops and escalates rather than improvising.
 
 | Mode | Use when | Writes | Ends with |
 | --- | --- | --- | --- |
-| **run** (default) | An accepted plan is ready to implement | Code in task scope, supplementary tests, `log.md`, `state.json`, plan checkboxes, staging index | All tasks done and feature gate passed, or an escalation |
+| **run** (default) | An accepted plan is ready to implement | Code in task scope, unit and regression tests, `log.md`, `state.json`, staging index | All tasks done and feature gate passed, or an escalation |
 | **resume** | Continuing a previous run | Same as run | Same as run |
 | **status** | "Where are we?" | Nothing | Chat report: task states, stale artifacts, open findings, next task |
 
 **Orchestrator option** (opt-in, with run/resume): the main session dispatches
 one implementer subagent per dependency-ready task with a disjoint file set,
-integrates results, and runs the QA loop for each. Offer it when the plan has
+integrates results, and runs the QA loop for each. Because several tasks share
+the working tree, each task is reviewed, checked and staged by its own file
+list (`git diff -- <files>`), never by the whole unstaged diff. Offer it when the plan has
 roughly four or more such tasks; never select it implicitly.
 
 ## Inputs
@@ -61,10 +63,10 @@ first (doc-reconcile or the owning stage) or continue with independent tasks.
 - **Regression tests** for defects found during the run, beside the unit tests
   or in `features/<f>/tests/` when they exercise a contract boundary. They
   supplement and never replace protected tests.
-- **Records:** `log.md` entries, `state.json` task and criterion status, ticked
-  plan checkboxes. Bounded factual corrections to the plan (moved paths, fixed
-  check commands) are allowed with a log entry; task wording and acceptance
-  criteria are not edited.
+- **Records:** `log.md` entries and `state.json` task and criterion status
+  (the only record of task status). Bounded factual corrections to the plan
+  (moved paths, fixed check commands) are allowed with a log entry; task
+  wording and acceptance criteria are not edited.
 - **Staging index:** each QA-passed task's files are staged as a checkpoint.
 
 Never written: requirements, contracts, accepted tests and fixtures, ADRs,
@@ -149,9 +151,9 @@ agent roles.
 
 5. **Checkpoint and record.** Stage exactly the task's files. Append a `QA`
    entry to `log.md` (changed paths, checks and results, deviations, notes
-   deferred), update `state.json`, tick the plan checkbox. Continue to the next
+   deferred), update `state.json`. Continue to the next
    task without asking for routine permission; give a one-line progress update.
-   *Exit:* the unstaged diff is empty of this task's work.
+   *Exit:* none of this task's files remain unstaged.
 
 6. **Feature gate.** When all tasks are done: run the complete acceptance flow,
    the required regression suite and the project's build, type and lint checks.
@@ -192,7 +194,8 @@ agent roles.
 ## Done when
 
 All accepted tasks are done; the feature gate has passed on the final code;
-blocking findings are resolved; optional notes are logged as deferred; records
+blocking findings are resolved; deferred MAJORs and notes are logged and listed
+in the report; records
 are current; and the staged diff contains the complete, verified feature. The
 report states behaviour delivered, evidence (with test counts, skips and any
 unavailable gates), deviations, and remaining limits. The user commits when

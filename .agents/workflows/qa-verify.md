@@ -6,8 +6,8 @@
 Shared rules: [development handoff](references/development-handoff.md) ·
 [document model](references/document-model.md) ·
 [agent roles](references/agent-roles.md) ·
-[engineering standards](references/engineering-standards.md) ·
-[glossary](references/glossary.md)
+[engineering standards](references/engineering-standards.md)
+Read a reference only when a step needs it.
 
 ## Purpose
 
@@ -35,8 +35,8 @@ when the user asks for it. Release mode always runs them.
 
 ## Inputs
 
-- **The change.** Task: the unstaged working-tree diff (new files registered
-  with `git add -N`). Feature: `git diff <baseline>` over the whole feature.
+- **The change.** Task: `git diff -- <files in the task packet>` (new files
+  registered with `git add -N`). Feature: `git diff <baseline>` over the whole feature.
   Standalone: the diff, range, branch or paths the user names. Release: the
   phase in `docs/roadmap.md`, its features' dossiers, and the current code.
 - **Specification.** The feature contract and its acceptance criteria, the plan
@@ -97,7 +97,10 @@ rubric. Ponytail-review's plain-language style applies to finding text.
 2. **Re-run the evidence.** Run the packet's focused checks and the regressions
    the change could affect. Confirm tests were collected and not skipped.
    Confirm protected tests, fixtures and contracts are unchanged (no diff on
-   protected paths). Use only non-mutating commands: tests, type checks,
+   protected paths). For every deleted or rewritten unit test, confirm its
+   stated reason and that the behaviour it covered is still tested or was
+   deliberately removed; an unexplained loss of coverage is a MAJOR finding.
+   Use only non-mutating commands: tests, type checks,
    linters and formatters in check mode. *Exit:* every check has an observed
    result, or is labelled not run with a reason.
 

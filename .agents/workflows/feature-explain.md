@@ -6,8 +6,8 @@
 
 Shared rules: [development handoff](references/development-handoff.md) ·
 [document model](references/document-model.md) ·
-[agent roles](references/agent-roles.md) ·
-[glossary](references/glossary.md)
+[agent roles](references/agent-roles.md)
+Read a reference only when a step needs it.
 
 ## Purpose
 

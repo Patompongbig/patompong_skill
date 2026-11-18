@@ -67,6 +67,18 @@ would catch. Doubles only at true boundaries. No sleeps where a condition can be
 awaited.
 *QA: Would this test fail if the behaviour regressed?*
 
+**Test economy.** Every test is code to maintain; keep the suite small enough
+to trust. One test per behaviour rule, not per line. Repetitive cases become one
+table-driven or parameterised test. No tests for trivial accessors, framework
+behaviour or generated code. A unit test that breaks on every refactor without
+ever catching a defect is a liability: rewrite it against behaviour or delete
+it. Deleting a unit test is correct when its behaviour was removed, or is still
+covered by another test. For long-lived sequences such as migrations, test the
+chain (every supported version upgrades to current) plus the newest steps, and
+squash steps older than the oldest deployed version into a baseline. Protected
+outside-in tests change only through contract-and-test.
+*QA: Is each test pulling its weight, and is every removed behaviour still covered?*
+
 **Simplicity.** Build the smallest complete change: reuse existing project code,
 the standard library and installed dependencies before adding new machinery. No
 speculative abstraction, unused parameters, dead code or premature

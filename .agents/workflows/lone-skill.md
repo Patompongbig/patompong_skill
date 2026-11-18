@@ -4,6 +4,7 @@
 > workflow.
 
 Shared rules: [development handoff](references/development-handoff.md#baseline-boundaries)
+Read a reference only when a step needs it.
 
 ## Purpose
 

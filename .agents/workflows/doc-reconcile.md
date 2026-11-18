@@ -6,8 +6,8 @@
 
 Shared rules: [development handoff](references/development-handoff.md) ·
 [document model](references/document-model.md) ·
-[agent roles](references/agent-roles.md) ·
-[glossary](references/glossary.md)
+[agent roles](references/agent-roles.md)
+Read a reference only when a step needs it.
 
 ## Purpose
 
@@ -70,7 +70,7 @@ Confirm models once at the start of the run per
    - **Integrity:** dangling or duplicate IDs, broken links, missing headers.
    - **Duplication:** the same requirement, clause or decision stated in more
      than one file, especially with different wording.
-   - **Status conflicts:** `state.json`, plan checkboxes and headers disagree.
+   - **Status conflicts:** `state.json` and status headers disagree.
    - **Code drift** (optional, via researchers): contract interfaces, file maps
      and commands that no longer match the code.
 

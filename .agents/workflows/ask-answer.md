@@ -3,8 +3,6 @@
 > Answer questions about code and software engineering through focused,
 > read-only investigation, with every deliverable in chat.
 
-Shared rules: [glossary](references/glossary.md)
-
 ## Purpose
 
 A safe mode for understanding. The agent investigates and explains; it never

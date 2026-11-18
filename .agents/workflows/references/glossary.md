@@ -46,7 +46,7 @@ live in the target project's `patompong-docs/docs/GLOSSARY.md`, not here.
 | **Task packet** | What the implementer hands to QA for one task: scope, diff, commands run, claims. |
 | **Verdict** | QA or design-review result: `PASS`, `PASS_WITH_NOTES` or `FAIL`, with severity-ranked findings. |
 | **Severity** | `BLOCKER` (violates acceptance, contract, protected test, correctness, security or data integrity), `MAJOR` (real maintenance, scalability or reliability cost; missing required test or error path), `MINOR` (notes only). |
-| **Checkpoint** | Staging (`git add`) a task's files after QA passes so the unstaged diff contains only unreviewed work. Never a commit. |
+| **Checkpoint** | Staging (`git add`) a task's files after QA passes so unstaged changes are only unreviewed work. Never a commit. |
 
 ## Stage mechanics
 

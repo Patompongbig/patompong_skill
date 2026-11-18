@@ -3,8 +3,8 @@
 > Reach a shared, explicit understanding of an idea, design or change through
 > structured rounds of questions before anything is decided or built.
 
-Shared rules: [development handoff](references/development-handoff.md#combining-and-switching-stages) ·
-[glossary](references/glossary.md)
+Shared rules: [development handoff](references/development-handoff.md#combining-and-switching-stages)
+Read a reference only when a step needs it.
 
 ## Purpose
 

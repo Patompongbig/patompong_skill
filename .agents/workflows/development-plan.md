@@ -6,8 +6,8 @@
 Shared rules: [development handoff](references/development-handoff.md) ·
 [document model](references/document-model.md) ·
 [agent roles](references/agent-roles.md) ·
-[engineering standards](references/engineering-standards.md) ·
-[glossary](references/glossary.md)
+[engineering standards](references/engineering-standards.md)
+Read a reference only when a step needs it.
 
 ## Purpose
 
@@ -33,6 +33,10 @@ write code, run project commands, or start execution.
 - Referenced shared contracts and SRS sections.
 - `docs/engineering.md` and the toolkit rubric.
 - Relevant current code, tests and configuration.
+
+**Refactor plans** change structure, not behaviour: the existing accepted
+contract stays as is, and its outside-in suite plus the feature gate prove
+behaviour is preserved. Tasks name the unit tests to rewrite, merge or delete.
 
 A contract that is still draft permits a **draft plan** only: proposed
 interfaces are marked as proposals and handed back to contract-and-test for

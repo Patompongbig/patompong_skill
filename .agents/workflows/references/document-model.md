@@ -83,8 +83,8 @@ when anything still links to them.
 | Machine status | `features/<f>/state.json` | any stage, within its own entries |
 | Implementation explanation | `features/<f>/guide/` | feature-explain |
 
-A stage may apply **bounded factual updates** outside its ownership — ticking a
-verified plan checkbox, correcting a moved file path — but never changes the
+A stage may apply **bounded factual updates** outside its ownership — correcting
+a moved file path or a broken check command — but never changes the
 meaning of a requirement, criterion, contract clause, protected test or decision.
 
 ## File conventions
@@ -127,7 +127,8 @@ summary block, keeping open items and all CRs verbatim.
 
 Allowed values — artifact: `draft | accepted | stale | superseded`; task:
 `todo | in_progress | blocked | done`; criterion: `unverified | red | blocked | verified`.
-Plan checkboxes mirror task status; `state.json` wins when they disagree.
+`state.json` is the only record of task and criterion status; plans carry no
+checkboxes.
 
 ## Amendments
 
